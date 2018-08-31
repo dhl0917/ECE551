@@ -1,7 +1,10 @@
-Grading at 08/31/2018:23:39:30.808966
-For commit ID a26ff26ad67c6769495c1c984b3747da640a846f
+Grading at 08/31/2018:23:43:21.093957
+For commit ID 44575446db46f5d8b71bd39b0a3af6f92430e998
 Checking errors.txt
-Line_4_did_not_match
-Your file did not match the expected ouput
+Your file matched the expected output
+errors.txt is correct.
+Checking the syntax in code.c
+code.c has legal syntax
+Your file matched the expected output
 
-Overall Grade: FAILED
+Overall Grade: PASSED
