@@ -1,12 +1,7 @@
 In the loop with i=0,a=5
 In the loop with i=1,a=7
 In anotherFunction(3,13)
-a is 3,b is 13
-a is 3,b is 13
-a is 3,b is 12
-a is 4,b is 10
-a is 5,b is 7
-a=711
+a=27
 x=2
 In anotherFunction(2,9)
 a is 2,b is 9
