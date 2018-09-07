@@ -46,7 +46,7 @@ rectangle_t intersection(rectangle_t r1, rectangle_t r2) {
   r1 = canonicalize(r1);
   r2 = canonicalize(r2);
   left = max(r1.x, r2.x);
-  right = min(r1.x + r2.width, r2.x + r2.width);
+  right = min(r1.x + r1.width, r2.x + r2.width);
   top = min(r1.y + r1.height, r2.y + r2.height);
   bottom = max(r1.y, r2.y);
   if ((left <= right) && (bottom <= top)) {
