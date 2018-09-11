@@ -1,0 +1,20 @@
+Grading at 09/11/2018:06:58:24.080880
+For commit ID 9fe2dc0839fd762c82d8b79284ea7ab37db4b60a
+#################################################
+test input.1:
+Your file matched the expected output
+input.1 passed
+#################################################
+test input.2:
+Your file matched the expected output
+input.2 passed
+#################################################
+test input.3:
+Your file matched the expected output
+input.3 passed
+#################################################
+test input.4:
+Your file matched the expected output
+input.4 passed
+
+Overall Grade: A
