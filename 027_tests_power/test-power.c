@@ -18,28 +18,6 @@ int run_check(unsigned x, unsigned y) {
 }
 
 int main() {
-  /*  if (!run_check(1, 1)) {
-    return EXIT_FAILURE;
-  }
-  if (!run_check(1, 0)) {
-    return EXIT_FAILURE;
-  }
-  if (!run_check(2, 0)) {
-    return EXIT_FAILURE;
-  }
-  if (!run_check(2, 2)) {
-    return EXIT_FAILURE;
-  }
-  if (!run_check(0, 0)) {
-    return EXIT_FAILURE;
-  }
-  if (!run_check(2, 10)) {
-    return EXIT_FAILURE;
-  }
-  if (!run_check(2, 5)) {
-    return EXIT_FAILURE;
-  }
- */
   for (unsigned i = 0; i <= 1000; i++) {
     for (unsigned j = 0; j <= 1000; j++) {
       if (!run_check(i, j)) {
