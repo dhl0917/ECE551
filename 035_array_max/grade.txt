@@ -1,5 +1,5 @@
-Grading at 09/15/2018:19:52:00.089303
-For commit ID 4227cf7a6930300ad6186d11df7359a1688e1ba3
+Grading at 09/15/2018:19:58:34.619414
+For commit ID 710e139b3ea8478e188b632d8c6e2bbdcff98ec4
 [32mSuccessfully compiled ['arrayMax.c'].[0m
 ********************test case 1********************
 match your original code with expected ans
@@ -20,12 +20,12 @@ Exit status of your code: 0
 ********************test case 4********************
 Exit status of your code: 0
 [32mValgrind was clean[0m
-[31mIncorrect: your output did not match the expected output.[0m
-[31mfailed test case 4[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 4[0m
 ********************test case 5********************
 Exit status of your code: 0
 [32mValgrind was clean[0m
-[31mIncorrect: your output did not match the expected output.[0m
-[31mfailed test case 5[0m
-[31mfailed 2 out of 5 test cases[0m
-Overall Grade: 60
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 5[0m
+[32msuccessfully passed all 5 test cases[0m
+Overall Grade: 100
