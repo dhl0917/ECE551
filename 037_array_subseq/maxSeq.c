@@ -14,8 +14,8 @@ size_t maxSeq(int * array, size_t n) {
     else {
       if (count > biggest) {
         biggest = count;
-        count = 1;
       }
+      count = 1;
     }
   }
   if (count > biggest) {
