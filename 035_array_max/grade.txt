@@ -1,5 +1,5 @@
-Grading at 09/15/2018:19:43:05.287112
-For commit ID b1d9ce764be51e30a951a6b7780bcdb54fda547e
+Grading at 09/15/2018:19:52:00.089303
+For commit ID 4227cf7a6930300ad6186d11df7359a1688e1ba3
 [32mSuccessfully compiled ['arrayMax.c'].[0m
 ********************test case 1********************
 match your original code with expected ans
