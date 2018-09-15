@@ -7,7 +7,7 @@ int * arrayMax(int * array, int n) {
   }
   int * biggest = &array[0];
   for (int i = 1; i < n; i++) {
-    if (array[i] > array[0]) {
+    if (array[i] > *biggest) {
       biggest = &array[i];
     }
   }
