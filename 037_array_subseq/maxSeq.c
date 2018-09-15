@@ -18,5 +18,9 @@ size_t maxSeq(int * array, size_t n) {
       }
     }
   }
+  if (count > biggest) {
+    biggest = count;
+    count = 1;
+  }
   return biggest;
 }
