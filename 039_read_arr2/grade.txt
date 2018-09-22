@@ -1,0 +1,10 @@
+Grading at 09/22/2018:16:31:34.041856
+For commit ID 2803bb4227b299a87f99754e0cb73774210e32bd
+Attempting to compile test.c
+gcc -o test -Wall -Werror -pedantic -std=gnu99 test.c
+compiled
+Line_4_did_not_match
+Your file did not match the expected ouput
+Your output did not match what we expected.
+
+Overall Grade: F
