@@ -1,0 +1,8 @@
+Grading at 09/25/2018:21:37:52.058702
+For commit ID 7815ae650c4375dd425cb971987d203963500cfc
+running passed-in stu_imp ./breaker
+[33mWarning: fail to run make clean[0m
+[32mSuccessfully compiled .[0m
+[31mgrader ERROR: doesn't found expected student implementation file ./breaker[0m
+[31mCannot continue testing[0m
+Overall Grade: F
