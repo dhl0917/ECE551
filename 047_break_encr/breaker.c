@@ -25,7 +25,7 @@ void breaker(FILE * f) {
   if (key < 0) {
     key += 26;
   }
-  printf("%d\n", key);
+  fprintf(stdout, "%d\n", key);
 }
 
 int main(int argc, char ** argv) {
