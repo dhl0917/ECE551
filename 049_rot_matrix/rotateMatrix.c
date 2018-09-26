@@ -10,6 +10,13 @@ int rotate(FILE * f, char main[10][12]) {
         fprintf(stderr, "The line is too long!\n");
         return 1;
       }
+      if ((strchr(matrix[i], '\n') - matrix[i]) != 10) {
+        fprintf(stderr, "The line is too short!\n");
+        return 1;
+      }
+    }
+    else {
+      fprintf(stderr, "fgets error!\n");
     }
   }
   for (int i = 0; i < 10; i++) {
