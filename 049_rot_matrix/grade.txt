@@ -1,5 +1,5 @@
-Grading at 09/26/2018:17:30:30.666168
-For commit ID 65bb2893411313675fc4629175b0de644ec47e27
+Grading at 09/26/2018:18:21:46.848527
+For commit ID ff5c46a3daa2d16233a2dd85bbbd85a3f1ffda98
 [32mSuccessfully compiled ['rotateMatrix.c'].[0m
 ********************test case 1********************
 Exit status of your code: 1
@@ -9,8 +9,8 @@ Exit status of your code: 1
 ********************test case 2********************
 Exit status of your code: 0
 [31mtest case 2 Error: valgrind was not clean,here are error suggestions:[0m
-[31m1 Syscall param write(buf) points to uninitialised byte(s)[0m
-[31m2 Conditional jump or move depends on uninitialised value(s)[0m
+[31m1 Conditional jump or move depends on uninitialised value(s)[0m
+[31m2 Syscall param write(buf) points to uninitialised byte(s)[0m
 [31m3  Address 0x522e2f0 is 0 bytes inside a block of size 4[0m
 [31mfailed test case 2[0m
 ********************test case 3********************
@@ -21,8 +21,8 @@ Exit status of your code: 1
 ********************test case 4********************
 Exit status of your code: 0
 [31mtest case 4 Error: valgrind was not clean,here are error suggestions:[0m
-[31m1 Syscall param write(buf) points to uninitialised byte(s)[0m
-[31m2 Conditional jump or move depends on uninitialised value(s)[0m
+[31m1 Conditional jump or move depends on uninitialised value(s)[0m
+[31m2 Syscall param write(buf) points to uninitialised byte(s)[0m
 [31m3  Address 0x522e2f0 is 0 bytes inside a block of size 4[0m
 [31mfailed test case 4[0m
 ********************test case 5********************
