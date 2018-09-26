@@ -14,6 +14,12 @@ int rotate(FILE * f, char main[10][12]) {
         fprintf(stderr, "The line is too short!\n");
         exit(EXIT_FAILURE);
       }
+      for (int k = 0; k < 11; k++) {
+        if (matrix[i][k] == EOF) {
+          fprintf(stderr, "There is EOF in line!\n");
+          exit(EXIT_FAILURE);
+        }
+      }
     }
     else {
       fprintf(stderr, "fgets error!\n");
