@@ -41,5 +41,9 @@ int main(int argc, char ** argv) {
       fprintf(stdout, "%c", matrix[i][j]);
     }
   }
+  if (fclose(f) != 0) {
+    perror("Failed to close the FILE\n");
+    return EXIT_FAILURE;
+  }
   EXIT_SUCCESS;
 }
