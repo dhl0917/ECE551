@@ -1,22 +1,22 @@
-Grading at 09/26/2018:03:06:07.577851
-For commit ID 0f77a1567ca96c208054730c798ac2eb08205e72
+Grading at 09/26/2018:03:39:25.392243
+For commit ID ba5a1ed42d3f7c908e1a933b2049fcebbb7f6d45
 running passed-in stu_imp ./breaker
 [33mWarning: fail to run make clean[0m
 [32mSuccessfully compiled .[0m
 ********************test case 1********************
 Exit status of your code: 0
 [32mValgrind was clean[0m
-[31mIncorrect: your output did not match the expected output.[0m
-[31mfailed test case 1[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 1[0m
 ********************test case 2********************
 Exit status of your code: 0
 [32mValgrind was clean[0m
-[31mIncorrect: your output did not match the expected output.[0m
-[31mfailed test case 2[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 2[0m
 ********************test case 3********************
 Exit status of your code: 0
 [32mValgrind was clean[0m
 [31mIncorrect: your output did not match the expected output.[0m
 [31mfailed test case 3[0m
-[31mfailed 3 out of 3 test cases[0m
-Overall Grade: F
+[31mfailed 1 out of 3 test cases[0m
+Overall Grade: D
