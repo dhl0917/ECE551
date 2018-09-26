@@ -53,7 +53,7 @@ int main(int argc, char ** argv) {
     return EXIT_FAILURE;
   }
   for (int i = 0; i < 10; i++) {
-    for (int j = 0; j < 12; j++) {
+    for (int j = 0; j < 11; j++) {
       fprintf(stdout, "%c", matrix[i][j]);
     }
   }
