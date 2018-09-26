@@ -18,6 +18,7 @@ void breaker(FILE * f) {
   for (int j = 0; j < 26; j++) {
     if (freq[j] > max) {
       maxindex = j;
+      max = freq[i];
     }
   }
   int key = 0;
@@ -39,5 +40,9 @@ int main(int argc, char ** argv) {
     return EXIT_FAILURE;
   }
   breaker(f);
+  if (fclose(f) != 0) {
+    perror("Failed to close the FILE");
+    return EXIT_FAILURE;
+  }
   return EXIT_SUCCESS;
 }
