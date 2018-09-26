@@ -24,7 +24,7 @@ int breaker(FILE * f) {
   for (int j = 0; j < 26; j++) {
     if (freq[j] > max) {
       maxindex = j;
-      max = freq[i];
+      max = freq[j];
     }
   }
   int key = 0;
