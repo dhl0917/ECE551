@@ -1,0 +1,25 @@
+10
+1;95;0cinput.txt
+1;95;0cjglsgsg
+jkgs jsdlgk sagjdl
+input
+
+   
+-%*&(*&p&
+荳ｭ�菴�螂ｽ扈乗ｵ主･吠
+中秋快乐！～
+./run_all.sh
+input.txt	./run_all.sh
+input.txt 12344
+NULL
+'a'
+output.txt
+2x2.txt 2x3.txt bla.txt
+2x3.txt
+8 bla.txt
+README next-README
+gets(2x2.txt")
+-o
+12345678900987654321
+14.txt
+15.txt
