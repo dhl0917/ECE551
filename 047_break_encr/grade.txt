@@ -1,8 +1,22 @@
-Grading at 09/25/2018:21:41:15.116326
-For commit ID 67d3a557c0c4d3a12eb612c509f14ff79c462619
+Grading at 09/26/2018:03:06:07.577851
+For commit ID 0f77a1567ca96c208054730c798ac2eb08205e72
 running passed-in stu_imp ./breaker
 [33mWarning: fail to run make clean[0m
 [32mSuccessfully compiled .[0m
-[31mgrader ERROR: doesn't found expected student implementation file ./breaker[0m
-[31mCannot continue testing[0m
+********************test case 1********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[31mIncorrect: your output did not match the expected output.[0m
+[31mfailed test case 1[0m
+********************test case 2********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[31mIncorrect: your output did not match the expected output.[0m
+[31mfailed test case 2[0m
+********************test case 3********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[31mIncorrect: your output did not match the expected output.[0m
+[31mfailed test case 3[0m
+[31mfailed 3 out of 3 test cases[0m
 Overall Grade: F
