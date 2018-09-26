@@ -23,6 +23,7 @@ int rotate(FILE * f, char main[10][12]) {
     }
     else {
       fprintf(stderr, "fgets error!\n");
+      exit(EXIT_FAILURE);
     }
   }
   if (fgetc(f) != EOF) {
