@@ -159,12 +159,12 @@ int checkWin(board_t * b) {
   for (int i = 0; i < b->height; i++) {
     for (int j = 0; j < b->width; j++) {
       if (b->board[i][j] == UNKNOWN) {
-        return 1;  //no win
+        return 0;  //no win
       }
     }
   }
 
-  return 0;
+  return 1;
 }
 
 void freeBoard(board_t * b) {
