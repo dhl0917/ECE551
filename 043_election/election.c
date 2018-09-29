@@ -112,8 +112,16 @@ unsigned int countElectoralVotes(state_t * stateData, uint64_t * voteCounts, siz
 
 void printRecounts(state_t * stateData, uint64_t * voteCounts, size_t nStates) {
   //STEP 3: write me
+  for (size_t i = 0; i < nStates; i++) {
+    if (voteCounts[i] >= 0.495 * stateData[i].population &&
+        voteCounts[i] <= 0.505 * stateData[i].population) {
+      fprintf(stdout,
+              "%s requires a recount (Candidate A has %.2f%% of the vote)\n",
+              stateData[i].name,
+              100 * voteCounts[i] / (1.0 * stateData[i].population));
+    }
+  }
 }
-
 void printLargestWin(state_t * stateData, uint64_t * voteCounts, size_t nStates) {
   //STEP 4: write me
 }
