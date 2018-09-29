@@ -124,4 +124,16 @@ void printRecounts(state_t * stateData, uint64_t * voteCounts, size_t nStates) {
 }
 void printLargestWin(state_t * stateData, uint64_t * voteCounts, size_t nStates) {
   //STEP 4: write me
+  double max = 0;
+  double percentage;
+  int maxindex;
+  for (size_t i = 0; i < nStates; i++) {
+    percentage = voteCounts[i] / (1.0 * stateData[i].population);
+    if (percentage > max) {
+      max = percentage;
+      maxindex = i;
+    }
+  }
+  fprintf(
+      stdout, "Candidate A won %s with %.2f%% of the vote\n", stateData[maxindex].name, 100 * max);
 }
