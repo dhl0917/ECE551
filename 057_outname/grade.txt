@@ -1,0 +1,24 @@
+Grading at 09/30/2018:19:53:07.054137
+For commit ID b6cafd364f515635d26103a610abe5ee280e03b3
+********************test case 1********************
+Exit status of your code: 0
+[31mtest case 1 Error: valgrind was not clean,here are error suggestions:[0m
+[31m1 Conditional jump or move depends on uninitialised value(s)[0m
+[31mfailed test case 1[0m
+********************test case 2********************
+Exit status of your code: 0
+[31mtest case 2 Error: valgrind was not clean,here are error suggestions:[0m
+[31m1 Conditional jump or move depends on uninitialised value(s)[0m
+[31mfailed test case 2[0m
+********************test case 3********************
+Exit status of your code: 0
+[31mtest case 3 Error: valgrind was not clean,here are error suggestions:[0m
+[31m1 Conditional jump or move depends on uninitialised value(s)[0m
+[31mfailed test case 3[0m
+********************test case 4********************
+Exit status of your code: 0
+[31mtest case 4 Error: valgrind was not clean,here are error suggestions:[0m
+[31m1 Conditional jump or move depends on uninitialised value(s)[0m
+[31mfailed test case 4[0m
+[31mfailed 4 out of 4 test cases[0m
+Overall Grade: F
