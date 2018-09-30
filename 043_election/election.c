@@ -9,7 +9,7 @@ state_t parseLine(const char * line) {
   state_t mystate;
   int i = 0;
   //Check input
-  int count = 0;
+  int count = 0;  //count for ':'
   while (line[i] != '\0') {
     if (line[0] < 'A' || line[0] > 'Z') {
       fprintf(stderr, "Wrong First input!\n");
@@ -32,7 +32,7 @@ state_t parseLine(const char * line) {
     if (count == 1) {
       if ((line[i] >= '0' && line[i] <= '9') || line[i] == ':') {
         if (line[i] == ':') {
-          if (line[i - 1] == ':') {
+          if (line[i - 1] == ':') {  //consecutive ':'
             fprintf(stderr, "Wrong input for population!\n");
             exit(EXIT_FAILURE);
           }
@@ -62,9 +62,9 @@ state_t parseLine(const char * line) {
   }
 
   i = 0;
-  int flag1 = 0;
-  int flag2 = 0;
-  int flag3 = 0;
+  int flag1 = 0;  //index for the first ':'
+  int flag2 = 0;  //index for the second ':'
+  int flag3 = 0;  //index for '\0'
   while (line[i] != '\0') {
     if ((line[i] == ':') && (flag1 == 0)) {
       flag1 = i;
