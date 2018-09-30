@@ -8,9 +8,10 @@ char * computeOutputFileName(const char * inputName) {
   //WRITE ME
   int len = strlen(inputName);
   char * outputName = malloc((len + 7 + 1) * sizeof(*outputName));
-  for (int i = 0; i < len; i++) {
+  for (int i = 0; i < len + 1; i++) {
     outputName[i] = inputName[i];
   }
 
-  return strcat(outputName, ".counts\0");
+  outputName = strcat(outputName, ".counts");
+  return outputName;
 }
