@@ -77,6 +77,7 @@ kvarray_t * readKVs(const char * fname) {
   kvarray_t * pointerToKVarray = malloc(sizeof(*pointerToKVarray));
   if (f == NULL) {
     fprintf(stderr, "Counld not open the k/v file!\n");
+    exit(EXIT_FAILURE);
   }
   char ** arrayForReading = ReadFileToArray(f, &size);
   addToArray(arrayForReading, pointerToKVarray, size);
