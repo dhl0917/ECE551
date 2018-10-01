@@ -1,0 +1,27 @@
+Grading at 10/01/2018:00:24:23.032006
+For commit ID 7eeabbebc1f12583c8d4a63ddf93c4fa5d9db816
+running passed-in stu_imp ./count_values
+[32mSuccessfully compiled .[0m
+********************test case 1********************
+Exit status of your code: 1
+[31mtest case 1 Error: valgrind was not clean,here are error suggestions:[0m
+[31m1 Syscall param openat(filename) points to unaddressable byte(s)[0m
+[31m2  Address 0x0 is not stack[0m
+[31mfailed test case 1[0m
+********************test case 2********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 2[0m
+********************test case 3********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 3[0m
+********************test case 4********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 4[0m
+[31mfailed 1 out of 4 test cases[0m
+Overall Grade: C
