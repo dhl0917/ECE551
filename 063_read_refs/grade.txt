@@ -1,8 +1,6 @@
-Grading at 10/09/2018:03:15:40.362243
-For commit ID 44f29772c623739a2c718253e3f42f9fa954d0a4
-Line_4_did_not_match
-Line_5_did_not_match
-Your file did not match the expected ouput
-Your output did not match what we expected.
+Grading at 10/09/2018:03:20:30.633912
+For commit ID 3ad3b4811be820013d7700395d4a1f6ab88d65b0
+Your file matched the expected output
+Your output matched what we expected
 
-Overall Grade: FAILED
+Overall Grade: PASSED
