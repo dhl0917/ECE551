@@ -155,5 +155,14 @@ int main(int argc, char ** argv) {
           mysb.st_gid,
           mygroup->gr_name);
 
+  //Step 4
+  char * atim = time2str(&mysb.st_atime, mysb.st_atim.tv_nsec);
+  char * mtim = time2str(&mysb.st_mtime, mysb.st_mtim.tv_nsec);
+  char * ctim = time2str(&mysb.st_ctime, mysb.st_ctim.tv_nsec);
+  fprintf(stdout, "Access: %s\n", atim);
+  fprintf(stdout, "Modify: %s\n", mtim);
+  fprintf(stdout, "Change: %s\n", ctim);
+  fprintf(stdout, " Birth: -\n");
+
   return EXIT_SUCCESS;
 }
