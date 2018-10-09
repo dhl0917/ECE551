@@ -44,7 +44,16 @@ void printFirst3Lines(struct stat mysb, char * access, char * filename) {
       filetype = "unknown???";
       break;
   }
-  fprintf(stdout, "  File: %s\n", filename);
+
+  if (S_ISLNK(mysb.st_mode)) {  //Step 7
+    char target[256];
+    ssize_t len = readlink(filename, target, 256);
+    target[len] = '\0';
+    fprintf(stdout, "  File: %s -> %s\n", filename, target);
+  }
+  else {
+    fprintf(stdout, "  File: %s\n", filename);
+  }
   fprintf(stdout,
           "  Size: %-10lu\tBlocks: %-10lu IO Block: %-6lu %s\n",
           mysb.st_size,
@@ -58,8 +67,8 @@ void printFirst3Lines(struct stat mysb, char * access, char * filename) {
             mysb.st_dev,
             mysb.st_ino,
             mysb.st_nlink,
-            major(mysb.st_dev),
-            minor(mysb.st_dev));
+            major(mysb.st_rdev),
+            minor(mysb.st_rdev));
   }
   else {
     fprintf(stdout,
