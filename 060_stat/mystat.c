@@ -7,32 +7,9 @@
 #include <sys/types.h>
 #include <time.h>
 #include <unistd.h>
-//This function is for Step 4
-char * time2str(const time_t * when, long ns) {
-  char * ans = malloc(128 * sizeof(*ans));
-  char temp1[64];
-  char temp2[32];
-  const struct tm * t = localtime(when);
-  strftime(temp1, 512, "%Y-%m-%d %H:%M:%S", t);
-  strftime(temp2, 32, "%z", t);
-  snprintf(ans, 128, "%s.%09ld %s", temp1, ns, temp2);
-  return ans;
-}
-int main(int argc, char ** argv) {
-  //Step 1
-  if (argc != 2) {
-    fprintf(stderr, "More or Less Arguments!\n");
-    return EXIT_FAILURE;
-  }
-  struct stat mysb;
-  if (lstat(argv[1], &mysb) == -1) {
-    fprintf(stderr, "lstat error\n");
-    return EXIT_FAILURE;
-  }
-  fprintf(stdout, "  File: %s\n", argv[1]);
-
+//Step 1
+void printFirst3Lines(struct stat mysb, char * access, char * filename) {
   char * filetype;
-  char access[11];
   switch (mysb.st_mode & S_IFMT) {
     case S_IFBLK:
       filetype = "block special file";
@@ -66,6 +43,7 @@ int main(int argc, char ** argv) {
       filetype = "unknown???";
       break;
   }
+  fprintf(stdout, "  File: %s\n", filename);
   fprintf(stdout,
           "  Size: %-10lu\tBlocks: %-10lu IO Block: %-6lu %s\n",
           mysb.st_size,
@@ -78,8 +56,10 @@ int main(int argc, char ** argv) {
           mysb.st_dev,
           mysb.st_ino,
           mysb.st_nlink);
+}
 
-  //Step 2
+//Step 2
+void permissons(struct stat mysb, char * access) {
   if (mysb.st_mode & S_IRUSR) {  //2nd
     access[1] = 'r';
   }
@@ -141,9 +121,10 @@ int main(int argc, char ** argv) {
     access[9] = '-';
   }
   access[10] = '\0';
-  // fprintf(stdout, "Access: (%04o/%s)\n", mysb.st_mode & ~S_IFMT, access);
+}
 
-  //Step 3
+//Step 3
+void printAccess(struct stat mysb, char * access) {
   struct passwd * mypasswd = getpwuid(mysb.st_uid);
   struct group * mygroup = getgrgid(mysb.st_gid);
   fprintf(stdout,
@@ -154,8 +135,21 @@ int main(int argc, char ** argv) {
           mypasswd->pw_name,
           mysb.st_gid,
           mygroup->gr_name);
+}
 
-  //Step 4
+//This function is for Step 4
+char * time2str(const time_t * when, long ns) {
+  char * ans = malloc(128 * sizeof(*ans));
+  char temp1[64];
+  char temp2[32];
+  const struct tm * t = localtime(when);
+  strftime(temp1, 512, "%Y-%m-%d %H:%M:%S", t);
+  strftime(temp2, 32, "%z", t);
+  snprintf(ans, 128, "%s.%09ld %s", temp1, ns, temp2);
+  return ans;
+}
+//Step 4
+void printTimes(struct stat mysb) {
   char * atim = time2str(&mysb.st_atime, mysb.st_atim.tv_nsec);
   char * mtim = time2str(&mysb.st_mtime, mysb.st_mtim.tv_nsec);
   char * ctim = time2str(&mysb.st_ctime, mysb.st_ctim.tv_nsec);
@@ -163,6 +157,32 @@ int main(int argc, char ** argv) {
   fprintf(stdout, "Modify: %s\n", mtim);
   fprintf(stdout, "Change: %s\n", ctim);
   fprintf(stdout, " Birth: -\n");
+  free(atim);
+  free(mtim);
+  free(ctim);
+}
 
+int main(int argc, char ** argv) {
+  //Step 1
+  if (argc == 1) {
+    fprintf(stderr, "NOT Enough Arguments!\n");
+    return EXIT_FAILURE;
+  }
+  for (int i = 1; i < argc; i++) {  //Step 5
+    struct stat mysb;
+    if (lstat(argv[i], &mysb) == -1) {
+      fprintf(stderr, "lstat error\n");
+      return EXIT_FAILURE;
+    }
+    char * filename = argv[i];
+    char access[11];
+    printFirst3Lines(mysb, access, filename);
+    //Step 2
+    permissons(mysb, access);
+    //Step 3
+    printAccess(mysb, access);
+    //Step 4
+    printTimes(mysb);
+  }
   return EXIT_SUCCESS;
 }
