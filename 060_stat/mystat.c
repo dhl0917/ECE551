@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
+#include <sys/sysmacros.h>  //For major and minor in Step 6
 #include <sys/types.h>
 #include <time.h>
 #include <unistd.h>
@@ -50,12 +51,24 @@ void printFirst3Lines(struct stat mysb, char * access, char * filename) {
           mysb.st_blocks,
           mysb.st_blksize,
           filetype);
-  fprintf(stdout,
-          "Device: %lxh/%lud\tInode: %-10lu  Links: %lu\n",
-          mysb.st_dev,
-          mysb.st_dev,
-          mysb.st_ino,
-          mysb.st_nlink);
+  if (S_ISCHR(mysb.st_mode) || S_ISBLK(mysb.st_mode)) {  //Step 6
+    fprintf(stdout,
+            "Device: %lxh/%lud\tInode: %-10lu  Links: %-5lu Device type: %d,%d\n",
+            mysb.st_dev,
+            mysb.st_dev,
+            mysb.st_ino,
+            mysb.st_nlink,
+            major(mysb.st_dev),
+            minor(mysb.st_dev));
+  }
+  else {
+    fprintf(stdout,
+            "Device: %lxh/%lud\tInode: %-10lu  Links: %lu\n",
+            mysb.st_dev,
+            mysb.st_dev,
+            mysb.st_ino,
+            mysb.st_nlink);
+  }
 }
 
 //Step 2
