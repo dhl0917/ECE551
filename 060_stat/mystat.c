@@ -19,6 +19,7 @@ char * time2str(const time_t * when, long ns) {
   return ans;
 }
 int main(int argc, char ** argv) {
+  //Step 1
   if (argc != 2) {
     fprintf(stderr, "More or Less Arguments!\n");
     return EXIT_FAILURE;
@@ -77,6 +78,8 @@ int main(int argc, char ** argv) {
           mysb.st_dev,
           mysb.st_ino,
           mysb.st_nlink);
+
+  //Step 2
   if (mysb.st_mode & S_IRUSR) {  //2nd
     access[1] = 'r';
   }
@@ -138,7 +141,19 @@ int main(int argc, char ** argv) {
     access[9] = '-';
   }
   access[10] = '\0';
-  fprintf(stdout, "Access: (%04o/%s)\n", mysb.st_mode & ~S_IFMT, access);
+  // fprintf(stdout, "Access: (%04o/%s)\n", mysb.st_mode & ~S_IFMT, access);
+
+  //Step 3
+  struct passwd * mypasswd = getpwuid(mysb.st_uid);
+  struct group * mygroup = getgrgid(mysb.st_gid);
+  fprintf(stdout,
+          "Access: (%04o/%s)  Uid: (%5d/%8s)   Gid: (%5d/%8s)\n",
+          mysb.st_mode & ~S_IFMT,
+          access,
+          mysb.st_uid,
+          mypasswd->pw_name,
+          mysb.st_gid,
+          mygroup->gr_name);
 
   return EXIT_SUCCESS;
 }
