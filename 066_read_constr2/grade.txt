@@ -1,9 +1,8 @@
-Grading at 10/14/2018:18:40:14.000102
-For commit ID 0faf4c70b519ec7cab7a7ab15081412d0fff6e2c
+Grading at 10/14/2018:18:42:24.433439
+For commit ID bb4b0fd7808f67b0c8c79715a7efbb98837e51db
 Attempting to compile:
 g++ -o code -Wall -Werror -pedantic -std=gnu++98 code.cpp
-Line_2_did_not_match
-Your file did not match the expected ouput
-Your output did not match what we expected.
+Your file matched the expected output
+Your output matched what we expected
 
-Overall Grade: FAILED
+Overall Grade: PASSED
