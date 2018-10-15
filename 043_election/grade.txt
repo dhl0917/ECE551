@@ -1,11 +1,90 @@
-Grading at 09/30/2018:18:58:53.389745
+Grading at 10/15/2018:19:32:23.137689
 For commit ID c9016bb0e558fe6d388f488c777b734526ca33c4
-[32mfind func state_t  parseLine(const char * line)[0m
-[32mfind func unsigned int countElectoralVotes(state_t * stateData, uint64_t * voteCounts, size_t   nStates)[0m
-[32mfind func void printRecounts(state_t * stateData, uint64_t * voteCounts, size_t nStates)[0m
-[32mfind func void printLargestWin(state_t * stateData, uint64_t * voteCounts, size_t nStates)[0m
-running passed-in stu_imp ./printStates
-[32mSuccessfully compiled .[0m
-now check if there is output in parseLine and countElectoralVotes
-[32mno spurious debug output in parseLine, countElectoralVotes[0m
-Overall Grade: NO GRADE YET
+Good for you: you committed election.h
+election.c exists (good)
+Starting by grading FUNCTIONALITY (90% of grade)
+Attempting to compile election.c
+rm -f *~ printStates printEVotes printRecounts printLargeWin
+gcc -ggdb3 -Wall -Werror -std=gnu99 election.c printStates.o -o printStates
+gcc -ggdb3 -Wall -Werror -std=gnu99 election.c printEVotes.o -o printEVotes
+gcc -ggdb3 -Wall -Werror -std=gnu99 election.c printRecounts.o -o printRecounts
+gcc -ggdb3 -Wall -Werror -std=gnu99 election.c printLargeWin.o -o printLargeWin
+#################################################
+testcase1 of step1:
+testcase1 passed [1/1]
+#################################################
+testcase2 of step1:
+testcase2 passed [1/1]
+#################################################
+testcase3 of step1:
+testcase3 passed [1/1]
+#################################################
+testcase4 of step1:
+testcase4 passed [1/1]
+#################################################
+testcase5 of step1:
+Your file matched the expected output
+testcase5 passed [10/10]
+#################################################
+testcase6 of step1:
+Difficult corner cases
+Line_1_did_not_match
+Your file did not match the expected ouput
+testcase6 failed, your output did not match with the answer [0/6]
+#################################################
+testcase1 of step2:
+Your output is correct [8/8]
+#################################################
+testcase2 of step2:
+Your output is correct [8/8]
+#################################################
+testcase3 of step2:
+Your output is correct [8/8]
+#################################################
+testcase4 of step2:
+Difficult corner cases
+Your output is correct [6/6]
+#################################################
+testcase1 of step3:
+Your output is correct [6/6]
+#################################################
+testcase2 of step3:
+Your output is correct [6/6]
+#################################################
+testcase3 of step3:
+Your output is correct [6/6]
+#################################################
+testcase4 of step3:
+Difficult corner cases
+Your output is correct [2/2]
+#################################################
+testcase1 of step4:
+Your output is correct [8/8]
+#################################################
+testcase2 of step4:
+Your output is correct [8/8]
+#################################################
+testcase3 of step4:
+Your output is correct [8/8]
+#################################################
+testcase4 of step4:
+Difficult corner cases
+Your output is correct [6/6]
+Functionality grade: 94 %
+This counts for 90% so you get 0.9 * 94 => 84.6 points
+--------------------------------------
+Style grade (10% of overall)
+Abstraction of finding a colon:  0 / 2
+Abstraction of converting a string to a number: 2 / 2
+Comments: 1.25 / 2
+Variable naming: 1 / 2
+Other (no global variables, no magic numbers, no strange casts etc)  2 / 2
+The comments from the  TA who graded this were:
+Not enough abstraction in parseline which far longer than1 pages. NO use of library functions for str search (e.g. strchr) or for checking char(e.g. isdigit, isalpha) . Nice try to use atoi but think about what is INT_MAX and maybe strtoull will do a better job? Flag is really a bad name even with comments : (  and the comments is not enough 
+-------------------------------------------------
+Style total 6.25 / 10 
+
+
+Overall grade is 84.6  + 6.25 = 90.85
+
+Overall Grade: 90.85
