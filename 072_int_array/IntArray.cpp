@@ -33,12 +33,12 @@ IntArray & IntArray::operator=(const IntArray & rhs) {
   return *this;
 }
 const int & IntArray::operator[](int index) const {
-  assert(numElements > 0);
+  //  assert(numElements > 0);
   assert(index <= numElements - 1 && index >= 0);
   return data[index];
 }
 int & IntArray::operator[](int index) {
-  assert(numElements > 0);
+  // assert(numElements > 0);
   assert(index <= numElements - 1 && index >= 0);
   return data[index];
 }
@@ -72,6 +72,10 @@ bool IntArray::operator!=(const IntArray & rhs) const {
 }
 
 std::ostream & operator<<(std::ostream & s, const IntArray & rhs) {
+  if (rhs.size() <= 0) {
+    s << "{}";
+    return s;
+  }
   s << "{" << rhs[0];
   for (int i = 1; i < rhs.size(); i++) {
     s << ", " << rhs[i];
