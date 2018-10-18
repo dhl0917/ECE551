@@ -1,0 +1,260 @@
+Grading at 10/18/2018:22:36:54.871451
+For commit ID 865efc68923d38d68bb145ebdac0cb66c41838ea
+Attempting to compile:
+rm -f *.o  *~ intMatrixTest
+#################################################
+testcase1:
+Your output is correct
+  - Valgrind reported errors
+valgrind was not clean
+==126382== Memcheck, a memory error detector
+==126382== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==126382== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==126382== 
+==126382== Parent PID: 126381
+==126382== 
+==126382== 
+==126382== HEAP SUMMARY:
+==126382==     in use at exit: 0 bytes in 1 blocks
+==126382==   total heap usage: 7 allocs, 6 frees, 76,800 bytes allocated
+==126382== 
+==126382== 0 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==126382==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==126382==    by 0x1091B6: IntMatrix::IntMatrix(int, int) (in intMatrixTest)
+==126382==    by 0x10975A: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==126382==    by 0x108FEF: main (in intMatrixTest)
+==126382== 
+==126382== LEAK SUMMARY:
+==126382==    definitely lost: 0 bytes in 1 blocks
+==126382==    indirectly lost: 0 bytes in 0 blocks
+==126382==      possibly lost: 0 bytes in 0 blocks
+==126382==    still reachable: 0 bytes in 0 blocks
+==126382==         suppressed: 0 bytes in 0 blocks
+==126382== 
+==126382== For counts of detected and suppressed errors, rerun with: -v
+==126382== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+#################################################
+testcase2:
+Your output is correct
+  - Valgrind reported errors
+valgrind was not clean
+==126442== Memcheck, a memory error detector
+==126442== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==126442== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==126442== 
+==126442== Parent PID: 126441
+==126442== 
+==126442== 
+==126442== HEAP SUMMARY:
+==126442==     in use at exit: 0 bytes in 1 blocks
+==126442==   total heap usage: 7 allocs, 6 frees, 76,800 bytes allocated
+==126442== 
+==126442== 0 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==126442==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==126442==    by 0x1091B6: IntMatrix::IntMatrix(int, int) (in intMatrixTest)
+==126442==    by 0x10975A: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==126442==    by 0x108FEF: main (in intMatrixTest)
+==126442== 
+==126442== LEAK SUMMARY:
+==126442==    definitely lost: 0 bytes in 1 blocks
+==126442==    indirectly lost: 0 bytes in 0 blocks
+==126442==      possibly lost: 0 bytes in 0 blocks
+==126442==    still reachable: 0 bytes in 0 blocks
+==126442==         suppressed: 0 bytes in 0 blocks
+==126442== 
+==126442== For counts of detected and suppressed errors, rerun with: -v
+==126442== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+#################################################
+testcase3:
+Your output is incorrect
+#################################################
+testcase4:
+Your output is incorrect
+#################################################
+testcase5:
+Your output is correct
+  - Valgrind reported errors
+valgrind was not clean
+==126656== Memcheck, a memory error detector
+==126656== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==126656== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==126656== 
+==126656== Parent PID: 126653
+==126656== 
+==126656== 
+==126656== HEAP SUMMARY:
+==126656==     in use at exit: 240 bytes in 21 blocks
+==126656==   total heap usage: 107 allocs, 86 frees, 78,000 bytes allocated
+==126656== 
+==126656== 240 (80 direct, 160 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 3
+==126656==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==126656==    by 0x1091B6: IntMatrix::IntMatrix(int, int) (in intMatrixTest)
+==126656==    by 0x10975A: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==126656==    by 0x108FEF: main (in intMatrixTest)
+==126656== 
+==126656== LEAK SUMMARY:
+==126656==    definitely lost: 80 bytes in 1 blocks
+==126656==    indirectly lost: 160 bytes in 20 blocks
+==126656==      possibly lost: 0 bytes in 0 blocks
+==126656==    still reachable: 0 bytes in 0 blocks
+==126656==         suppressed: 0 bytes in 0 blocks
+==126656== 
+==126656== For counts of detected and suppressed errors, rerun with: -v
+==126656== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+#################################################
+testcase6:
+Your output is correct
+  - Valgrind reported errors
+valgrind was not clean
+==126714== Memcheck, a memory error detector
+==126714== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==126714== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==126714== 
+==126714== Parent PID: 126713
+==126714== 
+==126714== 
+==126714== HEAP SUMMARY:
+==126714==     in use at exit: 640 bytes in 21 blocks
+==126714==   total heap usage: 107 allocs, 86 frees, 80,000 bytes allocated
+==126714== 
+==126714== 640 (80 direct, 560 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 3
+==126714==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==126714==    by 0x1091B6: IntMatrix::IntMatrix(int, int) (in intMatrixTest)
+==126714==    by 0x10975A: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==126714==    by 0x108FEF: main (in intMatrixTest)
+==126714== 
+==126714== LEAK SUMMARY:
+==126714==    definitely lost: 80 bytes in 1 blocks
+==126714==    indirectly lost: 560 bytes in 20 blocks
+==126714==      possibly lost: 0 bytes in 0 blocks
+==126714==    still reachable: 0 bytes in 0 blocks
+==126714==         suppressed: 0 bytes in 0 blocks
+==126714== 
+==126714== For counts of detected and suppressed errors, rerun with: -v
+==126714== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+#################################################
+testcase7:
+Your output is correct
+  - Valgrind reported errors
+valgrind was not clean
+==126757== Memcheck, a memory error detector
+==126757== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==126757== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==126757== 
+==126757== Parent PID: 126756
+==126757== 
+==126757== 
+==126757== HEAP SUMMARY:
+==126757==     in use at exit: 2,400 bytes in 201 blocks
+==126757==   total heap usage: 1,007 allocs, 806 frees, 88,800 bytes allocated
+==126757== 
+==126757== 2,400 (800 direct, 1,600 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 3
+==126757==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==126757==    by 0x1091B6: IntMatrix::IntMatrix(int, int) (in intMatrixTest)
+==126757==    by 0x10975A: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==126757==    by 0x108FEF: main (in intMatrixTest)
+==126757== 
+==126757== LEAK SUMMARY:
+==126757==    definitely lost: 800 bytes in 1 blocks
+==126757==    indirectly lost: 1,600 bytes in 200 blocks
+==126757==      possibly lost: 0 bytes in 0 blocks
+==126757==    still reachable: 0 bytes in 0 blocks
+==126757==         suppressed: 0 bytes in 0 blocks
+==126757== 
+==126757== For counts of detected and suppressed errors, rerun with: -v
+==126757== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+#################################################
+testcase8:
+Your output is correct
+  - Valgrind reported errors
+valgrind was not clean
+==126813== Memcheck, a memory error detector
+==126813== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==126813== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==126813== 
+==126813== Parent PID: 126812
+==126813== 
+==126813== 
+==126813== HEAP SUMMARY:
+==126813==     in use at exit: 6,400 bytes in 201 blocks
+==126813==   total heap usage: 1,007 allocs, 806 frees, 108,800 bytes allocated
+==126813== 
+==126813== 6,400 (800 direct, 5,600 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 3
+==126813==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==126813==    by 0x1091B6: IntMatrix::IntMatrix(int, int) (in intMatrixTest)
+==126813==    by 0x10975A: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==126813==    by 0x108FEF: main (in intMatrixTest)
+==126813== 
+==126813== LEAK SUMMARY:
+==126813==    definitely lost: 800 bytes in 1 blocks
+==126813==    indirectly lost: 5,600 bytes in 200 blocks
+==126813==      possibly lost: 0 bytes in 0 blocks
+==126813==    still reachable: 0 bytes in 0 blocks
+==126813==         suppressed: 0 bytes in 0 blocks
+==126813== 
+==126813== For counts of detected and suppressed errors, rerun with: -v
+==126813== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+#################################################
+testcase9:
+Your output is correct
+  - Valgrind reported errors
+valgrind was not clean
+==126881== Memcheck, a memory error detector
+==126881== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==126881== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==126881== 
+==126881== Parent PID: 126880
+==126881== 
+==126881== 
+==126881== HEAP SUMMARY:
+==126881==     in use at exit: 24,000 bytes in 2,001 blocks
+==126881==   total heap usage: 10,007 allocs, 8,006 frees, 196,800 bytes allocated
+==126881== 
+==126881== 24,000 (8,000 direct, 16,000 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 3
+==126881==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==126881==    by 0x1091B6: IntMatrix::IntMatrix(int, int) (in intMatrixTest)
+==126881==    by 0x10975A: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==126881==    by 0x108FEF: main (in intMatrixTest)
+==126881== 
+==126881== LEAK SUMMARY:
+==126881==    definitely lost: 8,000 bytes in 1 blocks
+==126881==    indirectly lost: 16,000 bytes in 2,000 blocks
+==126881==      possibly lost: 0 bytes in 0 blocks
+==126881==    still reachable: 0 bytes in 0 blocks
+==126881==         suppressed: 0 bytes in 0 blocks
+==126881== 
+==126881== For counts of detected and suppressed errors, rerun with: -v
+==126881== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+#################################################
+testcase10:
+Your output is correct
+  - Valgrind reported errors
+valgrind was not clean
+==126924== Memcheck, a memory error detector
+==126924== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==126924== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==126924== 
+==126924== Parent PID: 126923
+==126924== 
+==126924== 
+==126924== HEAP SUMMARY:
+==126924==     in use at exit: 64,000 bytes in 2,001 blocks
+==126924==   total heap usage: 10,007 allocs, 8,006 frees, 396,800 bytes allocated
+==126924== 
+==126924== 64,000 (8,000 direct, 56,000 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 3
+==126924==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==126924==    by 0x1091B6: IntMatrix::IntMatrix(int, int) (in intMatrixTest)
+==126924==    by 0x10975A: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==126924==    by 0x108FEF: main (in intMatrixTest)
+==126924== 
+==126924== LEAK SUMMARY:
+==126924==    definitely lost: 8,000 bytes in 1 blocks
+==126924==    indirectly lost: 56,000 bytes in 2,000 blocks
+==126924==      possibly lost: 0 bytes in 0 blocks
+==126924==    still reachable: 0 bytes in 0 blocks
+==126924==         suppressed: 0 bytes in 0 blocks
+==126924== 
+==126924== For counts of detected and suppressed errors, rerun with: -v
+==126924== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+
+Overall Grade: C
