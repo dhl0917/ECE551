@@ -61,7 +61,7 @@ bool IntMatrix::operator==(const IntMatrix & rhs) const {
   }
   for (int i = 0; i < numRows; i++) {
     for (int j = 0; j < numColumns; j++) {
-      if ((*rows[i])[j] != (*rhs.rows[i])[j]) {
+      if ((*this)[i][j] != (rhs[i][j])) {
         return false;
       }
     }
@@ -79,7 +79,7 @@ IntMatrix IntMatrix::operator+(const IntMatrix & rhs) const {
   // }
   for (int i = 0; i < m.numRows; i++) {
     for (int j = 0; j < m.numColumns; j++) {
-      (*m.rows[i])[j] = (*rows[i])[j] + (*rhs.rows[i])[j];
+      m[i][j] = (*this)[i][j] + rhs[i][j];
     }
   }
   return m;
