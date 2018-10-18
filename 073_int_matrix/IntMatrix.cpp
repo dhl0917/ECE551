@@ -91,10 +91,13 @@ std::ostream & operator<<(std::ostream & s, const IntMatrix & rhs) {
     return s;
   }
 
-  s << "[ " << rhs[0] << ",\n";
-  for (int i = 1; i < rhs.getRows() - 1; i++) {
-    s << rhs[i] << ",\n";
+  s << "[ " << rhs[0];
+  for (int i = 1; i < rhs.getRows(); i++) {
+    s << ",\n" << rhs[i];
   }
-  s << rhs[rhs.getRows() - 1] << " ]";
+  //  if (rhs.getRows() - 1 > 0) {
+  // s << rhs[rhs.getRows() - 1];
+  // }
+  s << " ]";
   return s;
 }
