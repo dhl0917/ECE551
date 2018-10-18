@@ -73,10 +73,10 @@ IntMatrix IntMatrix::operator+(const IntMatrix & rhs) const {
   assert(numRows == rhs.numRows);
   assert(numColumns == rhs.numColumns);
   IntMatrix m(numRows, numColumns);
-  m.rows = new IntArray *[m.numRows];
-  for (int i = 0; i < m.numRows; i++) {
-    m.rows[i] = new IntArray(m.numColumns);
-  }
+  // m.rows = new IntArray *[m.numRows];
+  // for (int i = 0; i < m.numRows; i++) {
+  // m.rows[i] = new IntArray(m.numColumns);
+  // }
   for (int i = 0; i < m.numRows; i++) {
     for (int j = 0; j < m.numColumns; j++) {
       (*m.rows[i])[j] = (*rows[i])[j] + (*rhs.rows[i])[j];
@@ -86,7 +86,7 @@ IntMatrix IntMatrix::operator+(const IntMatrix & rhs) const {
 }
 
 std::ostream & operator<<(std::ostream & s, const IntMatrix & rhs) {
-  if (rhs.getRows() <= 0) {
+  if (rhs.getRows() <= 0 || rhs.getColumns() <= 0) {
     s << "[ ]";
     return s;
   }
