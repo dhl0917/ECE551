@@ -86,7 +86,7 @@ IntMatrix IntMatrix::operator+(const IntMatrix & rhs) const {
 }
 
 std::ostream & operator<<(std::ostream & s, const IntMatrix & rhs) {
-  if (rhs.getRows() <= 0 || rhs.getColumns() <= 0) {
+  if (rhs.getRows() <= 0) {
     s << "[ ]";
     return s;
   }
