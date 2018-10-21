@@ -25,7 +25,7 @@ std::vector<std::string> * readFromFile(char * filename) {
   std::ifstream s;
   s.open(filename);
   if (!s) {
-    std::cout << "Fail to open " << filename;
+    std::cerr << "Fail to open " << filename << std::endl;
     exit(EXIT_FAILURE);
   }
   while (std::getline(s, line)) {
