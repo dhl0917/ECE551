@@ -8,6 +8,7 @@ class Expression
   Expression() {}
   virtual std::string toString() const = 0;
   virtual ~Expression() {}
+  virtual long evaluate() const = 0;
 };
 
 class NumExpression : public Expression
@@ -24,6 +25,7 @@ class NumExpression : public Expression
     s >> ss;
     return ss;
   }
+  virtual long evaluate() const { return -100.0; }
   virtual ~NumExpression() {}
 };
 
@@ -32,18 +34,54 @@ class OpExpression : public Expression
  private:
   Expression * left;
   Expression * right;
+  std::string op;
 
  public:
-  OpExpression(Expression * lhs, Expression * rhs) : left(lhs), right(rhs) {}
-  std::string leftToString() const {
-    std::string l = "(" + left->toString();
-    return l;
+  OpExpression(Expression * lhs, Expression * rhs, std::string opSign) :
+      left(lhs),
+      right(rhs),
+      op(opSign) {}
+  virtual std::string toString() const {
+    return "(" + left->toString() + op + right->toString() + ")";
   }
-  std::string rightToString() const {
-    std::string r = right->toString() + ")";
-    return r;
+  virtual long evaluate() const {
+    std::stringstream s;
+    long a = 0.0;
+    long b = 0.0;
+    if (op == " + ") {
+      s << left->toString();
+      s >> a;
+      s.clear();
+      s << right->toString();
+      s >> b;
+      return a + b;
+    }
+    if (op == " - ") {
+      s << left->toString();
+      s >> a;
+      s.clear();
+      s << right->toString();
+      s >> b;
+      return a - b;
+    }
+    if (op == " * ") {
+      s << left->toString();
+      s >> a;
+      s.clear();
+      s << right->toString();
+      s >> b;
+      return a * b;
+    }
+    if (op == " / ") {
+      s << left->toString();
+      s >> a;
+      s.clear();
+      s << right->toString();
+      s >> b;
+      return a / b;
+    }
+    return -50.0;
   }
-
   virtual ~OpExpression() {
     delete left;
     delete right;
@@ -53,31 +91,27 @@ class OpExpression : public Expression
 class PlusExpression : public OpExpression
 {
  public:
-  PlusExpression(Expression * l, Expression * r) : OpExpression(l, r) {}
-  virtual std::string toString() const { return leftToString() + " + " + rightToString(); }
+  PlusExpression(Expression * l, Expression * r) : OpExpression(l, r, " + ") {}
   virtual ~PlusExpression() {}
 };
 
 class MinusExpression : public OpExpression
 {
  public:
-  MinusExpression(Expression * l, Expression * r) : OpExpression(l, r) {}
-  virtual std::string toString() const { return leftToString() + " - " + rightToString(); }
+  MinusExpression(Expression * l, Expression * r) : OpExpression(l, r, " - ") {}
   virtual ~MinusExpression() {}
 };
 
 class TimesExpression : public OpExpression
 {
  public:
-  TimesExpression(Expression * l, Expression * r) : OpExpression(l, r) {}
-  virtual std::string toString() const { return leftToString() + " * " + rightToString(); }
+  TimesExpression(Expression * l, Expression * r) : OpExpression(l, r, " * ") {}
   virtual ~TimesExpression() {}
 };
 
 class DivExpression : public OpExpression
 {
  public:
-  DivExpression(Expression * l, Expression * r) : OpExpression(l, r) {}
-  virtual std::string toString() const { return leftToString() + " / " + rightToString(); }
+  DivExpression(Expression * l, Expression * r) : OpExpression(l, r, " / ") {}
   virtual ~DivExpression() {}
 };
