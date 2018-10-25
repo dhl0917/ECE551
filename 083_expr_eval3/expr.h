@@ -8,7 +8,7 @@ class Expression
   Expression() {}
   virtual std::string toString() const = 0;
   virtual ~Expression() {}
-  virtual long evaluate() const = 0;
+  virtual double evaluate() const = 0;
 };
 
 class NumExpression : public Expression
@@ -25,7 +25,7 @@ class NumExpression : public Expression
     s >> ss;
     return ss;
   }
-  virtual long evaluate() const { return -100.0; }
+  virtual double evaluate() const { return -100.0; }
   virtual ~NumExpression() {}
 };
 
@@ -44,7 +44,7 @@ class OpExpression : public Expression
   virtual std::string toString() const {
     return "(" + left->toString() + op + right->toString() + ")";
   }
-  virtual long evaluate() const {
+  virtual double evaluate() const {
     std::stringstream s;
     long a = 0.0;
     long b = 0.0;
