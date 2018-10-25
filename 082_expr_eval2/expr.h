@@ -32,16 +32,15 @@ class OpExpression : public Expression
  private:
   Expression * left;
   Expression * right;
+  std::string op;
 
  public:
-  OpExpression(Expression * lhs, Expression * rhs) : left(lhs), right(rhs) {}
-  std::string leftToString() const {
-    std::string l = "(" + left->toString();
-    return l;
-  }
-  std::string rightToString() const {
-    std::string r = right->toString() + ")";
-    return r;
+  OpExpression(Expression * lhs, Expression * rhs, std::string opSign) :
+      left(lhs),
+      right(rhs),
+      op(opSign) {}
+  virtual std::string toString() const {
+    return "(" + left->toString() + op + right->toString() + ")";
   }
 
   virtual ~OpExpression() {
@@ -53,31 +52,27 @@ class OpExpression : public Expression
 class PlusExpression : public OpExpression
 {
  public:
-  PlusExpression(Expression * l, Expression * r) : OpExpression(l, r) {}
-  virtual std::string toString() const { return leftToString() + " + " + rightToString(); }
+  PlusExpression(Expression * l, Expression * r) : OpExpression(l, r, " + ") {}
   virtual ~PlusExpression() {}
 };
 
 class MinusExpression : public OpExpression
 {
  public:
-  MinusExpression(Expression * l, Expression * r) : OpExpression(l, r) {}
-  virtual std::string toString() const { return leftToString() + " - " + rightToString(); }
+  MinusExpression(Expression * l, Expression * r) : OpExpression(l, r, " - ") {}
   virtual ~MinusExpression() {}
 };
 
 class TimesExpression : public OpExpression
 {
  public:
-  TimesExpression(Expression * l, Expression * r) : OpExpression(l, r) {}
-  virtual std::string toString() const { return leftToString() + " * " + rightToString(); }
+  TimesExpression(Expression * l, Expression * r) : OpExpression(l, r, " * ") {}
   virtual ~TimesExpression() {}
 };
 
 class DivExpression : public OpExpression
 {
  public:
-  DivExpression(Expression * l, Expression * r) : OpExpression(l, r) {}
-  virtual std::string toString() const { return leftToString() + " / " + rightToString(); }
+  DivExpression(Expression * l, Expression * r) : OpExpression(l, r, " / ") {}
   virtual ~DivExpression() {}
 };
