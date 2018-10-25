@@ -1,0 +1,23 @@
+Grading at 10/25/2018:07:00:54.496039
+For commit ID 35254c127bf9e454ca8b97c21a66962a7a94b081
+Compiling code
+The code compiled.
+---------------------
+Test case 1
+  - Valgrind showed memory leaks
+Valgrind reported errors (test failed).
+---------------------
+Test case 2
+  - Valgrind was clean (no errors, no memory leaks)
+Line_12_did_not_match
+Line_20_did_not_match
+Line_26_did_not_match
+Line_29_did_not_match
+Your file did not match the expected ouput
+Testcase failed 
+---------------------
+Test case 3
+  - Valgrind showed memory leaks
+Valgrind reported errors (test failed).
+
+Overall Grade: F
