@@ -78,7 +78,7 @@ class OpExpression : public Expression
       s.clear();
       s << right->toString();
       s >> b;
-      return a / b;
+      return a / (1.0 * b);
     }
     return -50.0;
   }
