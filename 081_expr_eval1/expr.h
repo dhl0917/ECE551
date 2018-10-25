@@ -35,8 +35,8 @@ class PlusExpression : public Expression
  public:
   PlusExpression(Expression * lhs, Expression * rhs) : lhs(lhs), rhs(rhs) {}
   virtual std::string toString() const {
-    std::string left = lhs->toString();
-    std::string right = rhs->toString();
+    std::string left = "(" + lhs->toString();
+    std::string right = rhs->toString() + ")";
     std::string plus = " + ";
     std::string s = left + plus + right;
     return s;
