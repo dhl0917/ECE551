@@ -6,7 +6,7 @@ c
 c
 f
 g
-c
+e
 b
 d
 a
