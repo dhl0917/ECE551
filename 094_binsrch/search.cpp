@@ -5,7 +5,7 @@
 
 int binarySearchForZero(Function<int, int> * f, int low, int high) {
   int m;
-  while (high >= low) {
+  while (high > low) {
     m = (low + high) / 2;
     int x = f->invoke(m);
     if (x > 0) {
