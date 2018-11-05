@@ -1,0 +1,10 @@
+Grading at 11/05/2018:21:23:06.200883
+For commit ID 0236fca24f1fc2f61efb392b3bb41c5e47022453
+Stripping out any main you may have written, and compiling...
+/tmp/ccEjm8Y1.o: In function `Function<int, int>::Function()':
+/home/ece551db/graderbase/work/hd97.094_binsrch.6GjYeS/function.h:36: multiple definition of `check(Function<int, int>*, int, int, int, char const*)'
+/tmp/ccPF0uBt.o:/home/ece551db/graderbase/work/hd97.094_binsrch.6GjYeS/function.h:36: first defined here
+collect2: error: ld returned 1 exit status
+The code did not compile
+
+Overall Grade: F
