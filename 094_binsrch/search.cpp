@@ -4,8 +4,11 @@
 #include "function.h"
 
 int binarySearchForZero(Function<int, int> * f, int low, int high) {
-  int m = (low + high) / 2;
-  while (high > low) {
+  int m;
+  if (low == high) {
+    return low;
+  }
+  while (high >= low) {
     m = (low + high) / 2;
     int x = f->invoke(m);
     if (x > 0) {
