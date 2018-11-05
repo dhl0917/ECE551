@@ -10,6 +10,7 @@ class Function
   virtual R invoke(A arg) = 0;
   virtual ~Function() {}
 };
+/*
 class CountedIntFn : public Function<int, int>
 {
  protected:
@@ -42,5 +43,5 @@ void check(Function<int, int> * f, int low, int high, int expected_ans, const ch
   }
   delete c;
 }
-
+*/
 #endif
