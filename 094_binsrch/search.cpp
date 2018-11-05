@@ -5,14 +5,15 @@
 
 int binarySearchForZero(Function<int, int> * f, int low, int high) {
   int m;
+  int x;
   if (low == high) {
     return low;
   }
-  while (high >= low) {
+  while (high > low) {
     m = (low + high) / 2;
-    int x = f->invoke(m);
+    x = f->invoke(m);
     if (x > 0) {
-      high = m - 1;
+      high = m;
     }
     else if (x == 0) {
       return m;
@@ -21,7 +22,7 @@ int binarySearchForZero(Function<int, int> * f, int low, int high) {
       low = m + 1;
     }
   }
-  if (m < 0) {
+  if (x < 0) {
     m = m - 1;
   }
   return m;
