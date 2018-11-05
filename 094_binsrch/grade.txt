@@ -1,10 +1,28 @@
-Grading at 11/05/2018:21:23:06.200883
-For commit ID 0236fca24f1fc2f61efb392b3bb41c5e47022453
+Grading at 11/05/2018:21:30:49.961015
+For commit ID 1d16ada5c4b4c982338f3995a31fb14015bb174d
 Stripping out any main you may have written, and compiling...
-/tmp/ccEjm8Y1.o: In function `Function<int, int>::Function()':
-/home/ece551db/graderbase/work/hd97.094_binsrch.6GjYeS/function.h:36: multiple definition of `check(Function<int, int>*, int, int, int, char const*)'
-/tmp/ccPF0uBt.o:/home/ece551db/graderbase/work/hd97.094_binsrch.6GjYeS/function.h:36: first defined here
-collect2: error: ld returned 1 exit status
+newsearch.cpp:6:25: error: ‘Function’ was not declared in this scope
+ int binarySearchForZero(Function<int, int> * f, int low, int high) {
+                         ^~~~~~~~
+newsearch.cpp:6:25: note: suggested alternative: ‘union’
+ int binarySearchForZero(Function<int, int> * f, int low, int high) {
+                         ^~~~~~~~
+                         union
+newsearch.cpp:6:34: error: expected primary-expression before ‘int’
+ int binarySearchForZero(Function<int, int> * f, int low, int high) {
+                                  ^~~
+newsearch.cpp:6:39: error: expected primary-expression before ‘int’
+ int binarySearchForZero(Function<int, int> * f, int low, int high) {
+                                       ^~~
+newsearch.cpp:6:49: error: expected primary-expression before ‘int’
+ int binarySearchForZero(Function<int, int> * f, int low, int high) {
+                                                 ^~~
+newsearch.cpp:6:58: error: expected primary-expression before ‘int’
+ int binarySearchForZero(Function<int, int> * f, int low, int high) {
+                                                          ^~~
+newsearch.cpp:6:66: error: expression list treated as compound expression in initializer [-fpermissive]
+ int binarySearchForZero(Function<int, int> * f, int low, int high) {
+                                                                  ^
 The code did not compile
 
 Overall Grade: F
