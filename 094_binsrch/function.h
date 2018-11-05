@@ -40,6 +40,7 @@ void check(Function<int, int> * f, int low, int high, int expected_ans, const ch
     fprintf(stderr, "Result Error!\n");
     exit(EXIT_FAILURE);
   }
+  delete c;
 }
 
 #endif
