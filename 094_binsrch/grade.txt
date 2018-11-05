@@ -1,28 +1,40 @@
-Grading at 11/05/2018:21:30:49.961015
-For commit ID 1d16ada5c4b4c982338f3995a31fb14015bb174d
+Grading at 11/05/2018:21:32:49.356328
+For commit ID 86e4b75a3246cbdba879ba2d2908805d20fdf2ca
 Stripping out any main you may have written, and compiling...
-newsearch.cpp:6:25: error: ‘Function’ was not declared in this scope
- int binarySearchForZero(Function<int, int> * f, int low, int high) {
-                         ^~~~~~~~
-newsearch.cpp:6:25: note: suggested alternative: ‘union’
- int binarySearchForZero(Function<int, int> * f, int low, int high) {
-                         ^~~~~~~~
-                         union
-newsearch.cpp:6:34: error: expected primary-expression before ‘int’
- int binarySearchForZero(Function<int, int> * f, int low, int high) {
-                                  ^~~
-newsearch.cpp:6:39: error: expected primary-expression before ‘int’
- int binarySearchForZero(Function<int, int> * f, int low, int high) {
-                                       ^~~
-newsearch.cpp:6:49: error: expected primary-expression before ‘int’
- int binarySearchForZero(Function<int, int> * f, int low, int high) {
-                                                 ^~~
-newsearch.cpp:6:58: error: expected primary-expression before ‘int’
- int binarySearchForZero(Function<int, int> * f, int low, int high) {
-                                                          ^~~
-newsearch.cpp:6:66: error: expression list treated as compound expression in initializer [-fpermissive]
- int binarySearchForZero(Function<int, int> * f, int low, int high) {
-                                                                  ^
-The code did not compile
+Testcase 1
+-----------------
+  - Valgrind was clean (no errors, no memory leaks)
+  - You got the wrong result
+  - Test Failed
+Testcase 2
+-----------------
+  - Valgrind was clean (no errors, no memory leaks)
+  - You got the correct result in 14 steps (correct is 15)
+  - Test Passed
+Testcase 3
+-----------------
+  - Valgrind was clean (no errors, no memory leaks)
+  - You got the correct result in 17 steps (correct is 17)
+  - Test Passed
+Testcase 4
+-----------------
+  - Valgrind was clean (no errors, no memory leaks)
+  - You got the correct result in 1 steps (correct is 0)
+  - Test Passed
+Testcase 5
+-----------------
+  - Valgrind was clean (no errors, no memory leaks)
+  - You got the correct result in 1 steps (correct is 0)
+  - Test Passed
+Testcase 6
+-----------------
+  - Valgrind was clean (no errors, no memory leaks)
+  - You got the correct result in 12 steps (correct is 12)
+  - Test Passed
+Testcase 7
+-----------------
+  - Valgrind was clean (no errors, no memory leaks)
+  - You got the wrong result
+  - Test Failed
 
-Overall Grade: F
+Overall Grade: C
