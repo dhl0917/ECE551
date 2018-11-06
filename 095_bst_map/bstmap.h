@@ -101,7 +101,7 @@ class BstMap : public Map<K, V>
           }
           else if ((*curr)->right == NULL) {
             Node * temp = *curr;
-            (*curr) = (*curr)->right;
+            (*curr) = (*curr)->left;
             delete temp;
           }
           else {
