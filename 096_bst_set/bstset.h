@@ -22,7 +22,7 @@ class BstSet : public Set<T>
   BstSet() : root(NULL) {}
   void copyHelper(Node * current) {
     if (current != NULL) {
-      add(current->key, current->value);
+      add(current->key);
       copyHelper(current->left);
       copyHelper(current->right);
     }
