@@ -90,8 +90,9 @@ class BstMap : public Map<K, V>
           }
           (*curr)->key = (*p)->key;
           (*curr)->value = (*p)->value;
-          delete *p;
-          *p = NULL;
+          Node * toFree = *p;
+          *p = (*p)->left;
+          delete toFree;
         }
         else {
           if ((*curr)->left == NULL) {

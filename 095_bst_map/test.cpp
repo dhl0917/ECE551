@@ -42,13 +42,9 @@ void check(void) {
   b.add(20, 20);
   b.add(30, 30);
   b.add(15, 15);
+  b.add(18, 18);
+  b.add(17, 17);
   b.remove(20);
-  BstMap<int, int> p(b);
-  p.add(18, 18);
-  p.add(19, 19);
-  p.add(20, 3);
-  p.remove(20);
-  p.remove(15);
 }
 
 int main() {
