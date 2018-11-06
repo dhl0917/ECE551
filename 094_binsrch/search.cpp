@@ -4,6 +4,7 @@
 #include "function.h"
 
 int binarySearchForZero(Function<int, int> * f, int low, int high) {
+  /*
   int m;
   int x;
   if (low == high) {
@@ -19,11 +20,28 @@ int binarySearchForZero(Function<int, int> * f, int low, int high) {
       return m;
     }
     else {
-      low = m + 1;
+      low = m;
     }
   }
   if (x < 0) {
-    m = m - 1;
+    m -= 1;
   }
   return m;
+  */
+  if (low >= high - 1) {
+    return low;
+  }
+  else {
+    int m = (low + high) / 2;
+    int x = f->invoke(m);
+    if (x == 0) {
+      return m;
+    }
+    else if (x > 0) {
+      return binarySearchForZero(f, low, m);
+    }
+    else {
+      return binarySearchForZero(f, m, high);
+    }
+  }
 }

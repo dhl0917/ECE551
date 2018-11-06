@@ -20,9 +20,9 @@ class Fx1 : public Function<int, int>
 
 int main() {
   Fx * myFx = new Fx();
-  check(myFx, -1, 4, 0, "y=x_1");
+  check(myFx, -100, 100, 0, "y=x_1");
   check(myFx, -5, -1, -2, "y=x_2");
-  check(myFx, 1, 5, 1, "y=x_3");
+  check(myFx, 1, 500, 1, "y=x_3");
   delete myFx;
 
   return EXIT_SUCCESS;
