@@ -1,40 +1,10 @@
-Grading at 11/05/2018:23:28:44.907682
-For commit ID c299b45af33cd47167d81fa9a9d4158a8124dd3a
+Grading at 11/06/2018:01:32:17.958798
+For commit ID a56f779a81e98974ed125c76156923ce7a508f58
 Stripping out any main you may have written, and compiling...
-Testcase 1
------------------
-  - Valgrind was clean (no errors, no memory leaks)
-  - You got the wrong result
-  - Test Failed
-Testcase 2
------------------
-  - Valgrind was clean (no errors, no memory leaks)
-  - You got the correct result in 16 steps (correct is 15)
-  - Test Passed
-Testcase 3
------------------
-  - Valgrind was clean (no errors, no memory leaks)
-  - You got the wrong result
-  - Test Failed
-Testcase 4
------------------
-  - Valgrind was clean (no errors, no memory leaks)
-  - You got the correct result in 0 steps (correct is 0)
-  - Test Passed
-Testcase 5
------------------
-  - Valgrind was clean (no errors, no memory leaks)
-  - You got the correct result in 0 steps (correct is 0)
-  - Test Passed
-Testcase 6
------------------
-  - Valgrind was clean (no errors, no memory leaks)
-  - You got the correct result in 13 steps (correct is 12)
-  - Test Passed
-Testcase 7
------------------
-  - Valgrind was clean (no errors, no memory leaks)
-  - You got the wrong result
-  - Test Failed
+/tmp/ccoOZCPE.o: In function `Function<int, int>::Function()':
+/home/ece551db/graderbase/work/hd97.094_binsrch.EAQfKS/function.h:37: multiple definition of `check(Function<int, int>*, int, int, int, char const*)'
+/tmp/ccjzNydi.o:/home/ece551db/graderbase/work/hd97.094_binsrch.EAQfKS/function.h:37: first defined here
+collect2: error: ld returned 1 exit status
+The code did not compile
 
 Overall Grade: F
