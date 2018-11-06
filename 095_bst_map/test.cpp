@@ -5,14 +5,18 @@
 
 #include "bstmap.h"
 void check(void) {
-  BstMap<int, int> b;
-  /*
-  b.add(1, 2);
-  b.add(2, 10);
-  b.add(3, 8);
-  assert(b.root->right->right->key == 3 && b.root->right->right->value == 8);
-  */
+  BstMap<int, int> b1;
 
+  b1.add(1, 2);
+  b1.add(2, 10);
+  b1.add(3, 8);
+  BstMap<int, int> b;
+  b.add(18, 108);
+  // BstMap<int, int> b(b1);
+  b = b1;
+  assert(b.root->right->right->key == 3 && b.root->right->right->value == 8);
+
+  /*
   assert(b.root != NULL && b.root->key == 1 && b.root->value == 2 && b.root->left == NULL &&
          b.root->right == NULL);
   b.add(0, 0);
@@ -30,6 +34,7 @@ void check(void) {
   b.add(3, 8);
   b.remove(1);
   assert(b.root->left == NULL && b.root->value == 0 && b.root->key == 0);
+  */
 }
 
 int main() {

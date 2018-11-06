@@ -24,6 +24,14 @@ class BstMap : public Map<K, V>
  public:
   Node * root;
   BstMap() : root(NULL) {}
+  void copyHelper(Node * current) {
+    if (current != NULL) {
+      add(current->key, current->value);
+      copyHelper(current->left);
+      copyHelper(current->right);
+    }
+  }
+  BstMap(BstMap & rhs) : root(NULL) { copyHelper(rhs.root); }
   virtual void add(const K & key, const V & value) {
     Node ** curr = &root;
     while (*curr != NULL) {
@@ -39,6 +47,13 @@ class BstMap : public Map<K, V>
       }
     }
     (*curr) = new Node(key, value, NULL, NULL);
+  }
+  BstMap & operator=(BstMap & rhs) {
+    if (this != &rhs) {
+      BstMap temp(rhs);
+      std::swap(root, temp.root);
+    }
+    return *this;
   }
   virtual const V & lookup(const K & key) const throw(std::invalid_argument) {
     Node * const * curr = &root;
