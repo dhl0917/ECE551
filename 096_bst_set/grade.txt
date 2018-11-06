@@ -1,37 +1,25 @@
-Grading at 11/06/2018:14:36:14.133370
-For commit ID 1a2aad1134ec431e9dffec9b5c1002dd3626eccd
+Grading at 11/06/2018:14:38:58.452788
+For commit ID 3f397e532c2a1a38ec448af6e72c5d568e5edb21
 -----------------------------------------------
 testcase 1 : Testing with BstSet<int>
 ...compiling...
-In file included from 90-tester.cpp:1:0:
-bstset.h: In instantiation of ‘void BstSet<T>::copyHelper(BstSet<T>::Node*) [with T = int]’:
-bstset.h:30:49:   required from ‘BstSet<T>::BstSet(BstSet<T>&) [with T = int]’
-90-tester.cpp:92:36:   required from here
-bstset.h:25:34: error: ‘class BstSet<int>::Node’ has no member named ‘value’
-       add(current->key, current->value);
-                         ~~~~~~~~~^~~~~
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 2 : Testing with BstSet<std::string>
 ...compiling...
-In file included from 90-tester.cpp:1:0:
-bstset.h: In instantiation of ‘void BstSet<T>::copyHelper(BstSet<T>::Node*) [with T = std::__cxx11::basic_string<char>]’:
-bstset.h:30:49:   required from ‘BstSet<T>::BstSet(BstSet<T>&) [with T = std::__cxx11::basic_string<char>]’
-90-tester.cpp:92:36:   required from here
-bstset.h:25:34: error: ‘class BstSet<std::__cxx11::basic_string<char> >::Node’ has no member named ‘value’
-       add(current->key, current->value);
-                         ~~~~~~~~~^~~~~
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 3 : Testing with BstSet<(a custom class we wrote)>
 ...compiling...
-In file included from 90-tester.cpp:1:0:
-bstset.h: In instantiation of ‘void BstSet<T>::copyHelper(BstSet<T>::Node*) [with T = Tester]’:
-bstset.h:30:49:   required from ‘BstSet<T>::BstSet(BstSet<T>&) [with T = Tester]’
-90-tester.cpp:92:36:   required from here
-bstset.h:25:34: error: ‘class BstSet<Tester>::Node’ has no member named ‘value’
-       add(current->key, current->value);
-                         ~~~~~~~~~^~~~~
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 
-Overall Grade: F
+Overall Grade: A
