@@ -35,8 +35,8 @@ class HashMap
         std::ifstream s;
         std::hash<std::string> myHash;
         size_t index = 0;
-        size_t counter = 0;
-        size_t primeArray[10] = {3, 7, 13, 29, 61, 127, 251, 499, 997, 2003};
+        // size_t counter = 0;
+        // size_t primeArray[10] = {3, 7, 13, 29, 61, 127, 251, 499, 997, 2003};
         s.open(filename);
         if (!s) {
           std::cerr << "Fail to open " << filename << std::endl;
@@ -45,8 +45,8 @@ class HashMap
         while (std::getline(s, line)) {
           size_t hashValue = myHash(line);
           // hashValue = hashValue % bucketSize;
-          index = index * primeArray[counter % 10] + hashValue;
-          counter += 1;
+          index = index * 29 + hashValue;
+          // counter += 1;
         }
         index = index % ((*temp).size());
         if ((*temp)[index].size() == 0) {
@@ -58,7 +58,7 @@ class HashMap
           // }
         }
         else {
-          std::cout << "#Removing " << filename << "(duplicate of" << std::endl
+          std::cout << "#Removing " << filename << " (duplicate of" << std::endl
                     << (*temp)[index] << ")." << std::endl
                     << std::endl;
           std::cout << "rm " << filename << std::endl << std::endl;
@@ -75,8 +75,8 @@ class HashMap
     std::ifstream s;
     std::hash<std::string> myHash;
     size_t index = 0;
-    size_t counter = 0;
-    size_t primeArray[10] = {3, 7, 13, 29, 61, 127, 251, 499, 997, 2003};
+    // size_t counter = 0;
+    // size_t primeArray[10] = {3, 7, 13, 29, 61, 127, 251, 499, 997, 2003};
     s.open(filename);
     if (!s) {
       std::cerr << "Fail to open " << filename << std::endl;
@@ -85,8 +85,8 @@ class HashMap
     while (std::getline(s, line)) {
       size_t hashValue = myHash(line);
       // hashValue = hashValue % bucketSize;
-      index = index * primeArray[counter % 10] + hashValue;
-      counter += 1;
+      index = index * 29 + hashValue;
+      // counter += 1;
     }
     index = index % bucketSize;
     if ((*table)[index].size() == 0) {
@@ -97,7 +97,7 @@ class HashMap
       }
     }
     else {
-      std::cout << "#Removing " << filename << "(duplicate of" << std::endl
+      std::cout << "#Removing " << filename << " (duplicate of" << std::endl
                 << (*table)[index] << ")." << std::endl
                 << std::endl;
       std::cout << "rm " << filename << std::endl << std::endl;
@@ -111,7 +111,7 @@ void readDir(char * basePath, HashMap & myHashMap) {
   DIR * dir;
   struct dirent * ptr;
   // int i = 0;
-  char base[512];
+  char base[1000];
 
   // pDir = opendir(path);
   // memset(base, '\0', sizeof(base));
