@@ -61,6 +61,7 @@ class HashMap
                 << std::endl;
       std::cout << "rm " << filename << std::endl;
     }
+    s.close();
   }
   ~HashMap() { delete table; }
 };
