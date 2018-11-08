@@ -24,9 +24,51 @@ class HashMap
  public:
   HashMap() : table(new std::vector<std::string>(20)), bucketSize(20), elementNum(0) {}
   double getLoadFactor() { return elementNum / ((1.0) * bucketSize); }
-  void rehash(){
-      //    std::cout << "need rehash" << std::endl;
-      // exit(EXIT_FAILURE);
+  void rehash() {
+    //    std::cout << "need rehash" << std::endl;
+    // exit(EXIT_FAILURE);
+    size_t n = bucketSize;
+    std::vector<std::string> * temp = new std::vector<std::string>(bucketSize * 2);
+    for (size_t i = 0; i < n; i++) {
+      if ((*table)[i].size() != 0) {
+        std::string filename = (*table)[i];
+        std::string line;
+        std::ifstream s;
+        std::hash<std::string> myHash;
+        size_t index = 0;
+        size_t counter = 0;
+        size_t primeArray[10] = {3, 7, 13, 29, 61, 127, 251, 499, 997, 2003};
+        s.open(filename);
+        if (!s) {
+          std::cerr << "Fail to open " << filename << std::endl;
+          exit(EXIT_FAILURE);
+        }
+        while (std::getline(s, line)) {
+          size_t hashValue = myHash(line);
+          // hashValue = hashValue % bucketSize;
+          index = index * primeArray[counter % 10] + hashValue;
+          counter += 1;
+        }
+        index = index % ((*temp).size());
+        if ((*temp)[index].size() == 0) {
+          (*temp)[index] = filename;
+          // elementNum += 1;
+          // if (getLoadFactor() > 0.8) {
+          //std::cout << getLoadFactor() << std::endl;
+          // rehash();  //not implemented yet!
+          // }
+        }
+        else {
+          std::cout << "#Removing " << filename << "(duplicate of" << std::endl
+                    << (*temp)[index] << ")." << std::endl
+                    << std::endl;
+          std::cout << "rm " << filename << std::endl << std::endl;
+        }
+        s.close();
+      }
+    }
+    std::swap(table, temp);
+    delete temp;
   };
   void add(std::string filename) {
     std::string line;
@@ -126,6 +168,7 @@ int main(int argc, char ** argv) {
   }
   */
   HashMap myHashMap;
+  std::cout << "#!/bin/bash" << std::endl;
   for (int i = 1; i < argc; i++) {
     readDir(argv[i], myHashMap);
   }
