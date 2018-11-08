@@ -59,7 +59,7 @@ class HashMap
       std::cout << "#Removing " << filename << "(duplicate of" << std::endl
                 << (*table)[index] << ")." << std::endl
                 << std::endl;
-      std::cout << "rm " << filename << std::endl;
+      std::cout << "rm " << filename << std::endl << std::endl;
     }
     s.close();
   }
@@ -84,14 +84,16 @@ void readDir(char * basePath, HashMap & myHashMap) {
     }
     //file
     else if (ptr->d_type == 8) {
-      myHashMap.add(std::string(basePath) + std::string("/") + std::string(ptr->d_name));
+      myHashMap.add(std::string(basePath) + std::string(ptr->d_name));
     }
     //dir
     else if (ptr->d_type == 4) {
       memset(base, '\0', sizeof(base));
       strcpy(base, basePath);
       strcat(base, "/");
-      strcat(base, ptr->d_name);
+      // strcat(base, ptr->d_name);
+
+      strcat(base, (std::string(basePath) + std::string("/") + std::string(ptr->d_name)).c_str());
       readDir(base, myHashMap);
     }
   }
