@@ -1,4 +1,3 @@
-//#include <io.h>
 #include <dirent.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -67,6 +66,7 @@ class HashMap
         s.close();
       }
     }
+    bucketSize *= 2;
     std::swap(table, temp);
     delete temp;
   };
@@ -93,8 +93,7 @@ class HashMap
       (*table)[index] = filename;
       elementNum += 1;
       if (getLoadFactor() > 0.8) {
-        //std::cout << getLoadFactor() << std::endl;
-        rehash();  //not implemented yet!
+        rehash();
       }
     }
     else {
@@ -126,16 +125,16 @@ void readDir(char * basePath, HashMap & myHashMap) {
     }
     //file
     else if (ptr->d_type == 8) {
-      myHashMap.add(std::string(basePath) + std::string(ptr->d_name));
+      myHashMap.add(std::string(basePath) + std::string("/") + std::string(ptr->d_name));
     }
     //dir
     else if (ptr->d_type == 4) {
       memset(base, '\0', sizeof(base));
       strcpy(base, basePath);
       strcat(base, "/");
-      // strcat(base, ptr->d_name);
+      strcat(base, (ptr->d_name));
 
-      strcat(base, (std::string(basePath) + std::string("/") + std::string(ptr->d_name)).c_str());
+      // strcat(base, (std::string(basePath) + std::string("/") + std::string(ptr->d_name)).c_str());
       readDir(base, myHashMap);
     }
   }
@@ -147,26 +146,7 @@ int main(int argc, char ** argv) {
     std::cerr << "Not enough arguments!\n" << std::endl;
     exit(EXIT_FAILURE);
   }
-  /*
-  std::vector<std::string> v;
-  for (int i = 1; i < argc; i++) {
-    v.push_back(argv[i]);
-  }
-  */
-  /*
-  std::string s("This is a test string");
-  std::hash<std::string> myHash;
-  size_t hashValue = myHash(s);
-  std::cout << hashValue << std::endl;
-  std::pair<std::string, size_t> p(s, hashValue);
-  std::cout << p.first << std::endl;
-  std::cout << p.second << std::endl;
-  std::string ss("This is a test string");
-  size_t hashValue2 = myHash(ss);
-  if (hashValue == hashValue2) {
-    std::cout << "rm ss" << std::endl;
-  }
-  */
+
   HashMap myHashMap;
   std::cout << "#!/bin/bash" << std::endl;
   for (int i = 1; i < argc; i++) {
