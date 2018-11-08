@@ -1,5 +1,5 @@
-Grading at 11/08/2018:04:05:11.468049
-For commit ID 03366bfe015730e66ca462d6018d4c854a8d9f70
+Grading at 11/08/2018:04:16:09.347937
+For commit ID 3be56f2ffd9b116b6df96683a39414f0f94e6aa1
 Running make
 g++ -o dedup -Werror -Wall -pedantic -std=gnu++11 dedup.cpp
 Found executable dedup
@@ -8,498 +8,474 @@ testcase 1 : ./dedup /var/dedup/d000
   - Valgrind was clean (no errors, no memory leaks)
 Checking output:
 **Testcase failed **
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file6
-Expected: # but found /var/dedup/d000/file7).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file13
-Expected: # but found /var/dedup/d000/file2).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file17
-Expected: # but found /var/dedup/d000/file12).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file21
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file5
+Expected: # but found /var/dedup/d000/file1).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file10
 Expected: # but found /var/dedup/d000/file8).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file23
-Expected: # but found /var/dedup/d000/file18).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file26
-Expected: # but found /var/dedup/d000/file15).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file28
-Expected: # but found /var/dedup/d000/file4).
-Expected: ( but found of
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file14
+Expected: # but found /var/dedup/d000/file2).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file17
+Expected: # but found /var/dedup/d000/file6).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file22
+Expected: # but found /var/dedup/d000/file6).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file24
+Expected: # but found /var/dedup/d000/file11).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file27
+Expected: # but found /var/dedup/d000/file25).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file40
 Expected: # but found /var/dedup/d000/file15).
-Expected: ( but found of
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file42
-Expected: # but found /var/dedup/d000/file14).
-Expected: ( but found of
+Expected: # but found /var/dedup/d000/file12).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file44
-Expected: # but found /var/dedup/d000/file15).
-Expected: ( but found of
+Expected: # but found /var/dedup/d000/file25).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file46
-Expected: # but found /var/dedup/d000/file14).
-Expected: ( but found of
+Expected: # but found /var/dedup/d000/file1).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file50
-Expected: # but found /var/dedup/d000/file14).
-Expected: ( but found of
+Expected: # but found /var/dedup/d000/file11).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file52
-Expected: # but found /var/dedup/d000/file48).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file54
-Expected: # but found /var/dedup/d000/file7).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file56
-Expected: # but found /var/dedup/d000/file4).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file61
-Expected: # but found /var/dedup/d000/file24).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file65
-Expected: # but found /var/dedup/d000/file15).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file69
-Expected: # but found /var/dedup/d000/file1).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file72
+Expected: # but found /var/dedup/d000/file8).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file55
+Expected: # but found /var/dedup/d000/file25).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file59
 Expected: # but found /var/dedup/d000/file18).
-Expected: ( but found of
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file64
+Expected: # but found /var/dedup/d000/file56).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file66
+Expected: # but found /var/dedup/d000/file70).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file74
+Expected: # but found /var/dedup/d000/file4).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file77
-Expected: # but found /var/dedup/d000/file48).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file80
-Expected: # but found /var/dedup/d000/file70).
-Expected: ( but found of
+Expected: # but found /var/dedup/d000/file28).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file79
+Expected: # but found /var/dedup/d000/file54).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file82
-Expected: # but found /var/dedup/d000/file19).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file85
-Expected: # but found /var/dedup/d000/file64).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file88
-Expected: # but found /var/dedup/d000/file83).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file90
-Expected: # but found /var/dedup/d000/file49).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file92
+Expected: # but found /var/dedup/d000/file28).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file84
+Expected: # but found /var/dedup/d000/file28).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file87
+Expected: # but found /var/dedup/d000/file62).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file89
 Expected: # but found /var/dedup/d000/file18).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file94
-Expected: # but found /var/dedup/d000/file83).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file96
-Expected: # but found /var/dedup/d000/file59).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file98
-Expected: # but found /var/dedup/d000/file75).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file101
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file93
 Expected: # but found /var/dedup/d000/file12).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file103
-Expected: # but found /var/dedup/d000/file11).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file106
-Expected: # but found /var/dedup/d000/file19).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file111
-Expected: # but found /var/dedup/d000/file73).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file119
-Expected: # but found /var/dedup/d000/file59).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file124
-Expected: # but found /var/dedup/d000/file108).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file126
-Expected: # but found /var/dedup/d000/file64).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file128
-Expected: # but found /var/dedup/d000/file104).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file131
-Expected: # but found /var/dedup/d000/file87).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file135
-Expected: # but found /var/dedup/d000/file134).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file140
-Expected: # but found /var/dedup/d000/file15).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file143
-Expected: # but found /var/dedup/d000/file70).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file146
-Expected: # but found /var/dedup/d000/file117).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file149
-Expected: # but found /var/dedup/d000/file15).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file152
-Expected: # but found /var/dedup/d000/file115).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file155
-Expected: # but found /var/dedup/d000/file156).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file159
-Expected: # but found /var/dedup/d000/file137).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file162
-Expected: # but found /var/dedup/d000/file151).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file165
-Expected: # but found /var/dedup/d000/file15).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file1
-Expected: # but found /var/dedup/d000/file83).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file4
-Expected: # but found /var/dedup/d000/file60).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file7
-Expected: # but found /var/dedup/d000/file115).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file9
-Expected: # but found /var/dedup/d000/file87).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file11
-Expected: # but found /var/dedup/d000/file18).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file13
-Expected: # but found /var/dedup/d000/file99).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file15
-Expected: # but found /var/dedup/d000/file18).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file17
-Expected: # but found /var/dedup/d000/file134).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file21
-Expected: # but found /var/dedup/d000/file15).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file23
-Expected: # but found /var/dedup/d000/file15).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file26
-Expected: # but found /var/dedup/d000/file151).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file28
-Expected: # but found /var/dedup/d000/file1).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file30
-Expected: # but found /var/dedup/d000/file8).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file32
-Expected: # but found /var/dedup/d000/x/file3).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file34
-Expected: # but found /var/dedup/d000/file122).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file36
-Expected: # but found /var/dedup/d000/file12).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file38
-Expected: # but found /var/dedup/d000/file83).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file44
-Expected: # but found /var/dedup/d000/file148).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/file46
-Expected: # but found /var/dedup/d000/file158).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file1
-Expected: # but found /var/dedup/d000/file122).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file3
-Expected: # but found /var/dedup/d000/file118).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file7
-Expected: # but found /var/dedup/d000/x/file43).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file9
-Expected: # but found /var/dedup/d000/file64).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file11
-Expected: # but found /var/dedup/d000/file117).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file13
-Expected: # but found /var/dedup/d000/x/file43).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file18
-Expected: # but found /var/dedup/d000/file112).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file24
-Expected: # but found /var/dedup/d000/file7).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file26
-Expected: # but found /var/dedup/d000/file59).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file28
-Expected: # but found /var/dedup/d000/x/file19).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file31
-Expected: # but found /var/dedup/d000/file134).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file34
-Expected: # but found /var/dedup/d000/x/y/file21).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file36
-Expected: # but found /var/dedup/d000/x/y/file21).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file38
-Expected: # but found /var/dedup/d000/file153).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file40
-Expected: # but found /var/dedup/d000/file144).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file42
-Expected: # but found /var/dedup/d000/file122).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file44
-Expected: # but found /var/dedup/d000/x/file43).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file46
-Expected: # but found /var/dedup/d000/file107).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/x/y/file48
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file95
 Expected: # but found /var/dedup/d000/file48).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file168
-Expected: # but found /var/dedup/d000/x/file3).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file172
-Expected: # but found /var/dedup/d000/x/y/file16).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file175
-Expected: # but found /var/dedup/d000/file120).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file180
-Expected: # but found /var/dedup/d000/file148).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file183
-Expected: # but found /var/dedup/d000/file99).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file186
-Expected: # but found /var/dedup/d000/file11).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file189
-Expected: # but found /var/dedup/d000/x/y/file5).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file191
-Expected: # but found /var/dedup/d000/x/file19).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file195
-Expected: # but found /var/dedup/d000/file87).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file198
-Expected: # but found /var/dedup/d000/x/y/file19).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file202
-Expected: # but found /var/dedup/d000/file78).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file204
-Expected: # but found /var/dedup/d000/file115).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file207
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file99
+Expected: # but found /var/dedup/d000/file57).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file103
+Expected: # but found /var/dedup/d000/file1).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file105
+Expected: # but found /var/dedup/d000/file1).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file109
+Expected: # but found /var/dedup/d000/file18).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file113
 Expected: # but found /var/dedup/d000/file70).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file209
-Expected: # but found /var/dedup/d000/x/file49).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file211
-Expected: # but found /var/dedup/d000/file59).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file213
-Expected: # but found /var/dedup/d000/x/y/file50).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file215
-Expected: # but found /var/dedup/d000/file59).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file217
-Expected: # but found /var/dedup/d000/file99).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file219
-Expected: # but found /var/dedup/d000/x/y/file19).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file223
-Expected: # but found /var/dedup/d000/x/file49).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file226
-Expected: # but found /var/dedup/d000/file8).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file229
-Expected: # but found /var/dedup/d000/file142).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file231
-Expected: # but found /var/dedup/d000/x/file3).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file233
-Expected: # but found /var/dedup/d000/file4).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file238
-Expected: # but found /var/dedup/d000/x/y/file16).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file241
-Expected: # but found /var/dedup/d000/file78).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file243
-Expected: # but found /var/dedup/d000/file158).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file245
-Expected: # but found /var/dedup/d000/x/y/file17).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file247
-Expected: # but found /var/dedup/d000/file8).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file250
-Expected: # but found /var/dedup/d000/file14).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file253
-Expected: # but found /var/dedup/d000/x/y/file21).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file256
-Expected: # but found /var/dedup/d000/x/file47).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file259
-Expected: # but found /var/dedup/d000/file144).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file261
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file119
+Expected: # but found /var/dedup/d000/file11).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file122
+Expected: # but found /var/dedup/d000/file56).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file126
+Expected: # but found /var/dedup/d000/file116).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file132
+Expected: # but found /var/dedup/d000/file76).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file134
+Expected: # but found /var/dedup/d000/file106).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file138
+Expected: # but found /var/dedup/d000/file136).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file140
 Expected: # but found /var/dedup/d000/file137).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file264
-Expected: # but found /var/dedup/d000/x/file3).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file268
-Expected: # but found /var/dedup/d000/file179).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file270
-Expected: # but found /var/dedup/d000/file64).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file273
-Expected: # but found /var/dedup/d000/x/file25).
-Expected: ( but found of
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file142
+Expected: # but found /var/dedup/d000/file60).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file144
+Expected: # but found /var/dedup/d000/file106).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file148
+Expected: # but found /var/dedup/d000/file68).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file151
+Expected: # but found /var/dedup/d000/file114).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file153
+Expected: # but found /var/dedup/d000/file57).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file155
+Expected: # but found /var/dedup/d000/file91).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file158
+Expected: # but found /var/dedup/d000/file18).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file160
+Expected: # but found /var/dedup/d000/file102).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file164
+Expected: # but found /var/dedup/d000/file19).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file1
+Expected: # but found /var/dedup/d000/file85).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file3
+Expected: # but found /var/dedup/d000/file70).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file6
+Expected: # but found /var/dedup/d000/file112).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file9
+Expected: # but found /var/dedup/d000/file161).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file12
+Expected: # but found /var/dedup/d000/file68).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file14
+Expected: # but found /var/dedup/d000/file114).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file16
+Expected: # but found /var/dedup/d000/file71).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file18
+Expected: # but found /var/dedup/d000/file145).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file20
+Expected: # but found /var/dedup/d000/file47).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file22
+Expected: # but found /var/dedup/d000/file161).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file24
+Expected: # but found /var/dedup/d000/file101).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file26
+Expected: # but found /var/dedup/d000/file6).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file28
+Expected: # but found /var/dedup/d000/file6).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file30
+Expected: # but found /var/dedup/d000/file85).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file34
+Expected: # but found /var/dedup/d000/file28).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file37
+Expected: # but found /var/dedup/d000/file117).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file39
+Expected: # but found /var/dedup/d000/file146).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file46
+Expected: # but found /var/dedup/d000/file6).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/file49
+Expected: # but found /var/dedup/d000/file97).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file2
+Expected: # but found /var/dedup/d000/file121).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file6
+Expected: # but found /var/dedup/d000/file47).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file8
+Expected: # but found /var/dedup/d000/x/file35).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file10
+Expected: # but found /var/dedup/d000/file117).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file13
+Expected: # but found /var/dedup/d000/file130).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file15
+Expected: # but found /var/dedup/d000/file11).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file21
+Expected: # but found /var/dedup/d000/x/file35).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file23
+Expected: # but found /var/dedup/d000/x/file7).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file27
+Expected: # but found /var/dedup/d000/x/file5).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file30
+Expected: # but found /var/dedup/d000/x/y/file5).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file32
+Expected: # but found /var/dedup/d000/file57).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file34
+Expected: # but found /var/dedup/d000/x/y/file5).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file36
+Expected: # but found /var/dedup/d000/x/y/file5).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file38
+Expected: # but found /var/dedup/d000/file116).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file41
+Expected: # but found /var/dedup/d000/x/file31).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file43
+Expected: # but found /var/dedup/d000/file91).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file45
+Expected: # but found /var/dedup/d000/x/y/file11).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file47
+Expected: # but found /var/dedup/d000/file117).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/x/y/file49
+Expected: # but found /var/dedup/d000/file146).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file168
+Expected: # but found /var/dedup/d000/x/file33).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file171
+Expected: # but found /var/dedup/d000/x/y/file40).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file173
+Expected: # but found /var/dedup/d000/x/y/file17).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file176
+Expected: # but found /var/dedup/d000/x/y/file11).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file178
+Expected: # but found /var/dedup/d000/x/file45).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file183
+Expected: # but found /var/dedup/d000/file136).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file186
+Expected: # but found /var/dedup/d000/file116).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file188
+Expected: # but found /var/dedup/d000/file137).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file192
+Expected: # but found /var/dedup/d000/file110).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file195
+Expected: # but found /var/dedup/d000/file68).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file199
+Expected: # but found /var/dedup/d000/file70).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file202
+Expected: # but found /var/dedup/d000/file190).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file205
+Expected: # but found /var/dedup/d000/file203).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file207
+Expected: # but found /var/dedup/d000/file123).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file209
+Expected: # but found /var/dedup/d000/file150).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file212
+Expected: # but found /var/dedup/d000/x/y/file50).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file216
+Expected: # but found /var/dedup/d000/x/file10).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file220
+Expected: # but found /var/dedup/d000/file73).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file223
+Expected: # but found /var/dedup/d000/file91).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file226
+Expected: # but found /var/dedup/d000/file117).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file228
+Expected: # but found /var/dedup/d000/file92).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file230
+Expected: # but found /var/dedup/d000/file165).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file232
+Expected: # but found /var/dedup/d000/x/y/file5).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file235
+Expected: # but found /var/dedup/d000/file67).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file237
+Expected: # but found /var/dedup/d000/x/y/file11).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file241
+Expected: # but found /var/dedup/d000/file47).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file243
+Expected: # but found /var/dedup/d000/file146).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file245
+Expected: # but found /var/dedup/d000/file67).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file247
+Expected: # but found /var/dedup/d000/x/y/file20).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file250
+Expected: # but found /var/dedup/d000/file117).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file253
+Expected: # but found /var/dedup/d000/x/file42).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file255
+Expected: # but found /var/dedup/d000/file165).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file260
+Expected: # but found /var/dedup/d000/x/y/file1).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file262
+Expected: # but found /var/dedup/d000/x/file45).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file265
+Expected: # but found /var/dedup/d000/file136).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file267
+Expected: # but found /var/dedup/d000/file69).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file269
+Expected: # but found /var/dedup/d000/file249).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file272
+Expected: # but found /var/dedup/d000/x/y/file20).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file275
-Expected: # but found /var/dedup/d000/file228).
-Expected: ( but found of
+Expected: # but found /var/dedup/d000/x/y/file24).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file277
-Expected: # but found /var/dedup/d000/x/file48).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file279
-Expected: # but found /var/dedup/d000/file78).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file281
-Expected: # but found /var/dedup/d000/file107).
-Expected: ( but found of
+Expected: # but found /var/dedup/d000/x/y/file4).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file280
+Expected: # but found /var/dedup/d000/x/y/file26).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file284
-Expected: # but found /var/dedup/d000/file176).
-Expected: ( but found of
+Expected: # but found /var/dedup/d000/file47).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file286
-Expected: # but found /var/dedup/d000/file194).
-Expected: ( but found of
+Expected: # but found /var/dedup/d000/file6).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file288
+Expected: # but found /var/dedup/d000/x/y/file16).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file290
-Expected: # but found /var/dedup/d000/file109).
-Expected: ( but found of
+Expected: # but found /var/dedup/d000/file80).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file294
-Expected: # but found /var/dedup/d000/x/y/file21).
-Expected: ( but found of
+Expected: # but found /var/dedup/d000/file76).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file296
 Expected: # but found /var/dedup/d000/x/file48).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file299
-Expected: # but found /var/dedup/d000/file83).
-Expected: ( but found of
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file298
+Expected: # but found /var/dedup/d000/file224).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file401
-Expected: # but found /var/dedup/d000/file114).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file403
-Expected: # but found /var/dedup/d000/file153).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file407
-Expected: # but found /var/dedup/d000/file59).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file409
-Expected: # but found /var/dedup/d000/file8).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file411
-Expected: # but found /var/dedup/d000/file151).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file413
-Expected: # but found /var/dedup/d000/file174).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file415
-Expected: # but found /var/dedup/d000/file15).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file417
-Expected: # but found /var/dedup/d000/file239).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file419
-Expected: # but found /var/dedup/d000/file194).
-Expected: ( but found of
+Expected: # but found /var/dedup/d000/file18).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file405
+Expected: # but found /var/dedup/d000/file224).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file408
+Expected: # but found /var/dedup/d000/file191).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file412
+Expected: # but found /var/dedup/d000/x/file33).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file414
+Expected: # but found /var/dedup/d000/file263).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file421
-Expected: # but found /var/dedup/d000/x/file41).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file423
-Expected: # but found /var/dedup/d000/x/y/file5).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file427
-Expected: # but found /var/dedup/d000/file293).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file430
-Expected: # but found /var/dedup/d000/x/y/file5).
-Expected: ( but found of
+Expected: # but found /var/dedup/d000/file165).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file432
-Expected: # but found /var/dedup/d000/file24).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file435
-Expected: # but found /var/dedup/d000/file254).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file443
-Expected: # but found /var/dedup/d000/file179).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file446
-Expected: # but found /var/dedup/d000/file176).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file459
-Expected: # but found /var/dedup/d000/file200).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file461
-Expected: # but found /var/dedup/d000/file457).
-Expected: ( but found of
+Expected: # but found /var/dedup/d000/file203).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file436
+Expected: # but found /var/dedup/d000/file434).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file448
+Expected: # but found /var/dedup/d000/file124).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file450
+Expected: # but found /var/dedup/d000/x/file35).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file454
+Expected: # but found /var/dedup/d000/x/y/file5).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file456
+Expected: # but found /var/dedup/d000/file76).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file462
+Expected: # but found /var/dedup/d000/file145).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file464
-Expected: # but found /var/dedup/d000/x/file48).
-Expected: ( but found of
+Expected: # but found /var/dedup/d000/file252).
+Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file466
-Expected: # but found /var/dedup/d000/file167).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file468
-Expected: # but found /var/dedup/d000/file239).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file473
-Expected: # but found /var/dedup/d000/file74).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file480
-Expected: # but found /var/dedup/d000/file136).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file483
-Expected: # but found /var/dedup/d000/x/y/file16).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file485
-Expected: # but found /var/dedup/d000/file167).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file488
-Expected: # but found /var/dedup/d000/file1).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file490
+Expected: # but found /var/dedup/d000/file299).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file475
+Expected: # but found /var/dedup/d000/file11).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file479
+Expected: # but found /var/dedup/d000/file203).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file487
+Expected: # but found /var/dedup/d000/file299).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file489
+Expected: # but found /var/dedup/d000/file56).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file491
 Expected: # but found /var/dedup/d000/file451).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file496
-Expected: # but found /var/dedup/d000/file60).
-Expected: ( but found of
-Expected: # but found rm /var/dedup/d000/file498
-Expected: # but found /var/dedup/d000/file185).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file495
+Expected: # but found /var/dedup/d000/file283).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file497
+Expected: # but found /var/dedup/d000/file201).
+Expected: ) but found 
+Expected: # but found rm /var/dedup/d000/file499
+Expected: # but found /var/dedup/d000/file469).
 These groupings were incorrect:
   Expected all but one of:
     /var/dedup/d000/file103
@@ -1370,289 +1346,289 @@ These groupings were incorrect:
 testcase 2 : ./dedup /var/dedup/d001
   - Valgrind showed memory leaks
 Valgrind reported errors (test failed).
-==27911== Memcheck, a memory error detector
-==27911== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==27911== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
-==27911== Command: ./dedup /var/dedup/d001
-==27911== Parent PID: 27908
-==27911== 
-==27911== 
-==27911== Process terminating with default action of signal 13 (SIGPIPE)
-==27911==    at 0x54F2154: write (write.c:27)
-==27911==    by 0x546D1BC: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1203)
-==27911==    by 0x546EF50: new_do_write (fileops.c:457)
-==27911==    by 0x546EF50: _IO_do_write@@GLIBC_2.2.5 (fileops.c:433)
-==27911==    by 0x546C787: _IO_file_sync@@GLIBC_2.2.5 (fileops.c:813)
-==27911==    by 0x546087C: fflush (iofflush.c:40)
-==27911==    by 0x4F52761: std::ostream::flush() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27911==    by 0x10A96C: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911== 
-==27911== HEAP SUMMARY:
-==27911==     in use at exit: 75,871 bytes in 446 blocks
-==27911==   total heap usage: 6,077 allocs, 5,631 frees, 13,815,101 bytes allocated
-==27911== 
-==27911== 24 bytes in 1 blocks are still reachable in loss record 1 of 9
-==27911==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27911==    by 0x10A069: HashMap::rehash() (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x10A866: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911== 
-==27911== 31 bytes in 1 blocks are still reachable in loss record 2 of 9
-==27911==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27911==    by 0x4F64DBE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27911==    by 0x4F664BA: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27911==    by 0x10AAC1: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109ABB: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911== 
-==27911== 190 bytes in 6 blocks are still reachable in loss record 3 of 9
-==27911==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27911==    by 0x4F64CFE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27911==    by 0x4F6506C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27911==    by 0x10A81B: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911== 
-==27911== 552 bytes in 1 blocks are still reachable in loss record 4 of 9
-==27911==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27911==    by 0x5460E49: __fopen_internal (iofopen.c:65)
-==27911==    by 0x5460E49: fopen@@GLIBC_2.2.5 (iofopen.c:89)
-==27911==    by 0x4EF09E3: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27911==    by 0x4F32B6D: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27911==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27911==    by 0x10A686: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911== 
-==27911== 5,487 bytes in 177 blocks are still reachable in loss record 5 of 9
-==27911==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27911==    by 0x4F64CFE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27911==    by 0x4F6506C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27911==    by 0x10A81B: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911== 
-==27911== 8,099 bytes in 257 blocks are still reachable in loss record 6 of 9
-==27911==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27911==    by 0x4F64CFE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27911==    by 0x4F6506C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27911==    by 0x10A372: HashMap::rehash() (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x10A866: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911== 
-==27911== 8,192 bytes in 1 blocks are still reachable in loss record 7 of 9
-==27911==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27911==    by 0x4F2E91F: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27911==    by 0x4F32B85: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27911==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27911==    by 0x10A686: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911== 
-==27911== 20,480 bytes in 1 blocks are still reachable in loss record 8 of 9
-==27911==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27911==    by 0x10B117: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x10B050: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x10AF73: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x10AE68: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_storage(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x10AD0C: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Vector_base(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x10AB4B: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x10A088: HashMap::rehash() (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x10A866: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911== 
-==27911== 32,816 bytes in 1 blocks are still reachable in loss record 9 of 9
-==27911==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27911==    by 0x54C19B5: __alloc_dir (opendir.c:216)
-==27911==    by 0x54C19B5: opendir_tail (opendir.c:136)
-==27911==    by 0x54C19B5: opendir (opendir.c:190)
-==27911==    by 0x109921: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27911== 
-==27911== LEAK SUMMARY:
-==27911==    definitely lost: 0 bytes in 0 blocks
-==27911==    indirectly lost: 0 bytes in 0 blocks
-==27911==      possibly lost: 0 bytes in 0 blocks
-==27911==    still reachable: 75,871 bytes in 446 blocks
-==27911==         suppressed: 0 bytes in 0 blocks
-==27911== 
-==27911== For counts of detected and suppressed errors, rerun with: -v
-==27911== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==44124== Memcheck, a memory error detector
+==44124== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==44124== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==44124== Command: ./dedup /var/dedup/d001
+==44124== Parent PID: 44122
+==44124== 
+==44124== 
+==44124== Process terminating with default action of signal 13 (SIGPIPE)
+==44124==    at 0x54F2154: write (write.c:27)
+==44124==    by 0x546D1BC: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1203)
+==44124==    by 0x546EF50: new_do_write (fileops.c:457)
+==44124==    by 0x546EF50: _IO_do_write@@GLIBC_2.2.5 (fileops.c:433)
+==44124==    by 0x546C787: _IO_file_sync@@GLIBC_2.2.5 (fileops.c:813)
+==44124==    by 0x546087C: fflush (iofflush.c:40)
+==44124==    by 0x4F52761: std::ostream::flush() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44124==    by 0x10A75E: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124== 
+==44124== HEAP SUMMARY:
+==44124==     in use at exit: 75,871 bytes in 446 blocks
+==44124==   total heap usage: 6,080 allocs, 5,634 frees, 13,823,876 bytes allocated
+==44124== 
+==44124== 24 bytes in 1 blocks are still reachable in loss record 1 of 9
+==44124==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44124==    by 0x10A069: HashMap::rehash() (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x10A70D: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124== 
+==44124== 31 bytes in 1 blocks are still reachable in loss record 2 of 9
+==44124==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44124==    by 0x4F64DBE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44124==    by 0x4F664BA: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44124==    by 0x10A969: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109ABB: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124== 
+==44124== 190 bytes in 6 blocks are still reachable in loss record 3 of 9
+==44124==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44124==    by 0x4F64CFE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44124==    by 0x4F6506C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44124==    by 0x10A6C2: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124== 
+==44124== 552 bytes in 1 blocks are still reachable in loss record 4 of 9
+==44124==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44124==    by 0x5460E49: __fopen_internal (iofopen.c:65)
+==44124==    by 0x5460E49: fopen@@GLIBC_2.2.5 (iofopen.c:89)
+==44124==    by 0x4EF09E3: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44124==    by 0x4F32B6D: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44124==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44124==    by 0x10A561: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124== 
+==44124== 5,487 bytes in 177 blocks are still reachable in loss record 5 of 9
+==44124==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44124==    by 0x4F64CFE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44124==    by 0x4F6506C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44124==    by 0x10A6C2: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124== 
+==44124== 8,099 bytes in 257 blocks are still reachable in loss record 6 of 9
+==44124==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44124==    by 0x4F64CFE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44124==    by 0x4F6506C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44124==    by 0x10A2C5: HashMap::rehash() (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x10A70D: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124== 
+==44124== 8,192 bytes in 1 blocks are still reachable in loss record 7 of 9
+==44124==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44124==    by 0x4F2E91F: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44124==    by 0x4F32B85: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44124==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44124==    by 0x10A561: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124== 
+==44124== 20,480 bytes in 1 blocks are still reachable in loss record 8 of 9
+==44124==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44124==    by 0x10AFBF: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x10AEF8: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x10AE1B: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x10AD10: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_storage(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x10ABB4: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Vector_base(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x10A9F3: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x10A088: HashMap::rehash() (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x10A70D: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124== 
+==44124== 32,816 bytes in 1 blocks are still reachable in loss record 9 of 9
+==44124==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44124==    by 0x54C19B5: __alloc_dir (opendir.c:216)
+==44124==    by 0x54C19B5: opendir_tail (opendir.c:136)
+==44124==    by 0x54C19B5: opendir (opendir.c:190)
+==44124==    by 0x109921: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44124== 
+==44124== LEAK SUMMARY:
+==44124==    definitely lost: 0 bytes in 0 blocks
+==44124==    indirectly lost: 0 bytes in 0 blocks
+==44124==      possibly lost: 0 bytes in 0 blocks
+==44124==    still reachable: 75,871 bytes in 446 blocks
+==44124==         suppressed: 0 bytes in 0 blocks
+==44124== 
+==44124== For counts of detected and suppressed errors, rerun with: -v
+==44124== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 -----------------------------------------------
 testcase 3 : ./dedup /var/dedup/*
   - Valgrind showed memory leaks
 Valgrind reported errors (test failed).
-==27949== Memcheck, a memory error detector
-==27949== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==27949== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
-==27949== Command: ./dedup /var/dedup/d000 /var/dedup/d001 /var/dedup/d002 /var/dedup/d003 /var/dedup/d004 /var/dedup/d005 /var/dedup/d006 /var/dedup/d007 /var/dedup/d008 /var/dedup/d009
-==27949== Parent PID: 27947
-==27949== 
-==27949== 
-==27949== Process terminating with default action of signal 13 (SIGPIPE)
-==27949==    at 0x54F2154: write (write.c:27)
-==27949==    by 0x546D1BC: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1203)
-==27949==    by 0x546EF50: new_do_write (fileops.c:457)
-==27949==    by 0x546EF50: _IO_do_write@@GLIBC_2.2.5 (fileops.c:433)
-==27949==    by 0x546C787: _IO_file_sync@@GLIBC_2.2.5 (fileops.c:813)
-==27949==    by 0x546087C: fflush (iofflush.c:40)
-==27949==    by 0x4F52761: std::ostream::flush() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27949==    by 0x10A96C: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949== 
-==27949== HEAP SUMMARY:
-==27949==     in use at exit: 170,513 bytes in 328 blocks
-==27949==   total heap usage: 8,681 allocs, 8,353 frees, 15,486,754 bytes allocated
-==27949== 
-==27949== 24 bytes in 1 blocks are still reachable in loss record 1 of 11
-==27949==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27949==    by 0x10A069: HashMap::rehash() (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x10A866: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949== 
-==27949== 43 bytes in 1 blocks are still reachable in loss record 2 of 11
-==27949==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27949==    by 0x4F64DBE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27949==    by 0x4F664BA: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27949==    by 0x10AAC1: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109ABB: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949== 
-==27949== 552 bytes in 1 blocks are still reachable in loss record 3 of 11
-==27949==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27949==    by 0x5460E49: __fopen_internal (iofopen.c:65)
-==27949==    by 0x5460E49: fopen@@GLIBC_2.2.5 (iofopen.c:89)
-==27949==    by 0x4EF09E3: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27949==    by 0x4F32B6D: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27949==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27949==    by 0x10A686: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949== 
-==27949== 1,969 bytes in 62 blocks are still reachable in loss record 4 of 11
-==27949==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27949==    by 0x4F64CFE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27949==    by 0x4F6506C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27949==    by 0x10A81B: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949== 
-==27949== 7,989 bytes in 257 blocks are still reachable in loss record 5 of 11
-==27949==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27949==    by 0x4F64CFE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27949==    by 0x4F6506C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27949==    by 0x10A372: HashMap::rehash() (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x10A866: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949== 
-==27949== 8,192 bytes in 1 blocks are still reachable in loss record 6 of 11
-==27949==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27949==    by 0x4F2E91F: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27949==    by 0x4F32B85: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27949==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==27949==    by 0x10A686: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949== 
-==27949== 20,480 bytes in 1 blocks are still reachable in loss record 7 of 11
-==27949==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27949==    by 0x10B117: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x10B050: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x10AF73: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x10AE68: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_storage(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x10AD0C: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Vector_base(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x10AB4B: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x10A088: HashMap::rehash() (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x10A866: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949== 
-==27949== 32,816 bytes in 1 blocks are still reachable in loss record 8 of 11
-==27949==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27949==    by 0x54C19B5: __alloc_dir (opendir.c:216)
-==27949==    by 0x54C19B5: opendir_tail (opendir.c:136)
-==27949==    by 0x54C19B5: opendir (opendir.c:190)
-==27949==    by 0x109921: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949== 
-==27949== 32,816 bytes in 1 blocks are still reachable in loss record 9 of 11
-==27949==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27949==    by 0x54C19B5: __alloc_dir (opendir.c:216)
-==27949==    by 0x54C19B5: opendir_tail (opendir.c:136)
-==27949==    by 0x54C19B5: opendir (opendir.c:190)
-==27949==    by 0x109921: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949== 
-==27949== 32,816 bytes in 1 blocks are still reachable in loss record 10 of 11
-==27949==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27949==    by 0x54C19B5: __alloc_dir (opendir.c:216)
-==27949==    by 0x54C19B5: opendir_tail (opendir.c:136)
-==27949==    by 0x54C19B5: opendir (opendir.c:190)
-==27949==    by 0x109921: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949== 
-==27949== 32,816 bytes in 1 blocks are still reachable in loss record 11 of 11
-==27949==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27949==    by 0x54C19B5: __alloc_dir (opendir.c:216)
-==27949==    by 0x54C19B5: opendir_tail (opendir.c:136)
-==27949==    by 0x54C19B5: opendir (opendir.c:190)
-==27949==    by 0x109921: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.DD6Abu/dedup)
-==27949== 
-==27949== LEAK SUMMARY:
-==27949==    definitely lost: 0 bytes in 0 blocks
-==27949==    indirectly lost: 0 bytes in 0 blocks
-==27949==      possibly lost: 0 bytes in 0 blocks
-==27949==    still reachable: 170,513 bytes in 328 blocks
-==27949==         suppressed: 0 bytes in 0 blocks
-==27949== 
-==27949== For counts of detected and suppressed errors, rerun with: -v
-==27949== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==44170== Memcheck, a memory error detector
+==44170== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==44170== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==44170== Command: ./dedup /var/dedup/d000 /var/dedup/d001 /var/dedup/d002 /var/dedup/d003 /var/dedup/d004 /var/dedup/d005 /var/dedup/d006 /var/dedup/d007 /var/dedup/d008 /var/dedup/d009
+==44170== Parent PID: 44167
+==44170== 
+==44170== 
+==44170== Process terminating with default action of signal 13 (SIGPIPE)
+==44170==    at 0x54F2154: write (write.c:27)
+==44170==    by 0x546D1BC: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1203)
+==44170==    by 0x546EF50: new_do_write (fileops.c:457)
+==44170==    by 0x546EF50: _IO_do_write@@GLIBC_2.2.5 (fileops.c:433)
+==44170==    by 0x546C787: _IO_file_sync@@GLIBC_2.2.5 (fileops.c:813)
+==44170==    by 0x546087C: fflush (iofflush.c:40)
+==44170==    by 0x4F52761: std::ostream::flush() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44170==    by 0x10A813: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170== 
+==44170== HEAP SUMMARY:
+==44170==     in use at exit: 172,587 bytes in 394 blocks
+==44170==   total heap usage: 9,029 allocs, 8,635 frees, 16,034,336 bytes allocated
+==44170== 
+==44170== 24 bytes in 1 blocks are still reachable in loss record 1 of 11
+==44170==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44170==    by 0x10A069: HashMap::rehash() (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x10A70D: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170== 
+==44170== 43 bytes in 1 blocks are still reachable in loss record 2 of 11
+==44170==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44170==    by 0x4F64DBE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44170==    by 0x4F664BA: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44170==    by 0x10A969: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109ABB: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170== 
+==44170== 552 bytes in 1 blocks are still reachable in loss record 3 of 11
+==44170==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44170==    by 0x5460E49: __fopen_internal (iofopen.c:65)
+==44170==    by 0x5460E49: fopen@@GLIBC_2.2.5 (iofopen.c:89)
+==44170==    by 0x4EF09E3: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44170==    by 0x4F32B6D: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44170==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44170==    by 0x10A561: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170== 
+==44170== 4,051 bytes in 128 blocks are still reachable in loss record 4 of 11
+==44170==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44170==    by 0x4F64CFE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44170==    by 0x4F6506C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44170==    by 0x10A6C2: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170== 
+==44170== 7,981 bytes in 257 blocks are still reachable in loss record 5 of 11
+==44170==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44170==    by 0x4F64CFE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44170==    by 0x4F6506C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44170==    by 0x10A2C5: HashMap::rehash() (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x10A70D: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170== 
+==44170== 8,192 bytes in 1 blocks are still reachable in loss record 6 of 11
+==44170==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44170==    by 0x4F2E91F: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44170==    by 0x4F32B85: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44170==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==44170==    by 0x10A561: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170== 
+==44170== 20,480 bytes in 1 blocks are still reachable in loss record 7 of 11
+==44170==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44170==    by 0x10AFBF: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x10AEF8: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x10AE1B: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x10AD10: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_storage(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x10ABB4: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Vector_base(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x10A9F3: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x10A088: HashMap::rehash() (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x10A70D: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109AF4: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170== 
+==44170== 32,816 bytes in 1 blocks are still reachable in loss record 8 of 11
+==44170==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44170==    by 0x54C19B5: __alloc_dir (opendir.c:216)
+==44170==    by 0x54C19B5: opendir_tail (opendir.c:136)
+==44170==    by 0x54C19B5: opendir (opendir.c:190)
+==44170==    by 0x109921: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170== 
+==44170== 32,816 bytes in 1 blocks are still reachable in loss record 9 of 11
+==44170==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44170==    by 0x54C19B5: __alloc_dir (opendir.c:216)
+==44170==    by 0x54C19B5: opendir_tail (opendir.c:136)
+==44170==    by 0x54C19B5: opendir (opendir.c:190)
+==44170==    by 0x109921: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170== 
+==44170== 32,816 bytes in 1 blocks are still reachable in loss record 10 of 11
+==44170==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44170==    by 0x54C19B5: __alloc_dir (opendir.c:216)
+==44170==    by 0x54C19B5: opendir_tail (opendir.c:136)
+==44170==    by 0x54C19B5: opendir (opendir.c:190)
+==44170==    by 0x109921: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170== 
+==44170== 32,816 bytes in 1 blocks are still reachable in loss record 11 of 11
+==44170==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==44170==    by 0x54C19B5: __alloc_dir (opendir.c:216)
+==44170==    by 0x54C19B5: opendir_tail (opendir.c:136)
+==44170==    by 0x54C19B5: opendir (opendir.c:190)
+==44170==    by 0x109921: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109C20: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170==    by 0x109DC1: main (in /home/ece551db/graderbase/work/hd97.098_dedup.WssoRl/dedup)
+==44170== 
+==44170== LEAK SUMMARY:
+==44170==    definitely lost: 0 bytes in 0 blocks
+==44170==    indirectly lost: 0 bytes in 0 blocks
+==44170==      possibly lost: 0 bytes in 0 blocks
+==44170==    still reachable: 172,587 bytes in 394 blocks
+==44170==         suppressed: 0 bytes in 0 blocks
+==44170== 
+==44170== For counts of detected and suppressed errors, rerun with: -v
+==44170== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 Overall Grade: F
