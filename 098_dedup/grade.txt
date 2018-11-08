@@ -1,5 +1,5 @@
-Grading at 11/08/2018:02:54:10.601488
-For commit ID 41ae203322a16e45974f40d2c95ef370ab90f582
+Grading at 11/08/2018:02:56:56.018057
+For commit ID 43038ea0e0d20e9b51095f513801d706b1f2fd24
 Running make
 g++ -o dedup -Werror -Wall -pedantic -std=gnu++11 dedup.cpp
 Found executable dedup
@@ -1582,235 +1582,235 @@ These groupings were incorrect:
 testcase 2 : ./dedup /var/dedup/d001
   - Valgrind showed memory leaks
 Valgrind reported errors (test failed).
-==28339== Memcheck, a memory error detector
-==28339== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==28339== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
-==28339== Command: ./dedup /var/dedup/d001
-==28339== Parent PID: 28337
-==28339== 
-==28339== 
-==28339== Process terminating with default action of signal 13 (SIGPIPE)
-==28339==    at 0x54F2154: write (write.c:27)
-==28339==    by 0x546D1BC: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1203)
-==28339==    by 0x546EF50: new_do_write (fileops.c:457)
-==28339==    by 0x546EF50: _IO_do_write@@GLIBC_2.2.5 (fileops.c:433)
-==28339==    by 0x546C787: _IO_file_sync@@GLIBC_2.2.5 (fileops.c:813)
-==28339==    by 0x546087C: fflush (iofflush.c:40)
-==28339==    by 0x4F52761: std::ostream::flush() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28339==    by 0x10A221: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x109A04: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x109CA9: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339== 
-==28339== HEAP SUMMARY:
-==28339==     in use at exit: 42,875 bytes in 26 blocks
-==28339==   total heap usage: 2,826 allocs, 2,800 frees, 6,991,419 bytes allocated
-==28339== 
-==28339== 24 bytes in 1 blocks are still reachable in loss record 1 of 7
-==28339==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28339==    by 0x109E13: HashMap::HashMap() (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x109C74: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339== 
-==28339== 31 bytes in 1 blocks are still reachable in loss record 2 of 7
-==28339==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28339==    by 0x4F64DBE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28339==    by 0x4F664BA: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28339==    by 0x10A407: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x1099CB: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x109CA9: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339== 
-==28339== 552 bytes in 1 blocks are still reachable in loss record 3 of 7
-==28339==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28339==    by 0x5460E49: __fopen_internal (iofopen.c:65)
-==28339==    by 0x5460E49: fopen@@GLIBC_2.2.5 (iofopen.c:89)
-==28339==    by 0x4EF09E3: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28339==    by 0x4F32B6D: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28339==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28339==    by 0x109FF0: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x109A04: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x109CA9: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339== 
-==28339== 620 bytes in 20 blocks are still reachable in loss record 4 of 7
-==28339==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28339==    by 0x4F64CFE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28339==    by 0x4F6506C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28339==    by 0x10A185: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x109A04: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x109CA9: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339== 
-==28339== 640 bytes in 1 blocks are still reachable in loss record 5 of 7
-==28339==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28339==    by 0x10A9B3: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x10A8EC: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x10A80F: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x10A704: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_storage(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x10A5A8: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Vector_base(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x10A491: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x109E26: HashMap::HashMap() (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x109C74: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339== 
-==28339== 8,192 bytes in 1 blocks are still reachable in loss record 6 of 7
-==28339==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28339==    by 0x4F2E91F: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28339==    by 0x4F32B85: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28339==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28339==    by 0x109FF0: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x109A04: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x109CA9: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339== 
-==28339== 32,816 bytes in 1 blocks are still reachable in loss record 7 of 7
-==28339==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28339==    by 0x54C19B5: __alloc_dir (opendir.c:216)
-==28339==    by 0x54C19B5: opendir_tail (opendir.c:136)
-==28339==    by 0x54C19B5: opendir (opendir.c:190)
-==28339==    by 0x109831: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339==    by 0x109CA9: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28339== 
-==28339== LEAK SUMMARY:
-==28339==    definitely lost: 0 bytes in 0 blocks
-==28339==    indirectly lost: 0 bytes in 0 blocks
-==28339==      possibly lost: 0 bytes in 0 blocks
-==28339==    still reachable: 42,875 bytes in 26 blocks
-==28339==         suppressed: 0 bytes in 0 blocks
-==28339== 
-==28339== For counts of detected and suppressed errors, rerun with: -v
-==28339== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==33962== Memcheck, a memory error detector
+==33962== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==33962== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==33962== Command: ./dedup /var/dedup/d001
+==33962== Parent PID: 33960
+==33962== 
+==33962== 
+==33962== Process terminating with default action of signal 13 (SIGPIPE)
+==33962==    at 0x54F2154: write (write.c:27)
+==33962==    by 0x546D1BC: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1203)
+==33962==    by 0x546EF50: new_do_write (fileops.c:457)
+==33962==    by 0x546EF50: _IO_do_write@@GLIBC_2.2.5 (fileops.c:433)
+==33962==    by 0x546C787: _IO_file_sync@@GLIBC_2.2.5 (fileops.c:813)
+==33962==    by 0x546087C: fflush (iofflush.c:40)
+==33962==    by 0x4F52761: std::ostream::flush() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==33962==    by 0x10A291: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x109A74: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x109D19: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962== 
+==33962== HEAP SUMMARY:
+==33962==     in use at exit: 42,875 bytes in 26 blocks
+==33962==   total heap usage: 2,826 allocs, 2,800 frees, 6,991,419 bytes allocated
+==33962== 
+==33962== 24 bytes in 1 blocks are still reachable in loss record 1 of 7
+==33962==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==33962==    by 0x109E83: HashMap::HashMap() (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x109CE4: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962== 
+==33962== 31 bytes in 1 blocks are still reachable in loss record 2 of 7
+==33962==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==33962==    by 0x4F64DBE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==33962==    by 0x4F664BA: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==33962==    by 0x10A487: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x109A3B: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x109D19: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962== 
+==33962== 552 bytes in 1 blocks are still reachable in loss record 3 of 7
+==33962==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==33962==    by 0x5460E49: __fopen_internal (iofopen.c:65)
+==33962==    by 0x5460E49: fopen@@GLIBC_2.2.5 (iofopen.c:89)
+==33962==    by 0x4EF09E3: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==33962==    by 0x4F32B6D: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==33962==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==33962==    by 0x10A060: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x109A74: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x109D19: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962== 
+==33962== 620 bytes in 20 blocks are still reachable in loss record 4 of 7
+==33962==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==33962==    by 0x4F64CFE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==33962==    by 0x4F6506C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==33962==    by 0x10A1F5: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x109A74: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x109D19: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962== 
+==33962== 640 bytes in 1 blocks are still reachable in loss record 5 of 7
+==33962==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==33962==    by 0x10AA33: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x10A96C: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x10A88F: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x10A784: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_storage(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x10A628: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Vector_base(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x10A511: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x109E96: HashMap::HashMap() (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x109CE4: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962== 
+==33962== 8,192 bytes in 1 blocks are still reachable in loss record 6 of 7
+==33962==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==33962==    by 0x4F2E91F: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==33962==    by 0x4F32B85: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==33962==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==33962==    by 0x10A060: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x109A74: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x109D19: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962== 
+==33962== 32,816 bytes in 1 blocks are still reachable in loss record 7 of 7
+==33962==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==33962==    by 0x54C19B5: __alloc_dir (opendir.c:216)
+==33962==    by 0x54C19B5: opendir_tail (opendir.c:136)
+==33962==    by 0x54C19B5: opendir (opendir.c:190)
+==33962==    by 0x1098A1: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962==    by 0x109D19: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==33962== 
+==33962== LEAK SUMMARY:
+==33962==    definitely lost: 0 bytes in 0 blocks
+==33962==    indirectly lost: 0 bytes in 0 blocks
+==33962==      possibly lost: 0 bytes in 0 blocks
+==33962==    still reachable: 42,875 bytes in 26 blocks
+==33962==         suppressed: 0 bytes in 0 blocks
+==33962== 
+==33962== For counts of detected and suppressed errors, rerun with: -v
+==33962== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 -----------------------------------------------
 testcase 3 : ./dedup /var/dedup/*
   - Valgrind showed memory leaks
 Valgrind reported errors (test failed).
-==28391== Memcheck, a memory error detector
-==28391== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==28391== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
-==28391== Command: ./dedup /var/dedup/d000 /var/dedup/d001 /var/dedup/d002 /var/dedup/d003 /var/dedup/d004 /var/dedup/d005 /var/dedup/d006 /var/dedup/d007 /var/dedup/d008 /var/dedup/d009
-==28391== Parent PID: 28389
-==28391== 
-==28391== 
-==28391== Process terminating with default action of signal 13 (SIGPIPE)
-==28391==    at 0x54F2154: write (write.c:27)
-==28391==    by 0x546D1BC: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1203)
-==28391==    by 0x546EF50: new_do_write (fileops.c:457)
-==28391==    by 0x546EF50: _IO_do_write@@GLIBC_2.2.5 (fileops.c:433)
-==28391==    by 0x546C787: _IO_file_sync@@GLIBC_2.2.5 (fileops.c:813)
-==28391==    by 0x546087C: fflush (iofflush.c:40)
-==28391==    by 0x4F52761: std::ostream::flush() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28391==    by 0x10A221: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109A04: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109CA9: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391== 
-==28391== HEAP SUMMARY:
-==28391==     in use at exit: 141,335 bytes in 29 blocks
-==28391==   total heap usage: 4,295 allocs, 4,266 frees, 8,513,418 bytes allocated
-==28391== 
-==28391== 24 bytes in 1 blocks are still reachable in loss record 1 of 10
-==28391==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28391==    by 0x109E13: HashMap::HashMap() (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109C74: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391== 
-==28391== 43 bytes in 1 blocks are still reachable in loss record 2 of 10
-==28391==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28391==    by 0x4F64DBE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28391==    by 0x4F664BA: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28391==    by 0x10A407: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x1099CB: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109CA9: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391== 
-==28391== 552 bytes in 1 blocks are still reachable in loss record 3 of 10
-==28391==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28391==    by 0x5460E49: __fopen_internal (iofopen.c:65)
-==28391==    by 0x5460E49: fopen@@GLIBC_2.2.5 (iofopen.c:89)
-==28391==    by 0x4EF09E3: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28391==    by 0x4F32B6D: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28391==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28391==    by 0x109FF0: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109A04: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109CA9: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391== 
-==28391== 620 bytes in 20 blocks are still reachable in loss record 4 of 10
-==28391==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28391==    by 0x4F64CFE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28391==    by 0x4F6506C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28391==    by 0x10A185: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109A04: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109CA9: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391== 
-==28391== 640 bytes in 1 blocks are still reachable in loss record 5 of 10
-==28391==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28391==    by 0x10A9B3: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x10A8EC: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x10A80F: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x10A704: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_storage(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x10A5A8: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Vector_base(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x10A491: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109E26: HashMap::HashMap() (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109C74: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391== 
-==28391== 8,192 bytes in 1 blocks are still reachable in loss record 6 of 10
-==28391==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28391==    by 0x4F2E91F: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28391==    by 0x4F32B85: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28391==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
-==28391==    by 0x109FF0: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109A04: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109CA9: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391== 
-==28391== 32,816 bytes in 1 blocks are still reachable in loss record 7 of 10
-==28391==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28391==    by 0x54C19B5: __alloc_dir (opendir.c:216)
-==28391==    by 0x54C19B5: opendir_tail (opendir.c:136)
-==28391==    by 0x54C19B5: opendir (opendir.c:190)
-==28391==    by 0x109831: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109CA9: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391== 
-==28391== 32,816 bytes in 1 blocks are still reachable in loss record 8 of 10
-==28391==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28391==    by 0x54C19B5: __alloc_dir (opendir.c:216)
-==28391==    by 0x54C19B5: opendir_tail (opendir.c:136)
-==28391==    by 0x54C19B5: opendir (opendir.c:190)
-==28391==    by 0x109831: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109CA9: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391== 
-==28391== 32,816 bytes in 1 blocks are still reachable in loss record 9 of 10
-==28391==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28391==    by 0x54C19B5: __alloc_dir (opendir.c:216)
-==28391==    by 0x54C19B5: opendir_tail (opendir.c:136)
-==28391==    by 0x54C19B5: opendir (opendir.c:190)
-==28391==    by 0x109831: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109CA9: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391== 
-==28391== 32,816 bytes in 1 blocks are still reachable in loss record 10 of 10
-==28391==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28391==    by 0x54C19B5: __alloc_dir (opendir.c:216)
-==28391==    by 0x54C19B5: opendir_tail (opendir.c:136)
-==28391==    by 0x54C19B5: opendir (opendir.c:190)
-==28391==    by 0x109831: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109B30: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391==    by 0x109CA9: main (in /home/ece551db/graderbase/work/hd97.098_dedup.F9Jp4T/dedup)
-==28391== 
-==28391== LEAK SUMMARY:
-==28391==    definitely lost: 0 bytes in 0 blocks
-==28391==    indirectly lost: 0 bytes in 0 blocks
-==28391==      possibly lost: 0 bytes in 0 blocks
-==28391==    still reachable: 141,335 bytes in 29 blocks
-==28391==         suppressed: 0 bytes in 0 blocks
-==28391== 
-==28391== For counts of detected and suppressed errors, rerun with: -v
-==28391== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==34020== Memcheck, a memory error detector
+==34020== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==34020== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==34020== Command: ./dedup /var/dedup/d000 /var/dedup/d001 /var/dedup/d002 /var/dedup/d003 /var/dedup/d004 /var/dedup/d005 /var/dedup/d006 /var/dedup/d007 /var/dedup/d008 /var/dedup/d009
+==34020== Parent PID: 34018
+==34020== 
+==34020== 
+==34020== Process terminating with default action of signal 13 (SIGPIPE)
+==34020==    at 0x54F2154: write (write.c:27)
+==34020==    by 0x546D1BC: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1203)
+==34020==    by 0x546EF50: new_do_write (fileops.c:457)
+==34020==    by 0x546EF50: _IO_do_write@@GLIBC_2.2.5 (fileops.c:433)
+==34020==    by 0x546C787: _IO_file_sync@@GLIBC_2.2.5 (fileops.c:813)
+==34020==    by 0x546087C: fflush (iofflush.c:40)
+==34020==    by 0x4F52761: std::ostream::flush() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==34020==    by 0x10A291: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109A74: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109D19: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020== 
+==34020== HEAP SUMMARY:
+==34020==     in use at exit: 141,335 bytes in 29 blocks
+==34020==   total heap usage: 4,287 allocs, 4,258 frees, 8,495,800 bytes allocated
+==34020== 
+==34020== 24 bytes in 1 blocks are still reachable in loss record 1 of 10
+==34020==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==34020==    by 0x109E83: HashMap::HashMap() (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109CE4: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020== 
+==34020== 43 bytes in 1 blocks are still reachable in loss record 2 of 10
+==34020==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==34020==    by 0x4F64DBE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==34020==    by 0x4F664BA: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==34020==    by 0x10A487: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109A3B: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109D19: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020== 
+==34020== 552 bytes in 1 blocks are still reachable in loss record 3 of 10
+==34020==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==34020==    by 0x5460E49: __fopen_internal (iofopen.c:65)
+==34020==    by 0x5460E49: fopen@@GLIBC_2.2.5 (iofopen.c:89)
+==34020==    by 0x4EF09E3: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==34020==    by 0x4F32B6D: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==34020==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==34020==    by 0x10A060: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109A74: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109D19: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020== 
+==34020== 620 bytes in 20 blocks are still reachable in loss record 4 of 10
+==34020==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==34020==    by 0x4F64CFE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==34020==    by 0x4F6506C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==34020==    by 0x10A1F5: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109A74: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109D19: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020== 
+==34020== 640 bytes in 1 blocks are still reachable in loss record 5 of 10
+==34020==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==34020==    by 0x10AA33: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x10A96C: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x10A88F: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x10A784: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_storage(unsigned long) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x10A628: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Vector_base(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x10A511: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109E96: HashMap::HashMap() (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109CE4: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020== 
+==34020== 8,192 bytes in 1 blocks are still reachable in loss record 6 of 10
+==34020==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==34020==    by 0x4F2E91F: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==34020==    by 0x4F32B85: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==34020==    by 0x4F32C56: std::basic_ifstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==34020==    by 0x10A060: HashMap::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109A74: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109D19: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020== 
+==34020== 32,816 bytes in 1 blocks are still reachable in loss record 7 of 10
+==34020==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==34020==    by 0x54C19B5: __alloc_dir (opendir.c:216)
+==34020==    by 0x54C19B5: opendir_tail (opendir.c:136)
+==34020==    by 0x54C19B5: opendir (opendir.c:190)
+==34020==    by 0x1098A1: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109D19: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020== 
+==34020== 32,816 bytes in 1 blocks are still reachable in loss record 8 of 10
+==34020==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==34020==    by 0x54C19B5: __alloc_dir (opendir.c:216)
+==34020==    by 0x54C19B5: opendir_tail (opendir.c:136)
+==34020==    by 0x54C19B5: opendir (opendir.c:190)
+==34020==    by 0x1098A1: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109D19: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020== 
+==34020== 32,816 bytes in 1 blocks are still reachable in loss record 9 of 10
+==34020==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==34020==    by 0x54C19B5: __alloc_dir (opendir.c:216)
+==34020==    by 0x54C19B5: opendir_tail (opendir.c:136)
+==34020==    by 0x54C19B5: opendir (opendir.c:190)
+==34020==    by 0x1098A1: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109D19: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020== 
+==34020== 32,816 bytes in 1 blocks are still reachable in loss record 10 of 10
+==34020==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==34020==    by 0x54C19B5: __alloc_dir (opendir.c:216)
+==34020==    by 0x54C19B5: opendir_tail (opendir.c:136)
+==34020==    by 0x54C19B5: opendir (opendir.c:190)
+==34020==    by 0x1098A1: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109BA0: readDir(char*, HashMap&) (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020==    by 0x109D19: main (in /home/ece551db/graderbase/work/hd97.098_dedup.gakn3G/dedup)
+==34020== 
+==34020== LEAK SUMMARY:
+==34020==    definitely lost: 0 bytes in 0 blocks
+==34020==    indirectly lost: 0 bytes in 0 blocks
+==34020==      possibly lost: 0 bytes in 0 blocks
+==34020==    still reachable: 141,335 bytes in 29 blocks
+==34020==         suppressed: 0 bytes in 0 blocks
+==34020== 
+==34020== For counts of detected and suppressed errors, rerun with: -v
+==34020== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 Overall Grade: F
