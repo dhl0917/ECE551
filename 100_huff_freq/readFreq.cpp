@@ -36,14 +36,15 @@ uint64_t * readFrequencies(const char * fname) {
   }
 
   char c;
-  // FILE * f;
-  //  f = fopen(fname, "r");
-  while (myFile.get(c)) {
-    // while (c = fgetc(f)) {
+  FILE * f;
+  f = fopen(fname, "r");
+  // while (myFile.get(c)) {
+  while ((c = fgetc(f)) != EOF) {
     int index = c;
     array[index] += 1;
   }
   array[256] = 1;
   myFile.close();
+  fclose(f);
   return array;
 }
