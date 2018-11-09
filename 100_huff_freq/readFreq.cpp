@@ -40,9 +40,13 @@ uint64_t * readFrequencies(const char * fname) {
     exit(EXIT_FAILURE);
   }
 
-  char c;
+  int c;
 
   while ((c = std::getc(myFile)) != EOF) {
+    if (c < 0 || c > 128) {
+      std::cerr << "Invalid input";
+      exit(EXIT_FAILURE);
+    }
     int index = c;
     array[index] += 1;
   }
