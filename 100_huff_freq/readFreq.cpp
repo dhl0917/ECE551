@@ -43,13 +43,24 @@ uint64_t * readFrequencies(const char * fname) {
   char c;
 
   while ((c = std::getc(myFile)) != EOF) {
-    if (c < 0 || (int)c > 128) {
+    //    unsigned a = c;
+    // std::cout << a << "\n";
+    /*
+    if (c < 0 || (int)c > 256) {
       fclose(myFile);
       delete[] array;
       std::cerr << "Invalid input";
       exit(EXIT_FAILURE);
     }
-    int index = c;
+    */
+
+    int index = (int)(unsigned)c;
+    if (index < 0 || index > 256) {
+      fclose(myFile);
+      delete[] array;
+      std::cerr << "Invalid input\n";
+      exit(EXIT_FAILURE);
+    }
     array[index] += 1;
   }
   array[256] = 1;
