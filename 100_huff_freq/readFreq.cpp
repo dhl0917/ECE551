@@ -30,8 +30,9 @@ uint64_t * readFrequencies(const char * fname) {
   memset(array, 0, 257 * sizeof(*array));
   std::ifstream myFile(fname);
   if (!myFile) {
-    std::cerr << "Open file error\n";
-    exit(EXIT_FAILURE);
+    //  std::cerr << "Open file error\n";
+    //    exit(EXIT_FAILURE);
+    return array;
   }
 
   char c;

@@ -1,6 +1,7 @@
-#include "readFreq.h"
-#include <iostream>
 #include <cstdlib>
+#include <iostream>
+
+#include "readFreq.h"
 
 int main(int argc, char ** argv) {
   if (argc != 2) {
