@@ -27,7 +27,10 @@ void printSym(std::ostream & s, unsigned sym) {
 uint64_t * readFrequencies(const char * fname) {
   //WRITE ME!
   uint64_t * array = new uint64_t[257];
-  memset(array, 0, 257 * sizeof(*array));
+  // memset(array, 0, 257 * sizeof(*array));
+  for (int i = 0; i < 257; i++) {
+    array[i] = 0;
+  }
   //std::ifstream myFile;
   //myFile.open(fname);
   FILE * myFile;
