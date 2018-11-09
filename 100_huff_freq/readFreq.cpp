@@ -29,8 +29,16 @@ uint64_t * readFrequencies(const char * fname) {
   uint64_t * array = new uint64_t[257];
   memset(array, 0, 257 * sizeof(*array));
   std::ifstream myFile(fname);
+  if (!myFile) {
+    std::cerr << "Open file error\n";
+    exit(EXIT_FAILURE);
+  }
+
   char c;
+  // FILE * f;
+  //  f = fopen(fname, "r");
   while (myFile.get(c)) {
+    // while (c = fgetc(f)) {
     int index = c;
     array[index] += 1;
   }
