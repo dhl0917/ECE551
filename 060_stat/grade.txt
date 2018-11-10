@@ -1,4 +1,4 @@
-Grading at 11/10/2018:21:44:14.877702
+Grading at 11/10/2018:22:57:28.420338
 For commit ID 76ae4c2e1f08eeeedbbbdf7b04eb92a8f185883d
 Attempting to compile mystat.c
 Your code seems to compile fine.
@@ -431,6 +431,6 @@ Note from the grader:
 Good abstraction. There are some comments, but you generally didn't explain your functions. Good naming.
 Total points 7 / 9 = 77.77 % 
  -> This is 15% of your overall grade on this assignment
-Total: 0.85 * 85.00 + 0.15 * 77.77=83.91
+Total: 0.85 * 100 + 0.15 * 77.77=96.66
 
-Overall Grade: 83.91
+Overall Grade: 96.66
