@@ -40,7 +40,7 @@ uint64_t * readFrequencies(const char * fname) {
     exit(EXIT_FAILURE);
   }
 
-  char c;
+  int c;
 
   while ((c = fgetc(myFile)) != EOF) {
     //    unsigned a = c;
@@ -54,7 +54,8 @@ uint64_t * readFrequencies(const char * fname) {
     }
     */
 
-    int index = (int)(unsigned)c;
+    // int index = (int)(unsigned)c;
+    int index = c;
     /*
     if (index < 0 || index > 255) {
       fclose(myFile);
@@ -67,8 +68,9 @@ uint64_t * readFrequencies(const char * fname) {
       array[index] += 1;
     }
   }
-
-  array[256] = 1;
+  if (c == EOF) {
+    array[256] += 1;
+  }
   fclose(myFile);
 
   return array;
