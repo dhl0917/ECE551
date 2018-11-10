@@ -10,6 +10,8 @@ void Node::buildMap(BitString b, std::map<unsigned, BitString> & theMap) {
   }
   //recursion
   //to the left
+  assert(left);
+  assert(right);
   (*this).left->buildMap(b.plusZero(), theMap);
   //to the right
   (*this).right->buildMap(b.plusOne(), theMap);
