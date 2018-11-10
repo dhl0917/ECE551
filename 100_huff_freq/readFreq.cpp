@@ -35,14 +35,14 @@ uint64_t * readFrequencies(const char * fname) {
   //myFile.open(fname);
   FILE * myFile;
   myFile = fopen(fname, "r");
-  if (!myFile) {
+  if (myFile == NULL) {
     std::cerr << "Open error\n";
     exit(EXIT_FAILURE);
   }
 
   char c;
 
-  while ((c = std::getc(myFile)) != EOF) {
+  while ((c = fgetc(myFile)) != EOF) {
     //    unsigned a = c;
     // std::cout << a << "\n";
     /*
@@ -55,14 +55,19 @@ uint64_t * readFrequencies(const char * fname) {
     */
 
     int index = (int)(unsigned)c;
-    if (index < 0 || index > 256) {
+    /*
+    if (index < 0 || index > 255) {
       fclose(myFile);
       delete[] array;
       std::cerr << "Invalid input\n";
       exit(EXIT_FAILURE);
     }
-    array[index] += 1;
+    */
+    if (index >= 0 && index <= 255) {
+      array[index] += 1;
+    }
   }
+
   array[256] = 1;
   fclose(myFile);
 
