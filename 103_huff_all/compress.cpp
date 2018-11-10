@@ -70,10 +70,10 @@ int main(int argc, char ** argv) {
   char * inFile = argv[1];
   char * outFile = argv[2];
   uint64_t * counts = readFrequencies(inFile);
+  assert(counts != NULL);
   std::map<unsigned, BitString> myMap;
   BitString b;
-  Node * roots;
-  roots = buildTree(counts);
+  Node * roots = buildTree(counts);
   roots->buildMap(b, myMap);
   writeCompressedOutput(inFile, outFile, myMap);
   delete[] counts;
