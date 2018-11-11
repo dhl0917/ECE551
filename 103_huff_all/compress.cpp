@@ -44,15 +44,16 @@ void writeCompressedOutput(const char * inFile,
   //and write the proper bit string with the BitFileWriter
   int c;
   while ((c = fgetc(s)) != EOF) {
-    std::pair<unsigned, BitString> b = *theMap.find(c);
-    assert(b.first != NO_SYM);
-    bfw.writeBitString(b.second);
+    // std::pair<unsigned, BitString> b = *theMap.find(c);
+    // assert(b.first != NO_SYM);
+    // bfw.writeBitString(b.second);
+    bfw.writeBitString(theMap.find(c)->second);
   }
 
   //dont forget to lookup 256 for the EOF marker, and write it out.
-  if (c == EOF) {
-    bfw.writeBitString((*theMap.find(256)).second);
-  }
+
+  bfw.writeBitString(theMap.find(256)->second);
+
   //BitFileWriter will close the output file in its destructor
   //but you probably need to close your input file.
   fclose(s);
