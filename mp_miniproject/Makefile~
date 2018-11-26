@@ -1,2 +1,0 @@
-numeric: numerics.cpp
-	g++ -o numerics -Werror -Wall -pedantic -std=gnu++11 numerics.cpp
