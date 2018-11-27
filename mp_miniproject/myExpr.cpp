@@ -91,11 +91,13 @@ Expression * makeSglExpr(std::string funcName, Expression * arg) {
 std::string getPrintFuncName(const char ** strp) {
   std::string printName;
   skipSpace(strp);
-  //skip '('
-  *strp = *strp + 1;
-  while (!isspace(**strp)) {
-    printName.append(1, **strp);
+  if (**strp == '(') {
+    //skip '('
     *strp = *strp + 1;
+    while (!isspace(**strp)) {
+      printName.append(1, **strp);
+      *strp = *strp + 1;
+    }
   }
   return printName;
 }
@@ -483,18 +485,29 @@ int main(void) {
                 << "------"
                 << "\n";
       */
-      if (std::abs(expr->evaluate() - ans->evaluate()) < 0.000001) {
-        std::cout << testFuncName << " (";
-        printArgs(&printPointer, testFuncName, myFuncs);
-        std::cout << ")"
-                  << " = " << ans->evaluate() << " [CORRECT]\n";
+      if (testFuncName.size() == 0) {
+        if (std::abs(expr->evaluate() - ans->evaluate()) < 0.0000000000001) {
+          std::cout << expr->toString() << " = " << ans->evaluate() << " [CORRECT]\n";
+        }
+        else {
+          std::cout << expr->toString() << " = " << ans->evaluate()
+                    << " [INCORRECT: expected: " << expr->evaluate() << "]\n";
+        }
       }
       else {
-        std::cout << "(" << testFuncName << " ";
-        printArgs(&printPointer, testFuncName, myFuncs);
-        std::cout << ")"
-                  << " = " << ans->evaluate() << " [INCORRECT: expected: " << expr->evaluate()
-                  << "]\n";
+        if (std::abs(expr->evaluate() - ans->evaluate()) < 0.000001) {
+          std::cout << testFuncName << "(";
+          printArgs(&printPointer, testFuncName, myFuncs);
+          std::cout << ")"
+                    << " = " << ans->evaluate() << " [CORRECT]\n";
+        }
+        else {
+          std::cout << "(" << testFuncName;
+          printArgs(&printPointer, testFuncName, myFuncs);
+          std::cout << ")"
+                    << " = " << ans->evaluate() << " [INCORRECT: expected: " << expr->evaluate()
+                    << "]\n";
+        }
       }
 
       delete expr;
