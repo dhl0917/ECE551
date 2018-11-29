@@ -320,7 +320,34 @@ Expression * parseOp(
     return NULL;
   }
 }
-
+/*
+double calculator(
+    std::vector<std::string> defArgv,
+    std::vector<double> testArgv,
+    std::string expr,
+    std::map<std::string, std::pair<std::vector<std::string>, std::string> > & myFuncs) {
+  for (size_t i = 0; i < defArgv.size(); i++) {
+    int pos = expr.find(defArgv[i]);
+    while (pos != -1) {
+      expr.replace(pos, defArgv[i].length(), dou2str(testArgv[i]));
+      pos = expr.find(defArgv[i]);
+    }
+  }
+  const char * pointerToExpr = &expr[0];
+  Expression * parsedExpr = parse(&pointerToExpr, myFuncs);
+  Expression * checkItsBack = parse(&pointerToExpr, myFuncs);
+  if (checkItsBack == NULL) {
+    delete checkItsBack;
+    return parsedExpr->evaluate();
+  }
+  else {
+    std::cerr << "More than one expressions!\n";
+    delete checkItsBack;
+    delete parsedExpr;
+    exit(EXIT_FAILURE);
+  }
+}
+*/
 Expression * parse(
     const char ** strp,
     std::map<std::string, std::pair<std::vector<std::string>, std::string> > & myFuncs) {
@@ -387,7 +414,44 @@ std::string parseFuncExpr(const char ** defineExpr) {
   funcExpr = *defineExpr;
   return funcExpr;
 }
-
+double getDou(const char ** strp) {
+  char * endp;
+  double ans = strtod(*strp, &endp);
+  if (endp == *strp) {
+    std::cerr << "Expected a number, but found " << *strp;
+    exit(EXIT_FAILURE);
+  }
+  *strp = endp;
+  return ans;
+}
+/*
+std::vector<double> dfs(int pos,
+                        std::vector<std::pair<double, double> > & ranges,
+                        double step,
+                        std::vector<double> & res) {
+  if (pos == ranges.size()) {
+  }
+}
+*/
+/*
+void parseNumInt(
+    const char ** strp,
+    std::map<std::string, std::pair<std::vector<std::string>, std::string> > & myFuncs) {
+  std::string funcName = parseFuncName(strp);
+  std::vector<std::string> defArgv = myFuncs[funcName].first;
+  std::string expr = myFuncs[funcName].second;
+  std::vector<std::pair<double, double> > ranges;
+  //skipSpace(strp);
+  std::vector<double> res;
+  res.resize(defArgv.size());
+  double step = getDou(strp);
+  for (size_t i = 0; i < defArgv.size(); ++i) {
+    double low = getDou(strp);
+    double high = getDou(strp);
+    ranges.push_back(std::pair<double, double>(low, high));
+  }
+}
+*/
 void parseDefine(
     const char ** defineExpr,
     std::map<std::string, std::pair<std::vector<std::string>, std::string> > & myFuncs) {
