@@ -9,6 +9,7 @@
 
 #include "definer.h"
 #include "function.h"
+#include "mcinter.h"
 #include "numinter.h"
 #include "tester.h"
 class Calculator

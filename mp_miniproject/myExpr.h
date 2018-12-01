@@ -21,6 +21,7 @@ class NumExpression : public Expression
   NumExpression(double num) : number(num) {}
   virtual std::string toString() const {
     std::stringstream strStream;
+    strStream.precision(13);
     std::string myStr;
     strStream << number;
     strStream >> myStr;

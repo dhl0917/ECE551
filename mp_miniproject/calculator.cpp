@@ -28,8 +28,15 @@ void Calculator::run() {
     //remember to check exceptions
     else if (std::string(line).find("numint") == 0) {
       Numinter myNuminter(&temp, myFuncs);
-      double ans = myNuminter.integrate();
-      std::cout << ans << "\n";
+      double numintAns = myNuminter.integrate();
+      std::cout.precision(13);  //display
+      std::cout << numintAns << "\n";
+    }
+    else if (std::string(line).find("mcint") == 0) {
+      Mcinter myMcinter(&temp, myFuncs);
+      double mcintAns = myMcinter.integrate();
+      std::cout.precision(13);  //display
+      std::cout << mcintAns << "\n";
     }
     else {
       std::cerr << "No valid key word.\n";

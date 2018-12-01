@@ -33,6 +33,7 @@ void Tester::test() {
 }
 
 void Tester ::printCorrect() {
+  std::cout.precision(13);  //display
   std::string funcName;
   Parser myParser(myFuncs);
   funcName = myParser.getPrintFuncName(printPtr);
@@ -47,6 +48,7 @@ void Tester ::printCorrect() {
   }
 }
 void Tester ::printInCorrect() {
+  std::cout.precision(13);  //display
   std::string funcName;
   Parser myParser(myFuncs);
   funcName = myParser.getPrintFuncName(printPtr);
@@ -55,7 +57,7 @@ void Tester ::printInCorrect() {
               << " [INCORRECT: expected: " << expr->evaluate() << "]\n";
   }
   else {
-    std::cout << "(" << funcName;
+    std::cout << "(" << funcName << " ";
     myParser.printArgs(printPtr, funcName);
     std::cout << ")"
               << " = " << ans->evaluate() << " [INCORRECT: expected: " << expr->evaluate() << "]\n";
