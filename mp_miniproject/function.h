@@ -10,8 +10,8 @@
 #include <map>
 #include <vector>
 
-//#include "myExpr.h"
 #include "parser.h"
+#include "vector.h"
 class Function
 {
  private:
@@ -39,6 +39,7 @@ class Function
   double evaluate();
   std::string getName() const { return name; }
   std::vector<std::string> getArgs() { return defArgv; }
+  Vector gradient(Vector v);
   /*
   Expression * parse(const char ** strp);
   Expression * parseOp(const char ** strp);

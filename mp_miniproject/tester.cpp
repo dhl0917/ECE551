@@ -25,10 +25,18 @@ void Tester::test() {
   }
   delete checkItsBack;
   if (abs(expr->evaluate() - ans->evaluate()) < 0.0000000000001) {
+    if (abs(expr->evaluate()) < 1 || abs(ans->evaluate()) < 1) {
+      std::cout.setf(std::ios::fixed, std::ios::floatfield);
+    }
     printCorrect();
+    std::cout.unsetf(std::ios::fixed);
   }
   else {
+    if (abs(expr->evaluate()) < 1 || abs(ans->evaluate()) < 1) {
+      std::cout.setf(std::ios::fixed, std::ios::floatfield);
+    }
     printInCorrect();
+    std::cout.unsetf(std::ios::fixed);
   }
 }
 
@@ -38,7 +46,7 @@ void Tester ::printCorrect() {
   Parser myParser(myFuncs);
   funcName = myParser.getPrintFuncName(printPtr);
   if (funcName.size() == 0) {
-    std::cout << expr->toString() << " = " << ans->evaluate() << " [CORRECT]\n";
+    std::cout << expr->evaluate() << " = " << ans->evaluate() << " [CORRECT]\n";
   }
   else {
     std::cout << funcName << "(";
@@ -49,11 +57,12 @@ void Tester ::printCorrect() {
 }
 void Tester ::printInCorrect() {
   std::cout.precision(13);  //display
+  //  std::cout.setf(std::ios::floatfield);
   std::string funcName;
   Parser myParser(myFuncs);
   funcName = myParser.getPrintFuncName(printPtr);
   if (funcName.size() == 0) {
-    std::cout << expr->toString() << " = " << ans->evaluate()
+    std::cout << expr->evaluate() << " = " << ans->evaluate()
               << " [INCORRECT: expected: " << expr->evaluate() << "]\n";
   }
   else {

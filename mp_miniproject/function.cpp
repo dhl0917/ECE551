@@ -62,6 +62,25 @@ double Function::evaluate() {
   delete parsedExpr;
   return ans;
 }
+Vector Function::gradient(Vector v) {
+  //  double delta = 0.001;  //Define delta = 0.001
+  setViaDou(v.getCoords());
+  double funcValue = evaluate();
+  std::vector<double> res;
+  res.resize(defArgv.size());
+  for (size_t i = 0; i < defArgv.size(); i++) {
+    std::vector<double> temp = v.getCoords();
+    double delta = temp[i] * 0.01;
+    if (delta == 0) {
+      delta = 0.01;
+    }
+    temp[i] += delta;
+    setViaDou(temp);
+    res[i] = ((evaluate() - funcValue) / delta);
+  }
+  return Vector(res);
+}
+
 /*
 Expression * Function::parse(const char ** strp) {
   skipSpace(strp);
