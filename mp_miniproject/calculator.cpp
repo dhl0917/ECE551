@@ -5,9 +5,10 @@
 void Calculator::run() {
   char * line = NULL;
   size_t sz;
+  //read line from stdin
   while (getline(&line, &sz, stdin) != -1) {
-    const char * temp = line;
-    const char * printPtr = line;
+    const char * temp = line;      //temp used to parse
+    const char * printPtr = line;  //printPtr used to print when test
 
     //DEFINE
     if (std::string(line).find("define") == 0) {

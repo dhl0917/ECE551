@@ -5,7 +5,10 @@ void Numinter::integrate() {
   values.resize(loopDepth);
   std::vector<std::pair<double, double> > argv = getArgv();
   accumulate(0, argv, getSteps(), values);
-  std::cout.precision(13);  // display;
+  std::cout.precision(13);
+  //display integrated value
+  //when its absolute value is less than 1,
+  //modify its displaying format
   if (abs(sum) < 1) {
     std::cout.setf(std::ios::fixed, std::ios::floatfield);
     std::cout << sum << "\n";
@@ -14,8 +17,6 @@ void Numinter::integrate() {
   else {
     std::cout << sum << "\n";
   }
-
-  //return sum;
 }
 
 void Numinter::accumulate(int pos,
@@ -26,8 +27,6 @@ void Numinter::accumulate(int pos,
     std::vector<double> res;
     res.resize(loopDepth);
     span(0, values, step, res);
-    //    func->setViaDou(values);
-    // sum += (func->evaluate() * factor);
   }
   else {
     for (double curr = ranges[pos].first; curr <= ranges[pos].second; curr += step) {

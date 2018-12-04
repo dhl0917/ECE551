@@ -27,7 +27,6 @@ void Mcinter::integrate() {
   else {
     std::cout << ans << "\n";
   }
-  //  return funcAvg * multipleRanges();
 }
 double Mcinter::multipleRanges() {
   double product = 1;

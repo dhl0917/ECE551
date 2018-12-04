@@ -1,29 +1,30 @@
 #include "tester.h"
 
 void Tester::test() {
+  //parse input to expr
   Parser myParser(myFuncs);
   expr = myParser.parse(testExpr);
   if (expr == NULL) {
     std::cerr << "Expression side parsed failed.\n";
-    //    delete expr;
     return;
   }
+  //parse input to ans
   ans = myParser.parse(testExpr);
   if (ans == NULL) {
     std::cerr << "Answer side parsed failed.\n";
-    // delete ans;
-    // delete expr;
     return;
   }
+  //check the back of ans to see if there are unnecessary expressions.
   Expression * checkItsBack;
   checkItsBack = myParser.parse(testExpr);
   if (checkItsBack != NULL) {
     std::cerr << "More than one answers.\n";
     delete checkItsBack;
-    // delete expr;
-    // delete ans;
   }
   delete checkItsBack;
+  //compare if expr == ans and give the result
+  //if either expr's or ans's absolute value is less than 1,
+  //adjust its display format to avoid scientific notion
   if (abs(expr->evaluate() - ans->evaluate()) < 0.0000000000001) {
     if (abs(expr->evaluate()) < 1 || abs(ans->evaluate()) < 1) {
       std::cout.setf(std::ios::fixed, std::ios::floatfield);
@@ -41,7 +42,7 @@ void Tester::test() {
 }
 
 void Tester ::printCorrect() {
-  std::cout.precision(13);  //display
+  std::cout.precision(13);  //display format
   std::string funcName;
   Parser myParser(myFuncs);
   funcName = myParser.getPrintFuncName(printPtr);
@@ -56,8 +57,7 @@ void Tester ::printCorrect() {
   }
 }
 void Tester ::printInCorrect() {
-  std::cout.precision(13);  //display
-  //  std::cout.setf(std::ios::floatfield);
+  std::cout.precision(13);  //display format
   std::string funcName;
   Parser myParser(myFuncs);
   funcName = myParser.getPrintFuncName(printPtr);

@@ -7,6 +7,7 @@ void Parser::skipSpace(const char ** strp) {
   }
 }
 
+//CITE: Come from codes provided in assignment 083 but with pretty much modifications
 Expression * Parser::parse(const char ** strp) {
   skipSpace(strp);
   if (**strp == '\0') {
@@ -14,14 +15,13 @@ Expression * Parser::parse(const char ** strp) {
     return NULL;
   }
   else if (**strp == '(') {
-    // (op E E)
+    // (func Expression Expression)
     *strp = *strp + 1;
     return parseOp(strp);
   }
   else {
     //number
     char * endp;
-    // long num = strtol(*strp, &endp, 10);
     double num = strtod(*strp, &endp);
     if (endp == *strp) {
       std::cerr << "Expected a number, but found " << *strp;
@@ -31,15 +31,17 @@ Expression * Parser::parse(const char ** strp) {
     return new NumExpression(num);
   }
 }
+
+//CITE: Come from codes provided in assignment 083 but with pretty much modifications
 Expression * Parser::parseOp(const char ** strp) {
   skipSpace(strp);
-  // char op = **strp;
+  //extract funcName
   std::string funcName = parseFuncName(strp);
-  // functions in myFuncs
+
+  //functions in myFuncs
   if (myFuncs->count(funcName) > 0) {
-    Function * TarFuncPointer = (*myFuncs)[funcName];  //???delete or not
+    Function * TarFuncPointer = (*myFuncs)[funcName];
     Expression * expr = parseArgs(strp, TarFuncPointer);
-    //    delete TarFuncPointer;  //delete
     skipSpace(strp);
     if (**strp == ')') {
       *strp = *strp + 1;
@@ -52,7 +54,8 @@ Expression * Parser::parseOp(const char ** strp) {
       return NULL;
     }
   }
-  //One argument
+
+  //One argument Op
   else if (isValidSglArgFunc(funcName)) {
     Expression * arg = parse(strp);
     skipSpace(strp);
@@ -65,7 +68,7 @@ Expression * Parser::parseOp(const char ** strp) {
     return NULL;
   }
 
-  //two arguments
+  //Two arguments Op
   else if (isValidDouFunc(funcName)) {
     Expression * lhs = parse(strp);
     if (lhs == NULL) {
@@ -225,9 +228,7 @@ std::vector<std::string> Parser::parseFuncArgs(const char ** defineExpr) {
     }
     argv.push_back(temp);
     if (isspace(**defineExpr)) {
-      // argv.push_back(temp);
       skipSpace(defineExpr);
-      //      *defineExpr = *defineExpr + 1;
     }
     else if (**defineExpr == ')') {
       break;
@@ -235,7 +236,7 @@ std::vector<std::string> Parser::parseFuncArgs(const char ** defineExpr) {
     else {
       std::cerr << "Invalid arguments!\n";
       argv.clear();
-      return argv;
+      return argv;  //need this sign??
     }
   }
   if (argv.size() == 0) {
@@ -274,7 +275,6 @@ void Parser::printArgs(const char ** strp, std::string funcName) {
   if (myFuncs->count(funcName) > 0) {
     Function * funcPtr = (*myFuncs)[funcName];
     std::vector<std::string> defArgv = funcPtr->getArgs();
-    //delete funcPtr;
     n = defArgv.size();
   }
   else if (isValidSglArgFunc(funcName)) {
@@ -285,7 +285,7 @@ void Parser::printArgs(const char ** strp, std::string funcName) {
   }
   else {
     std::cerr << "Invalid funcname.\n";
-    exit(EXIT_FAILURE);
+    exit(EXIT_FAILURE);  //exit????
   }
   skipSpace(strp);
   for (size_t i = 0; i < n; i++) {

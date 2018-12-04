@@ -3,6 +3,7 @@
 bool Definer::define() {
   //skip "define"
   *defineExpr = *defineExpr + 6;
+  //parse the input to a function *
   Parser myParser(myFuncs);
   Function * myFuncPointer = myParser.parseDef(defineExpr);
   if (myFuncPointer == NULL) {
@@ -10,9 +11,10 @@ bool Definer::define() {
     return false;
   }
   else {
+    //insert the function name and its function * to the map
     std::pair<std::string, Function *> myPair(myFuncPointer->getName(), myFuncPointer);
     (*myFuncs).insert(myPair);
-    if ((*myFuncs).count(myFuncPointer->getName()) > 0) {
+    if ((*myFuncs).count(myFuncPointer->getName()) > 0) {  //check if insert succeeded
       print(myFuncPointer);
       return true;
     }

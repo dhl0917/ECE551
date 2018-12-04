@@ -12,6 +12,40 @@
 
 #include "parser.h"
 #include "vector.h"
+/*
+Function class makes a good abstraction for functions. 
+
+#name: Function name.
+#defArgv: Arguements vector according to defination.
+#defExpr: Function's expression according to defination(right side of the "=" sign).
+#evalExpr: Function's expression used to replace alphabetic arguments with numeric
+           parameters.
+#myFuncs: A map * points to the map where we store all functions.*/
+
+/*
+______________________
+Private member methods:
+
+skipSpace(..): Skip space when needs.
+
+dou2Str(..): Convert double to string.
+
+_____________________
+Public member methods:
+
+constructor: Take four arguments to initialize the object.
+
+setViaDou(..): Replace alphabetic arguments with numeric parameters via a vector 
+               of double.
+
+setViapointer(..): Replace alphabetic arguments with numeric parameters via a pointer
+                   to a string a expression objects.
+
+evaluate(): Evaluate the function value out.
+
+gradient(..): Take a Vector and calculate the gradient of the function at this Vector.
+              And return the gradient which is a Vector.*/
+
 class Function
 {
  private:
@@ -40,16 +74,6 @@ class Function
   std::string getName() const { return name; }
   std::vector<std::string> getArgs() { return defArgv; }
   Vector gradient(Vector v);
-  /*
-  Expression * parse(const char ** strp);
-  Expression * parseOp(const char ** strp);
-  std::string parseFuncName(const char ** strp);
-  bool isValidSglArgFunc(std::string funcName);
-  bool isValidDouFunc(std::string funcName);
-  Expression * makeSglExpr(std::string funcName, Expression * arg);
-  Expression * makeDouExpr(std::string op, Expression * lhs, Expression * rhs);
-  Expression * parseArgs(const char ** strp, Function * tarFunc);
-  */
   ~Function(){};
 };
 #endif

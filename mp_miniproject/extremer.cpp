@@ -1,6 +1,7 @@
 #include "extremer.h"
 
 void Extremer::initialize() {
+  //parse expr to get necessary information of the fucntion and requist
   Parser myParser(myFuncs);
   std::string funcName = myParser.parseFuncName(expr);
   func = (*myFuncs)[funcName];
@@ -24,20 +25,16 @@ void Extremer::initialize() {
 }
 void Extremer::getMaximum() {
   int times = 0;
+  //calculate the next point
   Vector newPoint = startPoint + func->gradient(startPoint) * gamma;
   times += 1;
   while (startPoint.calDist(newPoint) > convergedDistance && times < trials) {
+    //update current point and the next point
     startPoint = newPoint;
     newPoint = startPoint + func->gradient(startPoint) * gamma;
     times += 1;
   }
-  /*
-  if (times >= trials) {
-    std::cout << "Alread reach giving up number of trials. Did not find.\n";
-    return;
-    //    return DBL_MIN;
-  }
-  */
+  //Find the requested point
   if (startPoint.calDist(newPoint) <= convergedDistance) {
     func->setViaDou(startPoint.getCoords());
     double ans = func->evaluate();
@@ -52,27 +49,24 @@ void Extremer::getMaximum() {
     }
     return;
   }
+  //run out of time
   else {
     std::cout << "Alread reach giving up number of trials. Did not find.\n";
     return;
   }
-  //  std::cerr << "Ops, here comes the accident!.\n";
-  //  return DBL_MIN;
 }
 void Extremer::getMinimum() {
   int times = 0;
+  //calculate the next point
   Vector newPoint = startPoint - func->gradient(startPoint) * gamma;
   times += 1;
   while (startPoint.calDist(newPoint) > convergedDistance && times < trials) {
+    //update current point and the next point
     startPoint = newPoint;
     newPoint = startPoint - func->gradient(startPoint) * gamma;
     times += 1;
   }
-  if (times >= trials) {
-    std::cout << "Alread reach giving up number of trials. Did not find.\n";
-    return;
-    // return DBL_MIN;
-  }
+  //Find the requested point
   if (startPoint.calDist(newPoint) <= convergedDistance) {
     func->setViaDou(startPoint.getCoords());
     double ans = func->evaluate();
@@ -86,8 +80,10 @@ void Extremer::getMinimum() {
       std::cout << ans << "\n";
     }
     return;
-    // return func->evaluate();
   }
-  std::cerr << "Ops, here comes the accident!.\n";
-  //  return DBL_MIN;
+  //run out of time
+  else {
+    std::cout << "Alread reach giving up number of trials. Did not find.\n";
+    return;
+  }
 }

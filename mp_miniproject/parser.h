@@ -10,7 +10,56 @@
 #include <vector>
 
 #include "myExpr.h"
-//#include "function.h"
+
+/*
+Parser is a class used to parse input. 
+
+#myFuncs:  A pointer points to a map where we store all the defined functions.*/
+
+/*
+______________________
+Private member methods:
+skipSpace(..): A private member method used to skip space.
+
+______________________
+Public member methods:
+
+(constructor): Take one argument map* which is used to initialize myFuncs.
+
+parse(..): Take one argument const char **. It parses the input(with parseOp) and
+return an Expression *.
+
+parseOp(..): Take one argument const char **. It parses the input(with parse) and
+return an Expression *.
+
+parseFuncName(..): Take one argument const char **. It parses and returns the function 
+name from the input.
+
+isValidSglArgfunc(..): Judge if it is the sort of function that only needs one argument.
+
+isValidDouFunc(..): Judge if it is the sort of function that needs two argument.
+
+makeSglExpr(..): Allocate a SglExpression object and return a pointer pointing it.
+
+makeDouExpr(..): Allocate a corresponding double argument expression object and
+return a pointer pointing it.
+
+parseArgs(..): Find the specific expression storing in the map and replace all the
+parameters with test numeric numbers. Then parse it and return the parsed result
+which is an Expression *.
+
+parseDef(..): Parse the input of "define" and new a function object and return
+a Function * pointing at it.
+
+parseFuncArgs(..): Extract and return all the arguments from the input in a 
+vector of string.
+
+parseFuncExpr(..): Extract and return the expression exactly as it is as in a string
+and return. 
+
+getPrintFuncName(..): Extract the function name and return it in a string.
+
+printArgs(..): Use printPtr to print the arguments exactly as it inputs.*/
 
 class Function;
 class Parser

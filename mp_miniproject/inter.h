@@ -10,6 +10,25 @@
 
 #include "function.h"
 #include "parser.h"
+
+/*
+Inter class is the parent class of Numinter and Mcinter because they all conform
+to the "is a" kind relationship. 
+
+#expr: Used to parse input.
+#myFuncs: A pointer points to a map where we store all the defined functions.
+#func: the Function * of the integrand.
+#steps: The step we integrate in numint and the trials we will make in mcint.
+#argv: A vector of pair. The pair consists two double. This vector stores the 
+       lower and upper bound in pairs for every parameter in pairs.*/
+
+/*
+(constructor): Take const char** and map* two parameters and initialize all the 
+fields to proper value according to parameters or default value.
+
+integrate(): This is an abstract function which is to be overloaded in the
+children classes.*/
+
 class Inter
 {
  private:
