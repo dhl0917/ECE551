@@ -25,6 +25,7 @@ word "test".
 
 test(): The entrance of class Tester. Parse the input to expr and ans. Use the 
 evaluate() method to calculate the value of both sides and then give the result.
+Return false when exceptions happened.
 
 printCorrect(): Used when the value of expr is equal to ans to output result.
 
@@ -54,7 +55,7 @@ class Tester
     *testExpr = *testExpr + 4;
     *printPtr = *printPtr + 4;
   }
-  void test();
+  bool test();
   void printCorrect();
   void printInCorrect();
   ~Tester() {

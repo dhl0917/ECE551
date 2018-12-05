@@ -1,18 +1,18 @@
 #include "tester.h"
 
-void Tester::test() {
+bool Tester::test() {
   //parse input to expr
   Parser myParser(myFuncs);
   expr = myParser.parse(testExpr);
   if (expr == NULL) {
     std::cerr << "Expression side parsed failed.\n";
-    return;
+    return false;
   }
   //parse input to ans
   ans = myParser.parse(testExpr);
   if (ans == NULL) {
     std::cerr << "Answer side parsed failed.\n";
-    return;
+    return false;
   }
   //check the back of ans to see if there are unnecessary expressions.
   Expression * checkItsBack;
@@ -20,6 +20,7 @@ void Tester::test() {
   if (checkItsBack != NULL) {
     std::cerr << "More than one answers.\n";
     delete checkItsBack;
+    return false;
   }
   delete checkItsBack;
   //compare if expr == ans and give the result
@@ -31,6 +32,7 @@ void Tester::test() {
     }
     printCorrect();
     std::cout.unsetf(std::ios::fixed);
+    return true;
   }
   else {
     if (abs(expr->evaluate()) < 1 || abs(ans->evaluate()) < 1) {
@@ -38,6 +40,7 @@ void Tester::test() {
     }
     printInCorrect();
     std::cout.unsetf(std::ios::fixed);
+    return true;
   }
 }
 

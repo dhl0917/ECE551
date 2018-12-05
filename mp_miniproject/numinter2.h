@@ -17,7 +17,7 @@ play a role in the trapezoid method to calculate integration.
 of the Inter first and then initialize the remain fields of its own.
 
 intergrate(): It overloads the function in Inter. It modifies the field sum and make 
-it equal to the answer at the end.
+it equal to the answer at the end. Return true when succeeded and false when failed.
 
 accumulate(..): It takes 4 parameters. pos is the depth of the current iteration. ranges
 is the parameters' valid range. step is the integrate step. values is the generated 
@@ -44,11 +44,14 @@ class Numinter : public Inter
       loopDepth(0),
       factor(0),
       divider(0) {
-    loopDepth = getFunction()->getArgs().size();
-    factor = pow(getSteps(), loopDepth);
-    divider = pow(2, loopDepth);
+    if (getFunction() != NULL) {
+      loopDepth = getFunction()->getArgs().size();
+      factor = pow(getSteps(), loopDepth);
+      divider = pow(2, loopDepth);
+    }
+    //if getFunction()==NULL, there are mistakes but have been detected somewhere else
   }
-  virtual void integrate();
+  virtual bool integrate();
   void accumulate(int pos,
                   std::vector<std::pair<double, double> > & ranges,
                   double step,

@@ -23,11 +23,12 @@ to the "is a" kind relationship.
        lower and upper bound in pairs for every parameter in pairs.*/
 
 /*
-(constructor): Take const char** and map* two parameters and initialize all the 
-fields to proper value according to parameters or default value.
+(constructor): Take const char** and map* two parameters and call initialize().
+
+initialize(): Initialize all the fields to proper value according to input.
 
 integrate(): This is an abstract function which is to be overloaded in the
-children classes.*/
+children classes. Return a bool*/
 
 class Inter
 {
@@ -45,8 +46,15 @@ class Inter
       func(NULL),
       steps(0) {
     *expr = *expr + 6;
+    initialize();
+    /*
     Parser myParser(myFuncs);
     std::string funcName = myParser.parseFuncName(expr);
+    if ((*myFuncs).count(funcName) <= 0) {
+      std::cout << "here!\n";
+      expr = NULL;
+      return;
+    }
     func = (*myFuncs)[funcName];
     Expression * mySteps = myParser.parse(expr);
     steps = mySteps->evaluate();
@@ -54,15 +62,24 @@ class Inter
     for (size_t i = 0; i < func->getArgs().size(); ++i) {  //what if not enough
       Expression * low = myParser.parse(expr);
       Expression * high = myParser.parse(expr);  //check result???
+      if (low == NULL || high == NULL) {
+        delete low;
+        delete high;
+        expr = NULL;
+        break;
+      }
       argv.push_back(std::pair<double, double>(low->evaluate(), high->evaluate()));
       delete low;
       delete high;
     }
+    */
   }
-  virtual void integrate() = 0;
+  void initialize();
+  virtual bool integrate() = 0;
   Function * getFunction() { return func; }
   double getSteps() { return steps; }
   std::vector<std::pair<double, double> > getArgv() { return argv; }
+  const char ** getExpr() { return expr; }
   virtual ~Inter(){};
 };
 #endif

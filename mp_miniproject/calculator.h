@@ -33,7 +33,7 @@ class Calculator
 
  public:
   Calculator() : myFuncs(new std::map<std::string, Function *>){};
-  void run();
+  bool run();
   //  void printDef(Function * funcPointer);
   ~Calculator() {  //free all the function * in the map
     for (std::map<std::string, Function *>::iterator it = (*myFuncs).begin();

@@ -11,24 +11,25 @@
 
 /*
 Extremer is a class used to find the maximum and minimum value of a given fucntion.
-It has seven fields. expr is used to parse the input. map* points to the map we
-used to store the functions. func is the Function * of the function we need to 
-find its maximum and minimum value. gamma is the constant. convergedDistance is 
-the distance within which we regard it is close enough. startPoint is the start
-coords while trials is the most time we try this method before we give up.
-*/
+
+#expr: A pointer to pointer used to parse the input.
+#myFuncs: A pointer points to the map we used to store the functions.
+#func: The Function * of the function we need to find its maximum and minimum value.
+#gamma: The constant.
+#convergeddistance: The distance within which we regard as convergence.
+#startpoint: The start coords.
+#trials: The most time we try before we give up.*/
 
 /*
-constructor: Take two arguments. Initialize the fields according to the corresponding
+(constructor): Take two arguments. Initialize the fields according to the corresponding
 parameters or default value. 
 
 initialize(): Through the expr to parse the input and modify the fields according
 the input.
 
-getMaximum(): Find the maximum value and output it.
+getMaximum(): Find the maximum value and output it. Return false when failed.
 
-getMinimum(): Find the minimum value and output it.
-*/
+getMinimum(): Find the minimum value and output it. Return false when failed.*/
 
 class Extremer
 {
@@ -54,8 +55,8 @@ class Extremer
     initialize();
   }
   void initialize();
-  void getMaximum();
-  void getMinimum();
+  bool getMaximum();
+  bool getMinimum();
   ~Extremer() {}
 };
 

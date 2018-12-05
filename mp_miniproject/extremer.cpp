@@ -4,26 +4,63 @@ void Extremer::initialize() {
   //parse expr to get necessary information of the fucntion and requist
   Parser myParser(myFuncs);
   std::string funcName = myParser.parseFuncName(expr);
+  if ((*myFuncs).count(funcName) <= 0) {  //invalid funcname
+    expr = NULL;
+    return;
+  }
   func = (*myFuncs)[funcName];
   Expression * myGamma = myParser.parse(expr);
+  if (myGamma == NULL) {  //invalid gamma
+    std::cerr << "Invalid input for gamma";
+    expr = NULL;
+    return;
+  }
   gamma = myGamma->evaluate();
   delete myGamma;
-  Expression * myCoverDist = myParser.parse(expr);
-  convergedDistance = myCoverDist->evaluate();
-  delete myCoverDist;
+  Expression * myConverDist = myParser.parse(expr);
+  if (myConverDist == NULL) {  //invalid Converdged distance
+    std::cerr << "Invalid input for converdged distance.";
+    expr = NULL;
+    return;
+  }
+  convergedDistance = myConverDist->evaluate();
+  delete myConverDist;
 
   std::vector<double> temp;
   for (size_t i = 0; i < func->getArgs().size(); ++i) {  //what if not enough
     Expression * coord = myParser.parse(expr);           //check result???
+    if (coord == NULL) {                                 //invalid parameter
+      std::cerr << "Invalid start point.\n";
+      expr = NULL;
+      return;
+    }
     temp.push_back(coord->evaluate());
     delete coord;
   }
   startPoint = Vector(temp);
   Expression * myTrials = myParser.parse(expr);
+  if (myTrials == NULL) {  //invalid trials
+    std::cerr << "Invalid input for trials";
+    expr = NULL;
+    return;
+  }
   trials = myTrials->evaluate();
   delete myTrials;  //what if more arguments???
+  Expression * checkItsBack = myParser.parse(expr);
+  if (checkItsBack != NULL) {
+    std::cerr << "Unnecessary parameters.\n";
+    expr = NULL;
+    delete checkItsBack;
+    return;
+  }
 }
-void Extremer::getMaximum() {
+bool Extremer::getMaximum() {
+  if (expr == NULL) {
+    return false;
+  }
+  if (func->gradient(startPoint).getCoords().size() == 0) {
+    return false;
+  }
   int times = 0;
   //calculate the next point
   Vector newPoint = startPoint + func->gradient(startPoint) * gamma;
@@ -47,15 +84,21 @@ void Extremer::getMaximum() {
     else {
       std::cout << ans << "\n";
     }
-    return;
+    return true;
   }
   //run out of time
   else {
     std::cout << "Alread reach giving up number of trials. Did not find.\n";
-    return;
+    return true;
   }
 }
-void Extremer::getMinimum() {
+bool Extremer::getMinimum() {
+  if (expr == NULL) {
+    return false;
+  }
+  if (func->gradient(startPoint).getCoords().size() == 0) {
+    return false;
+  }
   int times = 0;
   //calculate the next point
   Vector newPoint = startPoint - func->gradient(startPoint) * gamma;
@@ -79,11 +122,11 @@ void Extremer::getMinimum() {
     else {
       std::cout << ans << "\n";
     }
-    return;
+    return true;
   }
   //run out of time
   else {
     std::cout << "Alread reach giving up number of trials. Did not find.\n";
-    return;
+    return true;
   }
 }

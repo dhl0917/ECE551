@@ -1,9 +1,23 @@
 #include "numinter2.h"
 
-void Numinter::integrate() {
+bool Numinter::integrate() {
+  if (getExpr() == NULL) {
+    return false;
+  }
   std::vector<double> values;
   values.resize(loopDepth);
   std::vector<std::pair<double, double> > argv = getArgv();
+  //small demo to see if it is legal
+  std::vector<double> demoArgv;
+  for (size_t i = 0; i < argv.size(); ++i) {
+    demoArgv.push_back(argv[i].first);
+  }
+  getFunction()->setViaDou(demoArgv);
+  if (getFunction()->evaluate() == DBL_MIN) {
+    std::cerr << "Invalid integrand.\n";
+    return false;  //Did not pass demo test
+  }
+  //Have passed demo test
   accumulate(0, argv, getSteps(), values);
   std::cout.precision(13);
   //display integrated value
@@ -13,9 +27,11 @@ void Numinter::integrate() {
     std::cout.setf(std::ios::fixed, std::ios::floatfield);
     std::cout << sum << "\n";
     std::cout.unsetf(std::ios::fixed);
+    return true;
   }
   else {
     std::cout << sum << "\n";
+    return true;
   }
 }
 

@@ -18,7 +18,7 @@ getRandouVec(): Call getRandou to generate a vector of random double numbers in 
 ranges.
 
 integrate(): It overloads the function in the parent class to calculate the intergrate
-value.
+value. Return true when succeed and false when failed.
 
 multipleRanges(): It returns the product of all the length of ranges. 
 */
@@ -30,7 +30,7 @@ class Mcinter : public Inter
   Mcinter(const char ** strp, std::map<std::string, Function *> * myMap) : Inter(strp, myMap) {}
   double getRanDou(double low, double high);
   std::vector<double> getRanDouVec();
-  virtual void integrate();
+  virtual bool integrate();
   double multipleRanges();
   ~Mcinter() {}
 };

@@ -42,9 +42,20 @@ Expression * Parser::parseOp(const char ** strp) {
   if (myFuncs->count(funcName) > 0) {
     Function * TarFuncPointer = (*myFuncs)[funcName];
     Expression * expr = parseArgs(strp, TarFuncPointer);
+    if (expr == NULL) {  //Arguments parsed failed. Displayed in parseArgs(..).
+      return expr;
+    }
     skipSpace(strp);
     if (**strp == ')') {
       *strp = *strp + 1;
+      //check its back
+      Expression * checkItsBack = parse(strp);
+      if (checkItsBack != NULL) {
+        std::cerr << "Invalid right hand side expression of the function.\n";
+        delete expr;
+        delete checkItsBack;
+        return NULL;
+      }
       return expr;
     }
     else {
@@ -174,7 +185,7 @@ Expression * Parser::parseArgs(const char ** strp, Function * tarFunc) {
   parsedFuncExpr = parse(&pointerToSetExpr);  //check succeeded or failed.
   if (parsedFuncExpr == NULL) {               //check parsed result
     std::cerr << "Cannot parse arguments.\n";
-    exit(EXIT_FAILURE);
+    //    exit(EXIT_FAILURE);
   }
   return parsedFuncExpr;
 }
@@ -285,7 +296,8 @@ void Parser::printArgs(const char ** strp, std::string funcName) {
   }
   else {
     std::cerr << "Invalid funcname.\n";
-    exit(EXIT_FAILURE);  //exit????
+    return;  //????
+    //    exit(EXIT_FAILURE);  //exit????
   }
   skipSpace(strp);
   for (size_t i = 0; i < n; i++) {

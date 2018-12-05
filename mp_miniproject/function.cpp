@@ -17,6 +17,11 @@ std::string Function::dou2str(double arg) {
 
 //public methods
 void Function::setViaDou(std::vector<double> valVector) {
+  if (valVector.size() != defArgv.size()) {
+    //  std::cerr << "Cannot set via double vector.\n";
+    evalExpr.clear();
+    return;
+  }
   evalExpr = defExpr;
   for (size_t i = 0; i < defArgv.size(); i++) {
     int pos = evalExpr.find(defArgv[i]);
@@ -34,8 +39,11 @@ void Function::setViaPointer(const char ** strp) {
     Parser myParser(myFuncs);
     Expression * arg = myParser.parse(strp);
     if (arg == NULL) {  //check parsed result.
-      std::cerr << "Cannot set value via pointer.\n";
-      exit(EXIT_FAILURE);
+      // std::cerr << "Cannot set value via pointer.\n";
+      //      valVector.clear();
+      evalExpr.clear();
+      return;
+      //      exit(EXIT_FAILURE);  //???
     }
     valVector.push_back(arg->evaluate());
     delete arg;
@@ -46,7 +54,7 @@ void Function::setViaPointer(const char ** strp) {
 double Function::evaluate() {
   if (evalExpr.size() == 0) {
     std::cerr << "Failure set.\n";
-    exit(EXIT_FAILURE);
+    //    exit(EXIT_FAILURE);????
   }
   const char * pointerToEvalExpr = &evalExpr[0];
   Parser myParser(myFuncs);
@@ -56,6 +64,15 @@ double Function::evaluate() {
     // exit(EXIT_FAILURE);
     return DBL_MIN;  //return DBL_MIN to indicate failure?????
   }
+  //check its back
+  Expression * checkItsBack = myParser.parse(&pointerToEvalExpr);
+  if (checkItsBack != NULL) {
+    std::cerr << "Invalid right hand side expression of the function. in function.cpp\n";
+    delete parsedExpr;
+    delete checkItsBack;
+    return DBL_MIN;
+  }
+
   double ans = parsedExpr->evaluate();
   delete parsedExpr;
   return ans;
@@ -64,6 +81,11 @@ double Function::evaluate() {
 Vector Function::gradient(Vector v) {
   setViaDou(v.getCoords());
   double funcValue = evaluate();
+  if (funcValue == DBL_MIN) {
+    std::cerr << "Invalid function expression.\n";
+    return Vector();
+    //return something, modify vector, verify in extremer
+  }
   std::vector<double> res;
   res.resize(defArgv.size());
   for (size_t i = 0; i < defArgv.size(); i++) {
