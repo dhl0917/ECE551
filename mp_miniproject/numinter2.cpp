@@ -7,17 +7,6 @@ bool Numinter::integrate() {
   std::vector<double> values;
   values.resize(loopDepth);
   std::vector<std::pair<double, double> > argv = getArgv();
-  //small demo to see if it is legal
-  std::vector<double> demoArgv;
-  for (size_t i = 0; i < argv.size(); ++i) {
-    demoArgv.push_back(argv[i].first);
-  }
-  getFunction()->setViaDou(demoArgv);
-  if (getFunction()->evaluate() == DBL_MIN) {
-    std::cerr << "Invalid integrand.\n";
-    return false;  //Did not pass demo test
-  }
-  //Have passed demo test
   accumulate(0, argv, getSteps(), values);
   std::cout.precision(13);
   //display integrated value

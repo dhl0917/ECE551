@@ -15,13 +15,6 @@ bool Mcinter::integrate() {
   if (getExpr() == NULL) {
     return false;
   }
-  //small demo to see if it is legal
-  getFunction()->setViaDou(getRanDouVec());
-  if (getFunction()->evaluate() == DBL_MIN) {
-    std::cerr << "Invalid integrand.\n";
-    return false;  //Did not pass demo test
-  }
-  //Have passed demo test
   double funcAvg = 0;
   for (int i = 0; i < getSteps(); ++i) {
     getFunction()->setViaDou(getRanDouVec());

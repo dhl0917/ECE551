@@ -4,6 +4,7 @@ void Inter::initialize() {
   Parser myParser(myFuncs);
   std::string funcName = myParser.parseFuncName(expr);
   if ((*myFuncs).count(funcName) <= 0) {  //invalid funcname
+    std::cerr << "Invalid function name./n";
     expr = NULL;
     return;
   }

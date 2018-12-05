@@ -58,9 +58,6 @@ bool Extremer::getMaximum() {
   if (expr == NULL) {
     return false;
   }
-  if (func->gradient(startPoint).getCoords().size() == 0) {
-    return false;
-  }
   int times = 0;
   //calculate the next point
   Vector newPoint = startPoint + func->gradient(startPoint) * gamma;
@@ -88,15 +85,13 @@ bool Extremer::getMaximum() {
   }
   //run out of time
   else {
-    std::cout << "Alread reach giving up number of trials. Did not find.\n";
+    std::cout << "Alread reach giving up number of trials. Did not find. Last working point:\n";
+    newPoint.printVector();
     return true;
   }
 }
 bool Extremer::getMinimum() {
   if (expr == NULL) {
-    return false;
-  }
-  if (func->gradient(startPoint).getCoords().size() == 0) {
     return false;
   }
   int times = 0;
@@ -126,7 +121,8 @@ bool Extremer::getMinimum() {
   }
   //run out of time
   else {
-    std::cout << "Alread reach giving up number of trials. Did not find.\n";
+    std::cout << "Alread reach giving up number of trials. Did not find. Last working point:\n";
+    newPoint.printVector();
     return true;
   }
 }

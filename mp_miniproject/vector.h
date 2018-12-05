@@ -34,7 +34,9 @@ operator-: Overload the - opeartor to minus the corresponding element in rhs's
 coords vector with the one the this coords vector to come up with the result vector.
 
 opeartor*: Overload the * opeartor which take a double as its right hand side. Times
-every element with the double respectly to form the new element in the result vector.*/
+every element with the double respectly to form the new element in the result vector.
+
+printVector(): Print coords out formatted.*/
 
 class Vector
 {
@@ -58,6 +60,7 @@ class Vector
   Vector operator+(const Vector & rhs) const;
   Vector operator-(const Vector & rhs) const;
   Vector operator*(const double & rhs) const;
+  void printVector();
   ~Vector() {}
 };
 

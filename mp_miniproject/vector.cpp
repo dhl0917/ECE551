@@ -48,3 +48,16 @@ Vector Vector::operator*(const double & rhs) const {
   }
   return Vector(res);
 }
+void Vector::printVector() {
+  if (coords.size() == 0) {
+    return;
+  }
+  else {
+    std::cout.precision(13);
+    std::cout << "(" << coords[0];
+    for (size_t i = 1; i < coords.size(); i++) {
+      std::cout << ", " << coords[i];
+    }
+    std::cout << ")\n";
+  }
+}

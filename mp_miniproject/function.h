@@ -54,7 +54,7 @@ class Function
   std::string defExpr;
   std::string evalExpr;
   std::map<std::string, Function *> * myFuncs;
-
+  bool valid;
   void skipSpace(const char ** strp);
   std::string dou2str(double arg);
 
@@ -66,13 +66,18 @@ class Function
       name(funcName),
       defArgv(argv),
       defExpr(funcExpr),
-      myFuncs(myMap){};
+      myFuncs(myMap),
+      valid(true) {
+    demoTest();
+  };
+  void demoTest();
   std::string getEvalExpr() const { return evalExpr; }
   void setViaDou(std::vector<double> valVector);
   void setViaPointer(const char ** strp);
   double evaluate();
   std::string getName() const { return name; }
   std::vector<std::string> getArgs() { return defArgv; }
+  bool isValid() { return valid; }
   Vector gradient(Vector v);
   ~Function(){};
 };

@@ -24,7 +24,8 @@ Expression * Parser::parse(const char ** strp) {
     char * endp;
     double num = strtod(*strp, &endp);
     if (endp == *strp) {
-      std::cerr << "Expected a number, but found " << *strp;
+      //      std::cerr << "Expected a number, but found " << *strp;
+      std::cerr << "Unexpected: " << **strp << "\n";
       return NULL;
     }
     *strp = endp;
@@ -48,18 +49,11 @@ Expression * Parser::parseOp(const char ** strp) {
     skipSpace(strp);
     if (**strp == ')') {
       *strp = *strp + 1;
-      //check its back
-      Expression * checkItsBack = parse(strp);
-      if (checkItsBack != NULL) {
-        std::cerr << "Invalid right hand side expression of the function.\n";
-        delete expr;
-        delete checkItsBack;
-        return NULL;
-      }
       return expr;
     }
     else {
-      std::cerr << "Expected ) but found " << *strp << "\n";
+      //      std::cerr << "Expected ) but found " << *strp << "\n";
+      std::cerr << "Unexpected: " << **strp << "\n";
       std::cerr << "Defined function paresd failed.\n";
       delete expr;
       return NULL;
@@ -74,7 +68,8 @@ Expression * Parser::parseOp(const char ** strp) {
       *strp = *strp + 1;
       return makeSglExpr(funcName, arg);
     }
-    std::cerr << "Expected ) but found " << *strp << "\n";
+    std::cerr << "Unexpected: " << **strp << "\n";
+    //    std::cerr << "Expected ) but found " << *strp << "\n";
     delete arg;
     return NULL;
   }
@@ -95,13 +90,15 @@ Expression * Parser::parseOp(const char ** strp) {
       *strp = *strp + 1;
       return makeDouExpr(funcName, lhs, rhs);
     }
-    std::cerr << "Expected ) but found " << *strp << "\n";
+    //    std::cerr << "Expected ) but found " << *strp << "\n";
+    std::cerr << "Unexpected: " << **strp << "\n";
     delete lhs;
     delete rhs;
     return NULL;
   }
   else {
-    std::cerr << "Invalid op: " << funcName << "\n";
+    // std::cerr << "Invalid Op: " << funcName << "\n";
+    std::cerr << "Invalid function name.\n";
     return NULL;
   }
 }
@@ -185,7 +182,6 @@ Expression * Parser::parseArgs(const char ** strp, Function * tarFunc) {
   parsedFuncExpr = parse(&pointerToSetExpr);  //check succeeded or failed.
   if (parsedFuncExpr == NULL) {               //check parsed result
     std::cerr << "Cannot parse arguments.\n";
-    //    exit(EXIT_FAILURE);
   }
   return parsedFuncExpr;
 }
@@ -220,7 +216,13 @@ Function * Parser::parseDef(const char ** defineExpr) {
     }
     else {
       Function * myFunc = new Function(defFuncName, defFuncArgs, defFuncExpr, myFuncs);
-      return myFunc;
+      if (myFunc->isValid()) {
+        return myFunc;
+      }
+      else {
+        delete myFunc;
+        return NULL;
+      }
     }
   }
   else {
@@ -297,7 +299,6 @@ void Parser::printArgs(const char ** strp, std::string funcName) {
   else {
     std::cerr << "Invalid funcname.\n";
     return;  //????
-    //    exit(EXIT_FAILURE);  //exit????
   }
   skipSpace(strp);
   for (size_t i = 0; i < n; i++) {
