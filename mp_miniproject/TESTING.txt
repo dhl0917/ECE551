@@ -1,0 +1,64 @@
+--------------------------------Numeric Testcases-------------------------------
+
+############### Step 1
+
+1.1 Run ./numerics < testcases/input1_1.txt
+****************
+defined f(x y z)
+f(3 4.2 5) = 14.6 [CORRECT]
+f(-1 9.2 6) = -6.2 [CORRECT]
+
+It is correct. The define sentence is legal and the expression is legal, so it
+can be defined successfully. The two test sentences are legal so it can be
+parsed to see if it is correct. The evaluation of the function is equal to the
+answer. Therefore, there are key words correct at the end of each line.
+
+1.2 Run ./numerics < testcases/input1_2.txt
+****************
+defined f(x y z)
+f(3 4 5) = 14 [CORRECT]
+f(3    4   5) = 14 [CORRECT]
+
+It is correct. As above, the define sentence and test sentence are legal.The
+evaluation of the function is equal to the answer so there are CORRECT behind
+them. Also, according to the specifications, an arbitrary amount of spaces may
+appear between (but not inside of) any tokens (id, fname, parens, numeric
+constants) without altering the meaning. Therefore, the two test sentences has
+the same meaning and result.
+
+1.3 Run ./numerics < testcases/input1_3.txt
+****************
+(+ (- (* (/ 3 2) (% 10.5 6) ) 2.3) -10.505) = 20 [INCORRECT: expected: -6.055]
+sin(7.853982) = 1.0000000000000 [CORRECT]
+cos(0) = 1 [CORRECT]
+*((sqrt 2) (sqrt 2)) = 2 [CORRECT]
+(pow (% 21.5 10.2) (ln 2.71828)) = 1.1 [INCORRECT: expected: 1.099999929478]
+1 = 1 [CORRECT]
+1.5 = 2 [INCORRECT: expected: 1.5]
+1.123456789012 = 1.123456789011 [INCORRECT: expected: 1.123456789012]
+-2.4128 = 2.4128 [INCORRECT: expected: -2.4128]
+(pow (pow (pow 2 3) 2) 1.2) = 1 [INCORRECT: expected: 147.0333894396]
+5.5 = 2.000000000567 [INCORRECT: expected: 5.5]
+
+These are correct. All of these eleven testcases are in legal and valid syntax.
+So each of them can perform correctly. As we can see, the expressions can combine
+with others and perform correctly. Also, the answer side can also be expressions
+and its combinations. According to the actual result, the program will judge it
+is CORRECT or INCORRECT and print out the answer behind each line.
+
+1.4 Run ./numerics < testcases/input1_4.txt
+***************
+(f 2.4 3.2) = 1.5 [INCORRECT: expected: 19.50646970587]
+2.3 = 36.29719290892 [INCORRECT: expected: 2.3]
+defined g(d h l)
+g(1.2 3.4 -0.55) = 5.15 [CORRECT]
+3 = 3 [CORRECT]
+
+These are correct. All of the input are legal and valid syntax. The parameters
+of the function are not limited to only one alphabet. As shown in the testcase,
+dhl and at are two parameters while in the second function, d, h and l are three
+different paraments. According to the actual result, the program will judge it
+is CORRECT or INCORRECT and print out the answer behind each line.
+
+
+

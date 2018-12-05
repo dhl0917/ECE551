@@ -24,13 +24,22 @@ void Function::demoTest() {
   Parser myParser(myFuncs);
   setViaDou(demoArgv);
   const char * demoPtr = &evalExpr[0];
-  Expression * demoParsed = myParser.parse(&demoPtr);
+  Expression * demoParsed = NULL;
+  demoParsed = myParser.parse(&demoPtr);
   if (demoParsed == NULL) {
     std::cerr << "Invalid function.\n";
     valid = false;
     return;
   }
   //check its back
+  skipSpace(&demoPtr);
+  if (*demoPtr != '\0') {
+    std::cerr << "Invalid right hand side expression of the function.\n";
+    valid = false;
+    delete demoParsed;
+    return;
+  }
+  /*
   Expression * checkItsBack = myParser.parse(&demoPtr);
   if (checkItsBack != NULL) {
     std::cerr << "Invalid right hand side expression of the function.\n";
@@ -39,6 +48,7 @@ void Function::demoTest() {
     delete checkItsBack;
     return;
   }
+  */
   delete demoParsed;
 }
 
@@ -77,11 +87,6 @@ void Function::setViaPointer(const char ** strp) {
 }
 
 double Function::evaluate() {
-  /*
-  if (evalExpr.size() == 0) {
-    std::cerr << "Failure set.\n";
-  }
-  */
   const char * pointerToEvalExpr = &evalExpr[0];
   Parser myParser(myFuncs);
   Expression * parsedExpr = myParser.parse(&pointerToEvalExpr);

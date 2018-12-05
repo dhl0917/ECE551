@@ -1,0 +1,3 @@
+define (f x y z)=(+ (* x y) (- z 3))
+test (f 3 4 5) 14
+test (f        3    4   5) 14

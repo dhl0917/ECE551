@@ -1,0 +1,6 @@
+define (f dhl at)=(+ (pow at dhl) at)
+test (f 2.4 3.2) 1.5
+test 2.3 (f 2.3 4.5)
+define (g d h l)=(+ d (- h l))
+test (g 1.2 3.4 -0.55) 5.15
+test 3 (g 1 5 3)
