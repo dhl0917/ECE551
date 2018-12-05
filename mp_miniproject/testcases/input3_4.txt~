@@ -1,2 +1,0 @@
-define (f x)=(sin x)
-numint f 1000 2 -1
