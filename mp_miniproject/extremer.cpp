@@ -28,9 +28,9 @@ void Extremer::initialize() {
   delete myConverDist;
 
   std::vector<double> temp;
-  for (size_t i = 0; i < func->getArgs().size(); ++i) {  //what if not enough
-    Expression * coord = myParser.parse(expr);           //check result???
-    if (coord == NULL) {                                 //invalid parameter
+  for (size_t i = 0; i < func->getArgs().size(); ++i) {
+    Expression * coord = myParser.parse(expr);
+    if (coord == NULL) {  //invalid parameter
       std::cerr << "Invalid start point.\n";
       expr = NULL;
       return;
@@ -46,7 +46,8 @@ void Extremer::initialize() {
     return;
   }
   trials = myTrials->evaluate();
-  delete myTrials;  //what if more arguments???
+  delete myTrials;
+  //Check if more arguments than need
   Expression * checkItsBack = myParser.parse(expr);
   if (checkItsBack != NULL) {
     std::cerr << "Unnecessary parameters.\n";

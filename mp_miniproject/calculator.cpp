@@ -39,11 +39,6 @@ bool Calculator::run() {
         free(line);
         return false;
       }
-      /*
-      double numintAns = myNuminter.integrate();
-      std::cout.precision(13);  //display
-      std::cout << numintAns << "\n";
-      */
     }
     //mcint
     else if (std::string(line).find("mcint") == 0) {
@@ -53,11 +48,6 @@ bool Calculator::run() {
         free(line);
         return false;
       }
-      /*
-      double mcintAns = myMcinter.integrate();
-      std::cout.precision(13);  //display
-      std::cout << mcintAns << "\n";
-      */
     }
     //max
     else if (std::string(line).find("max") == 0) {
@@ -67,20 +57,6 @@ bool Calculator::run() {
         free(line);
         return false;
       }
-      // double max = myMaxer.getMaximum();
-      /*
-      if (max != DBL_MIN) {
-        std::cout.precision(13);  // display;
-        if (abs(max) < 1) {
-          std::cout.setf(std::ios::fixed, std::ios::floatfield);
-          std::cout << max << "\n";
-          std::cout.unsetf(std::ios::fixed);
-        }
-        else {
-          std::cout << max << "\n";
-        }
-      }
-      */
     }
     //min
     else if (std::string(line).find("min") == 0) {
@@ -90,20 +66,6 @@ bool Calculator::run() {
         free(line);
         return false;
       }
-      //     double min = myMiner.getMinimum();
-      /*
-      if (min != DBL_MIN) {
-        std::cout.precision(13);  // display;
-        if (abs(min) < 1) {
-          std::cout.setf(std::ios::fixed, std::ios::floatfield);
-          std::cout << min << "\n";
-          std::cout.unsetf(std::ios::fixed);
-        }
-        else {
-          std::cout << min << "\n";
-        }
-      }
-      */
     }
     //No key words.
     else {

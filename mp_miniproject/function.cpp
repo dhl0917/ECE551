@@ -39,22 +39,11 @@ void Function::demoTest() {
     delete demoParsed;
     return;
   }
-  /*
-  Expression * checkItsBack = myParser.parse(&demoPtr);
-  if (checkItsBack != NULL) {
-    std::cerr << "Invalid right hand side expression of the function.\n";
-    valid = false;
-    delete demoParsed;
-    delete checkItsBack;
-    return;
-  }
-  */
   delete demoParsed;
 }
 
 void Function::setViaDou(std::vector<double> valVector) {
   if (valVector.size() != defArgv.size()) {
-    //  std::cerr << "Cannot set via double vector.\n";
     evalExpr.clear();
     return;
   }
@@ -75,8 +64,6 @@ void Function::setViaPointer(const char ** strp) {
     Parser myParser(myFuncs);
     Expression * arg = myParser.parse(strp);
     if (arg == NULL) {  //check parsed result.
-      //  std::cerr << "Cannot set value via pointer.\n";
-      //      valVector.clear();
       evalExpr.clear();
       return;
     }
@@ -90,13 +77,6 @@ double Function::evaluate() {
   const char * pointerToEvalExpr = &evalExpr[0];
   Parser myParser(myFuncs);
   Expression * parsedExpr = myParser.parse(&pointerToEvalExpr);
-  /*
-  if (parsedExpr == NULL) {  //check paresd result
-    std::cerr << "Cannot parse and evaluate.\n";
-    // exit(EXIT_FAILURE);
-    return DBL_MIN;  //return DBL_MIN to indicate failure?????
-  }
-  */
   double ans = parsedExpr->evaluate();
   delete parsedExpr;
   return ans;

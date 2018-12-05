@@ -47,32 +47,6 @@ class Inter
       steps(0) {
     *expr = *expr + 6;
     initialize();
-    /*
-    Parser myParser(myFuncs);
-    std::string funcName = myParser.parseFuncName(expr);
-    if ((*myFuncs).count(funcName) <= 0) {
-      std::cout << "here!\n";
-      expr = NULL;
-      return;
-    }
-    func = (*myFuncs)[funcName];
-    Expression * mySteps = myParser.parse(expr);
-    steps = mySteps->evaluate();
-    delete mySteps;
-    for (size_t i = 0; i < func->getArgs().size(); ++i) {  //what if not enough
-      Expression * low = myParser.parse(expr);
-      Expression * high = myParser.parse(expr);  //check result???
-      if (low == NULL || high == NULL) {
-        delete low;
-        delete high;
-        expr = NULL;
-        break;
-      }
-      argv.push_back(std::pair<double, double>(low->evaluate(), high->evaluate()));
-      delete low;
-      delete high;
-    }
-    */
   }
   void initialize();
   virtual bool integrate() = 0;

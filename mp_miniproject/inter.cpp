@@ -17,15 +17,15 @@ void Inter::initialize() {
   }
   steps = mySteps->evaluate();
   delete mySteps;
-  for (size_t i = 0; i < func->getArgs().size(); ++i) {  //what if not enough
+  for (size_t i = 0; i < func->getArgs().size(); ++i) {
     Expression * low = myParser.parse(expr);
     if (low == NULL) {  //Invalid lower bound
       std::cerr << "Invalid lower bound.\n";
       expr = NULL;
       return;
     }
-    Expression * high = myParser.parse(expr);  //check result???
-    if (high == NULL) {                        //Invalid upper bound
+    Expression * high = myParser.parse(expr);
+    if (high == NULL) {  //Invalid upper bound
       std::cerr << "Invalid upper bound.\n";
       delete low;
       expr = NULL;
