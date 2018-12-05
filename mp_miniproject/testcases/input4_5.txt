@@ -1,0 +1,2 @@
+define (f x y)=(* (sin x) (cos y))
+min f 0.1 0.01 1  1000

@@ -1,0 +1,2 @@
+define (f x)=(* x x)
+mcint f 1000 2 -1

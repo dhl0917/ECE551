@@ -1,0 +1,18 @@
+define (f x)=(sin x)
+max f 0.1 0.001 0.5 1000
+min f 0.1 0.001 0.5 1000
+define (g x)=(cos x)
+max g 0.1 0.001 0.5 1200
+min g 0.1 0.001 0.5 1200
+define (h x)=(* 2 x)
+max h 0.5 0.01 0 500
+max h (/ 1 2) (/ 1 100) 0 (* 2 250)
+define (A x y)=(+ x y)
+max A 1 0.01 0 0 1000
+min A 1 0.01 0 0 1000
+define (F x y) = (+ (+ (* x x) (* y y)) (cos 0))
+max F 0.1 0.001  3 4   1000
+min F 0.1 0.001  3 4   1000
+define (G x y) = (- 1 (+ (* x x) (* y y)))
+max G 0.1 0.001 2 3 1000
+min G 0.1 0.001 2 3 1000

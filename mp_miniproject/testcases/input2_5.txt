@@ -1,0 +1,2 @@
+define (F x y)=(+ (pow x y) (sin x))
+numint F 1000 -1 2 3.5 6.3 2.3 4.1

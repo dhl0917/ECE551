@@ -1,0 +1,2 @@
+define (f x)=(ln x)
+mcint f a 0 3.1415926

@@ -5,13 +5,14 @@ void Extremer::initialize() {
   Parser myParser(myFuncs);
   std::string funcName = myParser.parseFuncName(expr);
   if ((*myFuncs).count(funcName) <= 0) {  //invalid funcname
+    std::cerr << "Invalid function name.\n";
     expr = NULL;
     return;
   }
   func = (*myFuncs)[funcName];
   Expression * myGamma = myParser.parse(expr);
   if (myGamma == NULL) {  //invalid gamma
-    std::cerr << "Invalid input for gamma";
+    std::cerr << "Invalid input for gamma.\n";
     expr = NULL;
     return;
   }
@@ -19,7 +20,7 @@ void Extremer::initialize() {
   delete myGamma;
   Expression * myConverDist = myParser.parse(expr);
   if (myConverDist == NULL) {  //invalid Converdged distance
-    std::cerr << "Invalid input for converdged distance.";
+    std::cerr << "Invalid input for converdged distance.\n";
     expr = NULL;
     return;
   }
@@ -40,7 +41,7 @@ void Extremer::initialize() {
   startPoint = Vector(temp);
   Expression * myTrials = myParser.parse(expr);
   if (myTrials == NULL) {  //invalid trials
-    std::cerr << "Invalid input for trials";
+    std::cerr << "Invalid input for trials.\n";
     expr = NULL;
     return;
   }
@@ -75,12 +76,14 @@ bool Extremer::getMaximum() {
     std::cout.precision(13);  // display;
     if (abs(ans) < 1) {
       std::cout.setf(std::ios::fixed, std::ios::floatfield);
-      std::cout << ans << "\n";
+      std::cout << ans;
       std::cout.unsetf(std::ios::fixed);
     }
     else {
-      std::cout << ans << "\n";
+      std::cout << ans;
     }
+    std::cout << " @ ";
+    startPoint.printVector();
     return true;
   }
   //run out of time
@@ -111,12 +114,14 @@ bool Extremer::getMinimum() {
     std::cout.precision(13);  // display;
     if (abs(ans) < 1) {
       std::cout.setf(std::ios::fixed, std::ios::floatfield);
-      std::cout << ans << "\n";
+      std::cout << ans;
       std::cout.unsetf(std::ios::fixed);
     }
     else {
-      std::cout << ans << "\n";
+      std::cout << ans;
     }
+    std::cout << " @ ";
+    startPoint.printVector();
     return true;
   }
   //run out of time

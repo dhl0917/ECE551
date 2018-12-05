@@ -1,0 +1,8 @@
+define (f x)=(sin x)
+mcint f 1000 0 3.1415926
+mcint f (* 2 500) (- 1 1) (* 1.5707963 2)
+define (g x y)=(+ (* 2 x) y)
+mcint g 100 1 1.5 3.4 3.9
+define (h x)=1.5
+mcint h 1000 1 2
+mcint h 1000 (ln 2.71828) (sqrt 4)

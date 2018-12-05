@@ -4,14 +4,14 @@ void Inter::initialize() {
   Parser myParser(myFuncs);
   std::string funcName = myParser.parseFuncName(expr);
   if ((*myFuncs).count(funcName) <= 0) {  //invalid funcname
-    std::cerr << "Invalid function name./n";
+    std::cerr << "Invalid function name.\n";
     expr = NULL;
     return;
   }
   func = (*myFuncs)[funcName];
   Expression * mySteps = myParser.parse(expr);
   if (mySteps == NULL) {  //invalid step/trials
-    std::cerr << "Invalid input for step/trials.";
+    std::cerr << "Invalid input for step/trials.\n";
     expr = NULL;
     return;
   }
@@ -42,6 +42,7 @@ void Inter::initialize() {
     delete low;
     delete high;
   }
+
   Expression * checkItsBack = myParser.parse(expr);
   if (checkItsBack != NULL) {
     std::cerr << "Unnecessary parameters.\n";

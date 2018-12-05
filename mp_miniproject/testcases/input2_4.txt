@@ -1,0 +1,2 @@
+define (f x)=(sin x)
+numint f 0.001 2 -1

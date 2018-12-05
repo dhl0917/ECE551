@@ -1,4 +1,7 @@
---------------------------------Numeric Testcases-------------------------------
+
+--------------------------------NUMERICS TESTCASES-------------------------------
+
+                        ALL TESTCASES ARE VALGRIND CLEAN.
 
 ############### Step 1
 
@@ -7,6 +10,7 @@
 defined f(x y z)
 f(3 4.2 5) = 14.6 [CORRECT]
 f(-1 9.2 6) = -6.2 [CORRECT]
+****************
 
 It is correct. The define sentence is legal and the expression is legal, so it
 can be defined successfully. The two test sentences are legal so it can be
@@ -18,6 +22,7 @@ answer. Therefore, there are key words correct at the end of each line.
 defined f(x y z)
 f(3 4 5) = 14 [CORRECT]
 f(3    4   5) = 14 [CORRECT]
+****************
 
 It is correct. As above, the define sentence and test sentence are legal.The
 evaluation of the function is equal to the answer so there are CORRECT behind
@@ -39,20 +44,22 @@ cos(0) = 1 [CORRECT]
 -2.4128 = 2.4128 [INCORRECT: expected: -2.4128]
 (pow (pow (pow 2 3) 2) 1.2) = 1 [INCORRECT: expected: 147.0333894396]
 5.5 = 2.000000000567 [INCORRECT: expected: 5.5]
+****************
 
 These are correct. All of these eleven testcases are in legal and valid syntax.
-So each of them can perform correctly. As we can see, the expressions can combine
-with others and perform correctly. Also, the answer side can also be expressions
-and its combinations. According to the actual result, the program will judge it
-is CORRECT or INCORRECT and print out the answer behind each line.
+So each of them can perform correctly. As we can see, the expressions can
+combine with others and perform correctly. Also, the answer side can also be
+expressions and its combinations. According to the actual result, the program
+will judge it is CORRECT or INCORRECT and print out the answer behind each line.
 
 1.4 Run ./numerics < testcases/input1_4.txt
-***************
+****************
 (f 2.4 3.2) = 1.5 [INCORRECT: expected: 19.50646970587]
 2.3 = 36.29719290892 [INCORRECT: expected: 2.3]
 defined g(d h l)
 g(1.2 3.4 -0.55) = 5.15 [CORRECT]
 3 = 3 [CORRECT]
+****************
 
 These are correct. All of the input are legal and valid syntax. The parameters
 of the function are not limited to only one alphabet. As shown in the testcase,
@@ -60,5 +67,308 @@ dhl and at are two parameters while in the second function, d, h and l are three
 different paraments. According to the actual result, the program will judge it
 is CORRECT or INCORRECT and print out the answer behind each line.
 
+1.5 Run ./numerics < testcases/input1_5.txt
+****************
+defined f(x y z)
+defined g(x y)
+defined h(x y z)
+f(3 4.2 5) = 7.6 [CORRECT]
+(f (g 1 2)(g 3 4)(h 5 6 -7)) = 99.87 [INCORRECT: expected: -64.18396486329]
+(f 1 2 3) = 1.134648741853 [INCORRECT: expected: -1]
+****************
+
+These are correct. Define inputs are all legal and they are all valid
+definations. For test sentences, they all have two commands. The first command
+can call other functions or use numeric constants directly, however, must have
+no variables. The second command which is the expected value for the expression
+to evaluate to can be a numeric constant or an arbitrary expression. According
+to the actual result, the program will tell if it is CORRECT or INCORRECT and
+print out the answer behind each line.
+
+1.6 Run ./numerics < testcases/input1_6.txt
+****************
+Found no function expression.
+Define failed.
+****************
+
+It is correct. There is no equal sign in the define sentence which is invalid
+syntax. The program cannot find the function expression and the failed the
+defination. Then it will result in exiting the program.
+
+1.7 Run ./numerics < testcases/input1_7.txt
+****************
+Invalid function name.
+Invalid function.
+Define failed.
+****************
+
+It is correct. The order of the right hand side of the function is wrong. We
+have to always input function name or operator first. In this testcase, the
+program cannot parse its valid function expression and failed the defination.
+Then it will result in exiting the program.
+
+1.8 Run ./numerics < testcases/input1_8.txt
+****************
+Invalid right hand side expression of the function.
+Define failed.
+****************
+
+It is correct. The syntax of the right hand side of the function is wrong. We
+have to use bracket and put the function name or operator in right order. In
+this testcase, the program cannot parse its valid function expression and failed
+the defination. Then it will result in exiting the program.
 
 
+1.9 Run ./numerics < testcases/input1_9.txt
+****************
+defined f(x y)
+Already defined!
+Define failed.
+****************
+
+It is correct. The first defination is valid. The second cannot use the function
+name which has been already used. It will result in exiting the program.
+
+1.10 Run ./numerics < testcases/input1_10.txt
+****************
+No valid key word.
+****************
+
+It is correct. The input has no valid key words so the program cannot parse what
+the input's requist. It will result in exiting the program.
+
+1.11 Run ./numerics < testcases/input1_11.txt
+****************
+Invalid right hand side expression of the function.
+Define failed.
+****************
+
+It is correct. The right hand side of the defination has two independent
+expressions, which is not valid. Consequently, the program says the right hand
+side is invalid and failed the define. It will lead to exit the program.
+
+############### Step 2
+
+2.1 Run ./numerics < testcases/input2_1.txt
+****************
+defined f(x)
+1.999999750368
+1.999999750368
+defined g(x y)
+1.569525
+defined h(x)
+1.5015
+1.5015
+****************
+
+These are correct. All three integrands are well-defined. All the parameters for
+the numerical integration are valid. The parameters can be either numeric
+constants or valid expression. The integration result can be calculated and
+printed according to the trapezoid method. 
+
+2.2 Run ./numerics < testcases/input2_2.txt
+****************
+defined f(x)
+Invalid function name.
+numint failed.
+****************
+
+It is correct. The defination is legal and defined successfully. However, the
+integrand is undeclared. So the program says the function name is unvalid and
+the numint failed.
+
+2.3 Run ./numerics < testcases/input2_3.txt
+****************
+defined f(x)
+Unexpected: a
+Invalid input for step/trials.
+numint failed.
+****************
+
+It is correct. The defination is legal and defined successfully. However, the
+step is not valid. It has to be either a constant or a valid expression. Thus,
+the numint failed.
+
+2.4 Run ./numerics < testcases/input2_4.txt
+****************
+defined f(x)
+Lower bound should be less than or equal to upper bound.
+numint failed.
+****************
+
+It is correct. The defination is legal and defined successfully. However, the
+lower bound should be less than or equal to the upper bound. The testcase does
+not obey this rule. Consequently, it failed the numint.
+
+2.5 Run ./numerics < testcases/input2_5.txt
+****************
+defined F(x y)
+Unnecessary parameters.
+numint failed.
+****************
+
+It is correct. The defination is legal and defined successfully. However, there
+are more parameters than necessary need. Consequently, it failed the numint and
+resulted in exiting the program.
+
+############### Step 3
+
+3.1 Run ./numerics < testcases/input3_1.txt
+****************
+defined f(x)
+2.030850167165
+1.962318004146
+defined g(x y)
+1.52908995
+defined h(x)
+1.5
+1.500001008979
+****************
+
+These are correct. All three integrands are well-defined. All the parameters for
+the Monte Carlo integration are valid. The parameters can be either numeric
+constants or valid expression. The integration result can be calculated and
+printed according to the Monte Carlo integration.
+
+3.2 Run ./numerics < testcases/input3_2.txt
+****************
+defined f(x)
+Invalid function name.
+mcint failed.
+****************
+
+It is correct. The defination is legal and defined successfully. However, the
+integrand is undeclared. So the program says the function name is invalid and
+the mcint failed.
+
+3.3 Run ./numerics < testcases/input3_3.txt
+****************
+defined f(x)
+Unexpected: a
+Invalid input for step/trials.
+mcint failed.
+****************
+
+It is correct. The defination is legal and defined successfully. However, the
+trials is  not valid. It has to be either a constant or a valid expression. Thus,
+the mcint failed.
+
+3.4 Run ./numerics < testcases/input3_4.txt
+****************
+defined f(x)
+Lower bound should be less than or equal to upper bound.
+mcint failed.
+****************
+
+It is correct. The defination is legal and defined successfully. However, the
+lower bound should be less than or equal to the upper bound. The testcase does
+not obey this rule. Consequently, it failed the mcint.
+
+3.5 Run ./numerics < testcases/input3_5.txt
+****************
+defined F(x y)
+Unnecessary parameters.
+mcint failed.
+****************
+
+It is correct. The defination is legal and defined successfully. However, there
+are more parameters than necessary need. Consequently, it failed the mcint and
+resulted in exiting the program.
+
+############### Step 4
+
+4.1 Run ./numerics < testcases/input4_1.txt
+****************
+defined f(x)
+0.9998557358198 @ (1.553811207636)
+-0.9998479911052 @ (-1.553360353719)
+defined g(x)
+0.9999580643458 @ (0.009158163517742)
+-0.9996909401492 @ (3.11673267299)
+defined h(x)
+Alread reach giving up number of trials. Did not find. Last working point:
+(500)
+Alread reach giving up number of trials. Did not find. Last working point:
+(500)
+defined A(x y)
+Alread reach giving up number of trials. Did not find. Last working point:
+(1000, 1000)
+Alread reach giving up number of trials. Did not find. Last working point:
+(-1000, -1000)
+defined F(x y)
+Alread reach giving up number of trials. Did not find. Last working point:
+(1.049513252814e+80, 1.39610764527e+80)
+1.000022697222 @ (0.00285760276439, 0.003811998446789)
+defined G(x y)
+0.9999815214722 @ (0.002384660622105, 0.003576580156023)
+Alread reach giving up number of trials. Did not find. Last working point:
+(6.983925740221e+79, 1.049513252814e+80)
+****************
+
+These are correct. The definations are all legal and defined successfully. All
+the parameters are legal because they are either numeric constants or valid
+expressions. The program will help find the coords which can get the maximum or
+minimum function value. If it does not converge when reaching the trials we set
+to give up, then it will give up finding and print out the last point it worked.
+If it converged, it will print out the function value and the point as well.
+According to the actual condition, the program works well for the inputs in
+input4_1.txt.
+
+4.2 Run ./numerics < testcases/input4_2.txt
+****************
+defined f(x y)
+Invalid function name.
+Find maximum failed.
+****************
+
+It is correct. The defination is legal and defined successfully. However, the
+function name is undeclared. So the program says the function name is invalid
+and the find maximum failed.
+
+
+4.3 Run ./numerics < testcases/input4_3.txt
+****************
+defined f(x y)
+Unexpected: A
+Invalid input for gamma.
+Find minimum failed.
+****************
+
+It is correct. The defination is legal and defined successfully. However, gamma
+is illegal. As a result, the program outputs that the input for gamma is invalid
+and then exits.
+
+4.4 Run ./numerics < testcases/input4_4.txt
+****************
+defined f(x y)
+Unexpected: A
+Invalid input for converdged distance.
+Find minimum failed.
+****************
+
+It is correct. The defination is legal and defined successfully. However, the
+input for converdged distance is illegal. As a result, the program outputs that
+the input for converdged distance is invalid and then exits.
+
+4.5 Run ./numerics < testcases/input4_5.txt
+****************
+defined f(x y)
+Invalid input for trials.
+Find minimum failed.
+****************
+
+It is correct. The defination is legal and defined successfully. However, there
+are parameters not given by input. For the program, it reports the ignored
+parameters backwards. As a result, the program outputs that the input for
+trials is invalid and then exits.
+
+4.6 Run ./numerics < testcases/input4_6.txt
+****************
+defined f(x y)
+Unnecessary parameters.
+Find maximum failed.
+****************
+
+It is correct. The defination is legal and defined successfully. However, there
+are more parameters than the function needs, which is illegal. Consequently, the
+program says that there were unnecessary parameters and then exits.

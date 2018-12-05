@@ -1,0 +1,6 @@
+define (f x y z)=(- (* x y) z)
+define (g x y)= (* x (cos y))
+define (h x y z)=(* x (- y z))
+test (f 3 4.2 5) 7.6
+test (f (g 1 2)(g 3 4)(h 5 6 -7)) 99.87
+test (f 1 2 3)(g 4 5)

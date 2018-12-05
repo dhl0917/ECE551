@@ -1,0 +1,2 @@
+define (f x)=(ln x)
+numint g 0.001 0 3.1415926

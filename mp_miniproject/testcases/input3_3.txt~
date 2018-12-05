@@ -1,0 +1,2 @@
+define (f x)=(ln x)
+numint f a 0 3.1415926
