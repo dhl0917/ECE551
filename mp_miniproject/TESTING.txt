@@ -3,7 +3,10 @@
 
                         ALL TESTCASES ARE VALGRIND CLEAN.
 
+        ALL TESTCASES FILES ARE IN /home/hd97/ece551/mp_miniproject/testcases .
+
 ############### Step 1
+Note: All illegal inputs will lead the program to exit.
 
 1.1 Run ./numerics < testcases/input1_1.txt
 ****************
@@ -148,6 +151,9 @@ expressions, which is not valid. Consequently, the program says the right hand
 side is invalid and failed the define. It will lead to exit the program.
 
 ############### Step 2
+NOTE: If there are too many calculations to do, it may take a little longer time,
+      but the result will be correct. Please choose the step properly. Not too
+      small, neither too large.
 
 2.1 Run ./numerics < testcases/input2_1.txt
 ****************
@@ -212,6 +218,8 @@ are more parameters than necessary need. Consequently, it failed the numint and
 resulted in exiting the program.
 
 ############### Step 3
+Note: Please pay attention to the trial times you give. If it is not large
+      enough, the result may be a little inaccurate.
 
 3.1 Run ./numerics < testcases/input3_1.txt
 ****************
@@ -276,6 +284,12 @@ are more parameters than necessary need. Consequently, it failed the mcint and
 resulted in exiting the program.
 
 ############### Step 4
+Note: 1.Due to the possibility of overflow, please pay attention to the
+        parameters you input, espcially when the function is monotone
+	increasing/decreasing.
+      2.If it converged, the output would give the function value and the coords
+        as well in the form [func value] @ [coords]. If it didn't, the output
+	would print it can't and the last point it worked at as well.
 
 4.1 Run ./numerics < testcases/input4_1.txt
 ****************
